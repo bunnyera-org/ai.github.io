@@ -3,173 +3,274 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BunnyEra | AI Company Operating System</title>
-  <meta
-    name="description"
-    content="BunnyEra is an AI-powered company operating system for multi-agent automation, cross-border ecommerce, security, cloud workflows, and developer collaboration."
-  />
-  <link rel="stylesheet" href="style.css" />
+  <title>BunnyEra — AI Commerce Agents for Modern Brands</title>
+  <meta name="description" content="BunnyEra builds AI commerce agents for product listing, marketing, customer service, logistics, reports, and brand operations." />
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="brand">
-      <div class="brand-mark">🐰</div>
-      <div>
-        <div class="brand-name">BunnyEra</div>
-        <div class="brand-subtitle">AI Company Operating System</div>
-      </div>
-    </div>
+    <a class="brand" href="/">
+      <span class="brand-mark">B</span>
+      <span>BunnyEra</span>
+    </a>
 
     <nav class="nav">
-      <a href="#ecosystem">Ecosystem</a>
-      <a href="#products">Products</a>
-      <a href="#ai-company">AI Company</a>
-      <a href="#community">Community</a>
+      <div class="nav-item usecases">
+        <span>Use Cases</span>
+        <div class="dropdown">
+          <a href="#use-cases">Product Listing Generator</a>
+          <a href="#use-cases">AI Ad Generator</a>
+          <a href="#use-cases">TikTok Content Agent</a>
+          <a href="#use-cases">Customer Service Agent</a>
+          <a href="#use-cases">Logistics Assistant</a>
+          <a href="#use-cases">Commerce Report Agent</a>
+          <a href="#use-cases">Brand Website Builder</a>
+        </div>
+      </div>
+      <a href="#agents">Agents</a>
+      <a href="#commerce">Commerce</a>
+      <a href="#technology">Technology</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#company">Company</a>
     </nav>
+
+    <div class="header-actions">
+      <a class="ghost-link" href="https://console.bunnyera.com">Login</a>
+      <a class="primary-small" href="#pricing">Get Started</a>
+    </div>
   </header>
 
   <main>
     <section class="hero">
+      <div class="hero-bg"></div>
+
       <div class="hero-content">
-        <div class="eyebrow">AI Agents · Automation · Cloud · Security</div>
-        <h1>Build and operate an AI-powered company with BunnyEra.</h1>
-        <p>
-          BunnyEra connects AI agents, automation workflows, browser execution,
-          cloud services, security rules, and developer tools into one modular ecosystem.
+        <p class="eyebrow">BUNNYERA AI COMMERCE SYSTEM</p>
+        <h1>
+          Run your online business with AI agents.
+        </h1>
+        <p class="hero-subtitle">
+          BunnyEra helps brands create product listings, launch marketing content,
+          handle customers, manage logistics, and generate business reports — without hiring a full team.
         </p>
 
         <div class="hero-actions">
-          <a class="button primary" href="#products">Explore Ecosystem</a>
-          <a class="button secondary" href="#community">Join Community</a>
+          <a class="primary-btn" href="#pricing">Start with BunnyEra</a>
+          <a class="secondary-btn" href="#use-cases">View use cases</a>
+        </div>
+
+        <div class="hero-proof">
+          <span>Brand Website</span>
+          <span>Commerce Layer</span>
+          <span>AI Company OS</span>
         </div>
       </div>
 
-      <div class="hero-card">
-        <div class="card-title">BunnyEra Stack</div>
-        <div class="stack-list">
-          <span>Console</span>
-          <span>AI</span>
-          <span>Claw</span>
-          <span>Browser</span>
-          <span>Cloud</span>
-          <span>Security</span>
+      <div class="hero-panel">
+        <div class="panel-top">
+          <span class="status-dot"></span>
+          <span>BunnyEra Agents Online</span>
         </div>
-      </div>
-    </section>
 
-    <section id="ecosystem" class="section">
-      <div class="section-heading">
-        <div class="eyebrow">Ecosystem</div>
-        <h2>One modular system for AI business operations.</h2>
-      </div>
-
-      <div class="grid">
-        <article class="card">
-          <h3>Control Layer</h3>
-          <p>BunnyEra Console provides the main dashboard for agents, tasks, logs, settings, and AI company operations.</p>
-        </article>
-
-        <article class="card">
-          <h3>Intelligence Layer</h3>
-          <p>BunnyEra AI stores agents, prompts, workflows, model notes, and business automation templates.</p>
-        </article>
-
-        <article class="card">
-          <h3>Execution Layer</h3>
-          <p>BunnyEra Claw runs the gateway, agent registry, RPC routing, tasks, and automation execution.</p>
-        </article>
-
-        <article class="card">
-          <h3>Cloud Layer</h3>
-          <p>BunnyEra Cloud plans the API gateway, storage, database, queues, monitoring, and service integration.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="products" class="section">
-      <div class="section-heading">
-        <div class="eyebrow">Products</div>
-        <h2>BunnyEra repositories.</h2>
-      </div>
-
-      <div class="repo-list">
-        <div class="repo-item">
-          <strong>BunnyEra2FA</strong>
-          <span>Two-factor authenticator app with PWA support.</span>
+        <div class="agent-stack">
+          <div class="agent-row">
+            <span>Product Agent</span>
+            <b>Listings ready</b>
+          </div>
+          <div class="agent-row">
+            <span>Marketing Agent</span>
+            <b>Campaign drafted</b>
+          </div>
+          <div class="agent-row">
+            <span>Customer Agent</span>
+            <b>Replies prepared</b>
+          </div>
+          <div class="agent-row">
+            <span>Logistics Agent</span>
+            <b>Delivery plan set</b>
+          </div>
         </div>
-        <div class="repo-item">
-          <strong>bunnyera-console</strong>
-          <span>Main AI control center and AI Company dashboard.</span>
-        </div>
-        <div class="repo-item">
-          <strong>bunnyera-ai</strong>
-          <span>AI agents, prompts, workflows, and model registry.</span>
-        </div>
-        <div class="repo-item">
-          <strong>bunnyera-claw</strong>
-          <span>Automation execution gateway and agent runtime.</span>
-        </div>
-        <div class="repo-item">
-          <strong>bunnyera-browser</strong>
-          <span>AI browser automation for visits, screenshots, and workflows.</span>
-        </div>
-        <div class="repo-item">
-          <strong>bunnyera-security</strong>
-          <span>Security policies, secrets management, 2FA rules, and audit workflows.</span>
+
+        <div class="panel-metric">
+          <span>Workflow Status</span>
+          <strong>Operating</strong>
         </div>
       </div>
     </section>
 
-    <section id="ai-company" class="section highlight">
-      <div class="section-heading">
-        <div class="eyebrow">AI Company</div>
-        <h2>AI departments for cross-border business automation.</h2>
+    <section class="trust-strip">
+      <div>
+        <strong>Luxury AI Brand System</strong>
+        <span>Premium public presence for serious commerce brands.</span>
+      </div>
+      <div>
+        <strong>AI Agents at Work</strong>
+        <span>Product, marketing, service, logistics, finance, and tech execution.</span>
+      </div>
+      <div>
+        <strong>Commerce Operating Layer</strong>
+        <span>Connect brand traffic to leads, orders, delivery, and revenue reports.</span>
+      </div>
+    </section>
+
+    <section id="use-cases" class="section">
+      <div class="section-head">
+        <p class="eyebrow">USE CASES</p>
+        <h2>AI tools that do real business work.</h2>
+        <p>
+          BunnyEra is designed around practical commerce tasks — the things a brand needs every day
+          to grow, serve customers, and operate.
+        </p>
       </div>
 
-      <div class="grid">
-        <article class="card">
-          <h3>AI CEO</h3>
-          <p>Routes tasks, prioritizes goals, summarizes progress, and identifies risks.</p>
+      <div class="usecase-grid">
+        <article>
+          <span>01</span>
+          <h3>Product Listing Generator</h3>
+          <p>Create titles, descriptions, selling points, SEO text, and product structure.</p>
         </article>
-
-        <article class="card">
-          <h3>Product Selection</h3>
-          <p>Researches products, analyzes demand, estimates profit, and reviews risk.</p>
+        <article>
+          <span>02</span>
+          <h3>AI Ad Generator</h3>
+          <p>Generate Facebook, Instagram, TikTok, and Google ad copy for campaigns.</p>
         </article>
-
-        <article class="card">
-          <h3>Listing</h3>
-          <p>Creates product titles, descriptions, SEO keywords, and localized listing content.</p>
+        <article>
+          <span>03</span>
+          <h3>Social Content Agent</h3>
+          <p>Plan daily posts, short video ideas, hooks, captions, and content calendars.</p>
         </article>
-
-        <article class="card">
-          <h3>Marketing</h3>
-          <p>Generates ad copy, social posts, campaign ideas, UGC scripts, and launch materials.</p>
+        <article>
+          <span>04</span>
+          <h3>Customer Service Agent</h3>
+          <p>Prepare replies, FAQ answers, inquiry follow-up, and support workflows.</p>
+        </article>
+        <article>
+          <span>05</span>
+          <h3>Logistics Assistant</h3>
+          <p>Draft fulfillment notes, shipping rules, tracking messages, and delivery plans.</p>
+        </article>
+        <article>
+          <span>06</span>
+          <h3>Commerce Report Agent</h3>
+          <p>Summarize sales, costs, leads, marketing activity, and operational status.</p>
         </article>
       </div>
     </section>
 
-    <section id="community" class="section">
-      <div class="section-heading">
-        <div class="eyebrow">Community</div>
-        <h2>OpenClaw-style AI collaboration community.</h2>
+    <section id="agents" class="section dark-panel">
+      <div class="section-head">
+        <p class="eyebrow">AI AGENTS</p>
+        <h2>One brand. One autonomous operating team.</h2>
       </div>
 
-      <p class="wide-text">
-        BunnyEra Community is planned as a space for sharing AI agents, workflows,
-        prompts, plugins, themes, tutorials, and developer discussions.
+      <div class="agents-grid">
+        <div><b>CEO Agent</b><span>Goals, planning, daily reports, task review.</span></div>
+        <div><b>Product Agent</b><span>Products, pricing, listings, category strategy.</span></div>
+        <div><b>Marketing Agent</b><span>Ads, SEO, social content, campaigns.</span></div>
+        <div><b>Customer Agent</b><span>FAQ, inquiries, follow-up, support.</span></div>
+        <div><b>Logistics Agent</b><span>Fulfillment, tracking, delivery process.</span></div>
+        <div><b>Finance Agent</b><span>Cost, revenue, profit, reports.</span></div>
+        <div><b>Tech Agent</b><span>API, database, automation, deployment.</span></div>
+        <div><b>Brand Agent</b><span>Luxury tone, visual consistency, messaging.</span></div>
+      </div>
+    </section>
+
+    <section id="commerce" class="section split">
+      <div>
+        <p class="eyebrow">COMMERCE ENGINE</p>
+        <h2>From brand traffic to revenue workflow.</h2>
+        <p>
+          BunnyEra connects a premium brand website, a self-owned shop, and an AI Company OS.
+          The goal is not just a beautiful website — the goal is a working business system.
+        </p>
+      </div>
+
+      <div class="workflow-card">
+        <div><span>1</span><b>bunnyera.com</b><p>Official luxury-grade brand website.</p></div>
+        <div><span>2</span><b>shop.bunnyera.com</b><p>Self-owned commerce and service sales layer.</p></div>
+        <div><span>3</span><b>console.bunnyera.com</b><p>AI agents execute operations, content, support, and reports.</p></div>
+      </div>
+    </section>
+
+    <section id="technology" class="section technology">
+      <div class="section-head">
+        <p class="eyebrow">TECHNOLOGY</p>
+        <h2>The operating stack behind BunnyEra.</h2>
+      </div>
+
+      <div class="tech-grid">
+        <article>
+          <h3>BunnyEra Console</h3>
+          <p>Command center for workflows, agents, reports, and business execution.</p>
+        </article>
+        <article>
+          <h3>BunnyEra Claw</h3>
+          <p>Execution engine that receives tasks, routes agents, and runs workflows.</p>
+        </article>
+        <article>
+          <h3>InsForge Layer</h3>
+          <p>Backend workflow layer for API, database, deployment, and output generation.</p>
+        </article>
+        <article>
+          <h3>BunnyEra Shop</h3>
+          <p>Self-owned commerce layer for services, products, leads, and orders.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="section pricing">
+      <div class="section-head">
+        <p class="eyebrow">START WITH BUNNYERA</p>
+        <h2>Clear packages. Real execution.</h2>
+        <p>First revenue should come from setup, automation, and brand commerce services.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <article>
+          <p class="package-label">Starter</p>
+          <h3>AI Brand Website Setup</h3>
+          <p>Luxury landing page, brand message, use cases, and contact flow.</p>
+          <strong>Request quote</strong>
+        </article>
+        <article class="featured">
+          <p class="package-label">Commerce</p>
+          <h3>AI Commerce Automation</h3>
+          <p>Product listings, marketing content, customer service, and reporting workflows.</p>
+          <strong>Request access</strong>
+        </article>
+        <article>
+          <p class="package-label">Operating System</p>
+          <h3>AI Agent Business Setup</h3>
+          <p>Console, agents, workflows, database, and execution engine configuration.</p>
+          <strong>Apply now</strong>
+        </article>
+      </div>
+    </section>
+
+    <section id="company" class="final-cta">
+      <p class="eyebrow">BUNNYERA LLC</p>
+      <h2>Build the brand. Run the shop. Automate the company.</h2>
+      <p>
+        BunnyEra is building a self-owned AI commerce ecosystem for modern brands —
+        starting with brand presence, commerce execution, and AI agent operations.
       </p>
-
       <div class="hero-actions">
-        <a class="button primary" href="https://github.com/bunnyera-org">GitHub Organization</a>
-        <a class="button secondary" href="https://github.com/bunnyera-org/bunnyera-docs">Documentation</a>
+        <a class="primary-btn" href="mailto:admin@bunnyera.com">Contact BunnyEra</a>
+        <a class="secondary-btn" href="https://console.bunnyera.com">Open Console</a>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <span>© 2026 BunnyEra</span>
-    <span>AI-powered ecosystem for business automation.</span>
+  <footer>
+    <div>
+      <b>BunnyEra</b>
+      <span>Autonomous Commerce Intelligence</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://bunnyera.com">bunnyera.com</a>
+      <a href="https://shop.bunnyera.com">shop.bunnyera.com</a>
+      <a href="https://console.bunnyera.com">console.bunnyera.com</a>
+    </div>
   </footer>
 </body>
 </html>
