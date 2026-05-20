@@ -3,557 +3,317 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BunnyEra — AI Commerce Agents for Modern Brands</title>
-  <meta name="description" content="BunnyEra builds AI commerce agents for product listing, marketing, customer service, logistics, reports, and brand operations." />
+
+  <title>BunnyEra — AI Assistant for Cross-border Commerce</title>
+  <meta name="description" content="BunnyEra is your AI assistant for cross-border commerce. It helps brands create product listings, marketing content, customer support replies, logistics workflows, translations, and business reports." />
+
+  <link rel="icon" href="./assets/favicon.png" />
   <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
   <header class="site-header">
     <a class="brand" href="/">
-      <span class="brand-mark">B</span>
+      <img src="./assets/logo-header.png" alt="BunnyEra logo" />
       <span>BunnyEra</span>
     </a>
 
     <nav class="nav">
-      <div class="nav-item usecases">
-        <span>Use Cases</span>
-        <div class="dropdown">
-          <a href="#use-cases">Brand Website System</a>
-          <a href="#use-cases">Commerce Product System</a>
-          <a href="#use-cases">AI Marketing System</a>
-          <a href="#use-cases">Customer Support System</a>
-          <a href="#use-cases">Logistics Workflow</a>
-          <a href="#use-cases">Revenue Report System</a>
-          <a href="#use-cases">AI Agent Operations</a>
-        </div>
-      </div>
-      <a href="#agents">Agents</a>
-      <a href="#commerce">Commerce</a>
-      <a href="#technology">Technology</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#assistant">AI Assistant</a>
+      <a href="#workflow">How It Works</a>
+      <a href="#languages">Languages</a>
+      <a href="#services">Services</a>
       <a href="#company">Company</a>
     </nav>
 
     <div class="header-actions">
-      <select class="lang-select" id="langSelect" aria-label="Select language">
-        <option value="en">EN</option>
-        <option value="zh">中文</option>
-        <option value="th">ไทย</option>
-        <option value="ja">日本語</option>
-        <option value="ko">한국어</option>
-        <option value="vi">Tiếng Việt</option>
-        <option value="id">Bahasa Indonesia</option>
-        <option value="ms">Bahasa Malaysia</option>
-        <option value="lo">ລາວ</option>
-      </select>
-      <a class="ghost-link" href="mailto:admin@bunnyera.com">Contact</a>
-      <a class="primary-small" href="#pricing">Buy Now</a>
+      <button class="lang-btn" id="langBtn">EN</button>
+      <a class="contact-link" href="mailto:admin@bunnyera.com">Contact</a>
+      <a class="header-cta" href="mailto:admin@bunnyera.com">Book Demo</a>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-bg"></div>
-
-      <div class="hero-content">
-        <p class="eyebrow">BUNNYERA AI COMMERCE SYSTEM</p>
-        <h1>
-          Run your online business with AI agents.
-        </h1>
-        <p class="hero-subtitle">
-          BunnyEra helps brands create product listings, launch marketing content,
-          handle customers, manage logistics, and generate business reports — without hiring a full team.
+      <div class="hero-copy">
+        <p class="eyebrow">BUNNYERA AI COMMERCE ASSISTANT</p>
+        <h1 id="heroTitle">Your AI assistant for cross-border commerce.</h1>
+        <p class="hero-subtitle" id="heroSubtitle">
+          BunnyEra helps brands launch products, create listings, generate marketing content,
+          handle customers, manage logistics, and grow revenue across APAC markets.
         </p>
 
         <div class="hero-actions">
-          <a class="primary-btn" href="#pricing">Start with BunnyEra</a>
-          <a class="secondary-btn" href="#use-cases">View use cases</a>
+          <a class="primary-btn" href="mailto:admin@bunnyera.com">Book a Demo</a>
+          <a class="secondary-btn" href="#solutions">See Use Cases</a>
         </div>
 
-        <div class="hero-proof">
-          <span>Brand Website</span>
-          <span>Commerce Layer</span>
-          <span>AI Company OS</span>
+        <div class="hero-pills">
+          <span>Product Listing</span>
+          <span>Marketing Content</span>
+          <span>Customer Support</span>
+          <span>Logistics Workflow</span>
         </div>
       </div>
 
-      <div class="hero-panel">
-        <div class="panel-top">
-          <span class="status-dot"></span>
-          <span>BunnyEra Agents Online</span>
-        </div>
-
-        <div class="agent-stack">
-          <div class="agent-row">
-            <span>Product Agent</span>
-            <b>Listings ready</b>
-          </div>
-          <div class="agent-row">
-            <span>Marketing Agent</span>
-            <b>Campaign drafted</b>
-          </div>
-          <div class="agent-row">
-            <span>Customer Agent</span>
-            <b>Replies prepared</b>
-          </div>
-          <div class="agent-row">
-            <span>Logistics Agent</span>
-            <b>Delivery plan set</b>
-          </div>
-        </div>
-
-        <div class="panel-metric">
-          <span>Workflow Status</span>
-          <strong>Operating</strong>
-        </div>
+      <div class="hero-image">
+        <picture>
+          <source media="(max-width: 760px)" srcset="./assets/hero-assistant-mobile-900.webp" />
+          <img src="./assets/hero-assistant-1600x900.webp" alt="BunnyEra AI assistant for cross-border commerce" />
+        </picture>
       </div>
     </section>
 
-    <section class="trust-strip">
+    <section class="proof-strip">
       <div>
-        <strong>Luxury AI Brand System</strong>
-        <span>Premium public presence for serious commerce brands.</span>
+        <b>AI Commerce Assistant</b>
+        <span>A friendly helper for sellers and brands.</span>
       </div>
       <div>
-        <strong>AI Agents at Work</strong>
-        <span>Product, marketing, service, logistics, finance, and tech execution.</span>
+        <b>APAC Multi-language</b>
+        <span>English, Chinese, Thai, Japanese, Korean, Vietnamese, Indonesian, Malay, and Lao.</span>
       </div>
       <div>
-        <strong>Commerce Operating Layer</strong>
-        <span>Connect brand traffic to leads, orders, delivery, and revenue reports.</span>
+        <b>Business Execution</b>
+        <span>Product, content, customer service, logistics, and reports.</span>
       </div>
     </section>
 
-    <section id="use-cases" class="section">
+    <section id="solutions" class="section">
       <div class="section-head">
-        <p class="eyebrow">USE CASES</p>
-        <h2>AI tools that do real business work.</h2>
+        <p class="eyebrow">SOLUTIONS</p>
+        <h2>What BunnyEra helps you do.</h2>
         <p>
-          BunnyEra is designed around practical commerce tasks — the things a brand needs every day
-          to grow, serve customers, and operate.
+          BunnyEra is designed around real cross-border commerce work — not just chat.
+          It helps sellers move faster from product idea to customer delivery.
         </p>
       </div>
 
-      <div class="usecase-grid">
+      <div class="grid six-grid">
         <article>
           <span>01</span>
-          <h3>Brand Website System</h3>
-          <p>Create titles, descriptions, selling points, SEO text, and product structure.</p>
+          <h3>Product Listing</h3>
+          <p>Create product titles, descriptions, selling points, SEO text, and category structure.</p>
         </article>
         <article>
           <span>02</span>
-          <h3>Commerce Product System</h3>
-          <p>Generate Facebook, Instagram, TikTok, and Google ad copy for campaigns.</p>
+          <h3>Marketing Content</h3>
+          <p>Generate ad copy, social posts, hooks, captions, and campaign ideas.</p>
         </article>
         <article>
           <span>03</span>
-          <h3>Social Content Agent</h3>
-          <p>Plan daily posts, short video ideas, hooks, captions, and content calendars.</p>
+          <h3>Customer Service</h3>
+          <p>Prepare customer replies, FAQ answers, inquiry follow-up, and support messages.</p>
         </article>
         <article>
           <span>04</span>
-          <h3>Customer Support System</h3>
-          <p>Prepare replies, FAQ answers, inquiry follow-up, and support workflows.</p>
+          <h3>Logistics Workflow</h3>
+          <p>Create shipping notices, tracking messages, delivery updates, and after-sales support.</p>
         </article>
         <article>
           <span>05</span>
-          <h3>Logistics Workflow</h3>
-          <p>Draft fulfillment notes, shipping rules, tracking messages, and delivery plans.</p>
+          <h3>Translation & Localization</h3>
+          <p>Adapt product and customer content for APAC markets and cross-border communication.</p>
         </article>
         <article>
           <span>06</span>
-          <h3>Revenue Report System</h3>
-          <p>Summarize sales, costs, leads, marketing activity, and operational status.</p>
+          <h3>Business Reports</h3>
+          <p>Summarize sales, customers, content output, logistics status, and operational performance.</p>
         </article>
       </div>
     </section>
 
-    <section id="agents" class="section dark-panel">
-      <div class="section-head">
-        <p class="eyebrow">AI AGENTS</p>
-        <h2>One brand. One autonomous operating team.</h2>
+    <section id="assistant" class="assistant-section">
+      <div class="assistant-text">
+        <p class="eyebrow">BUNNYERA IP ASSISTANT</p>
+        <h2>Meet your BunnyEra AI commerce assistant.</h2>
+        <p>
+          BunnyEra is designed as a friendly AI commerce helper that helps sellers solve real
+          cross-border business problems — from product setup to marketing, customer support,
+          logistics, localization, and reports.
+        </p>
+
+        <div class="mini-tags">
+          <span>Product Helper</span>
+          <span>Marketing Helper</span>
+          <span>Customer Helper</span>
+          <span>Logistics Helper</span>
+        </div>
       </div>
 
-      <div class="agents-grid">
-        <div><b>CEO Agent</b><span>Goals, planning, daily reports, task review.</span></div>
-        <div><b>Product Agent</b><span>Products, pricing, listings, category strategy.</span></div>
-        <div><b>Marketing Agent</b><span>Ads, SEO, social content, campaigns.</span></div>
-        <div><b>Customer Agent</b><span>FAQ, inquiries, follow-up, support.</span></div>
-        <div><b>Logistics Agent</b><span>Fulfillment, tracking, delivery process.</span></div>
-        <div><b>Finance Agent</b><span>Cost, revenue, profit, reports.</span></div>
-        <div><b>Tech Agent</b><span>API, database, automation, deployment.</span></div>
-        <div><b>Brand Agent</b><span>Luxury tone, visual consistency, messaging.</span></div>
+      <div class="assistant-mascot">
+        <img src="./assets/mascot-cutout-720.webp" alt="BunnyEra AI mascot assistant" />
       </div>
     </section>
 
-    <section id="commerce" class="section split">
-      <div>
-        <p class="eyebrow">COMMERCE ENGINE</p>
-        <h2>From brand traffic to revenue workflow.</h2>
+    <section id="workflow" class="section workflow">
+      <div class="section-head">
+        <p class="eyebrow">HOW IT WORKS</p>
+        <h2>From product idea to global customer delivery.</h2>
         <p>
-          BunnyEra connects a premium brand website, a self-owned shop, and an AI Company OS.
-          The goal is not just a beautiful website — the goal is a working business system.
+          BunnyEra connects product information, AI-generated content, customer communication,
+          logistics messages, and performance reports into one commerce workflow.
         </p>
       </div>
 
-      <div class="workflow-card">
-        <div><span>1</span><b>bunnyera.com</b><p>Official luxury-grade brand website.</p></div>
-        <div><span>2</span><b>shop.bunnyera.com</b><p>Self-owned commerce and service sales layer.</p></div>
-        <div><span>3</span><b>console.bunnyera.com</b><p>AI agents execute operations, content, support, and reports.</p></div>
+      <div class="workflow-layout">
+        <div class="workflow-steps">
+          <div><span>01</span><b>Product Info</b></div>
+          <div><span>02</span><b>AI Listing</b></div>
+          <div><span>03</span><b>Marketing</b></div>
+          <div><span>04</span><b>Customer</b></div>
+          <div><span>05</span><b>Logistics</b></div>
+          <div><span>06</span><b>Report</b></div>
+        </div>
+
+        <div class="workflow-img">
+          <img src="./assets/workflow-assistant-1200x675.webp" alt="BunnyEra workflow assistant" />
+        </div>
       </div>
     </section>
 
-    <section id="technology" class="section technology">
-      <div class="section-head">
-        <p class="eyebrow">TECHNOLOGY</p>
-        <h2>The operating stack behind BunnyEra.</h2>
+    <section id="languages" class="language-section">
+      <div class="language-img">
+        <img src="./assets/language-apac-1200x800.webp" alt="BunnyEra APAC language support" />
       </div>
 
-      <div class="tech-grid">
-        <article>
-          <h3>BunnyEra Console</h3>
-          <p>Command center for workflows, agents, reports, and business execution.</p>
-        </article>
-        <article>
-          <h3>BunnyEra Claw</h3>
-          <p>Execution engine that receives tasks, routes agents, and runs workflows.</p>
-        </article>
-        <article>
-          <h3>InsForge Layer</h3>
-          <p>Backend workflow layer for API, database, deployment, and output generation.</p>
-        </article>
-        <article>
-          <h3>BunnyEra Shop</h3>
-          <p>Self-owned commerce layer for services, products, leads, and orders.</p>
-        </article>
+      <div class="language-text">
+        <p class="eyebrow">APAC LANGUAGES</p>
+        <h2>Built for APAC cross-border commerce.</h2>
+        <p>
+          BunnyEra helps brands localize content for English, Chinese, Thai, Japanese, Korean,
+          Vietnamese, Indonesian, Malay, and Lao markets. If a visitor is outside supported
+          languages, the website defaults to English.
+        </p>
+
+        <div class="language-pills">
+          <span>English</span>
+          <span>中文</span>
+          <span>ไทย</span>
+          <span>日本語</span>
+          <span>한국어</span>
+          <span>Tiếng Việt</span>
+          <span>Bahasa Indonesia</span>
+          <span>Bahasa Malaysia</span>
+          <span>ລາວ</span>
+        </div>
       </div>
     </section>
 
-    <section id="pricing" class="section pricing">
+    <section id="services" class="section">
       <div class="section-head">
-        <p class="eyebrow">START WITH BUNNYERA</p>
-        <h2>Clear packages. Real execution.</h2>
-        <p>First revenue should come from setup, automation, and brand commerce services.</p>
+        <p class="eyebrow">SERVICES</p>
+        <h2>Start with a BunnyEra commerce system.</h2>
+        <p>BunnyEra helps brands move from idea to execution with clear service packages.</p>
       </div>
 
-      <div class="pricing-grid">
+      <div class="grid service-grid">
         <article>
-          <p class="package-label">Starter</p>
+          <span>STARTER</span>
           <h3>AI Brand Website Setup</h3>
-          <p>Luxury landing page, brand message, use cases, and contact flow.</p>
-          <strong>Request quote</strong>
+          <p>For brands that need a premium public website with multi-language content and inquiry flow.</p>
+          <a href="mailto:admin@bunnyera.com">Request Quote</a>
         </article>
         <article class="featured">
-          <p class="package-label">Commerce</p>
+          <span>COMMERCE</span>
           <h3>AI Commerce Automation</h3>
-          <p>Product listings, marketing content, customer service, and reporting workflows.</p>
-          <strong>Request access</strong>
+          <p>For sellers that need product, marketing, customer support, logistics, and report workflows.</p>
+          <a href="mailto:admin@bunnyera.com">Book Demo</a>
         </article>
         <article>
-          <p class="package-label">Operating System</p>
+          <span>SYSTEM</span>
           <h3>AI Agent Business Setup</h3>
-          <p>Console, agents, workflows, database, and execution engine configuration.</p>
-          <strong>Apply now</strong>
+          <p>For teams that want an AI-assisted operating system for business execution.</p>
+          <a href="mailto:admin@bunnyera.com">Apply Now</a>
         </article>
       </div>
     </section>
 
-    <section id="company" class="final-cta">
-      <p class="eyebrow">BUNNYERA LLC</p>
-      <h2>Build the brand. Run the shop. Automate the company.</h2>
-      <p>
-        BunnyEra is building a self-owned AI commerce ecosystem for modern brands —
-        starting with brand presence, commerce execution, and AI agent operations.
-      </p>
+    <section id="company" class="why-section">
+      <div>
+        <img class="seal" src="./assets/seal-gold.png" alt="BunnyEra gold seal" />
+        <p class="eyebrow">WHY BUNNYERA</p>
+        <h2>Designed for brands that want execution, not just tools.</h2>
+      </div>
+
+      <div class="why-list">
+        <article>
+          <h3>Cross-border first</h3>
+          <p>Built for multilingual commerce and APAC market workflows.</p>
+        </article>
+        <article>
+          <h3>AI assistant experience</h3>
+          <p>A friendly assistant interface that helps sellers understand and act.</p>
+        </article>
+        <article>
+          <h3>Business execution</h3>
+          <p>Focused on product, marketing, service, logistics, and reporting.</p>
+        </article>
+        <article>
+          <h3>Self-owned ecosystem</h3>
+          <p>Brand site, shop layer, and internal AI operating system stay under BunnyEra control.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div>
+        <p class="eyebrow">BUILD WITH BUNNYERA</p>
+        <h2>Ready to build your AI commerce assistant?</h2>
+        <p>Tell BunnyEra what you sell, which markets you target, and what operations you want to automate.</p>
+      </div>
+
       <div class="hero-actions">
-        <a class="primary-btn" href="mailto:admin@bunnyera.com">Contact BunnyEra</a>
-        <a class="secondary-btn" href="mailto:admin@bunnyera.com">Request Quote</a>
+        <a class="primary-btn" href="mailto:admin@bunnyera.com">Book Demo</a>
+        <a class="secondary-btn" href="mailto:admin@bunnyera.com">Contact</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div>
-      <b>BunnyEra</b>
-      <span>Autonomous Commerce Intelligence</span>
+    <div class="footer-brand">
+      <img src="./assets/logo-header.png" alt="BunnyEra logo" />
+      <div>
+        <b>BunnyEra</b>
+        <span>Your AI assistant for cross-border commerce.</span>
+      </div>
     </div>
+
     <div class="footer-links">
-      <a href="https://bunnyera.com">bunnyera.com</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#assistant">AI Assistant</a>
+      <a href="#services">Services</a>
+      <a href="#languages">Languages</a>
+      <a href="mailto:admin@bunnyera.com">admin@bunnyera.com</a>
       <a href="https://shop.bunnyera.com">shop.bunnyera.com</a>
-      <a href="mailto:admin@bunnyera.com">Contact</a>
     </div>
+
+    <p class="copyright">© 2026 BunnyEra LLC. All rights reserved.</p>
   </footer>
 
-<!-- BUNNYERA_LANG_SCRIPT_START -->
-<script>
-const bunnyEraLang = {
-  en: {
-    navUseCases: 'Use Cases',
-    navAgents: 'Agents',
-    navCommerce: 'Commerce',
-    navTechnology: 'Technology',
-    navPricing: 'Pricing',
-    navCompany: 'Company',
-    contact: 'Contact',
-    buyNow: 'Buy Now',
-    heroEyebrow: 'BUNNYERA AI COMMERCE SYSTEM',
-    heroTitle: 'Run your online business with AI agents.',
-    heroSubtitle: 'BunnyEra helps brands create product listings, launch marketing content, handle customers, manage logistics, and generate business reports — without hiring a full team.',
-    primaryCta: 'Start with BunnyEra',
-    secondaryCta: 'View use cases',
-    useCasesTitle: 'AI systems that do real business work.',
-    agentsTitle: 'One brand. One autonomous operating team.',
-    commerceTitle: 'From brand traffic to revenue workflow.',
-    technologyTitle: 'The operating stack behind BunnyEra.',
-    pricingTitle: 'Clear packages. Real execution.',
-    finalTitle: 'Build the brand. Run the shop. Automate the company.'
-  },
-  zh: {
-    navUseCases: '使用场景',
-    navAgents: 'AI Agents',
-    navCommerce: '商业系统',
-    navTechnology: '技术体系',
-    navPricing: '价格方案',
-    navCompany: '公司',
-    contact: '联系',
-    buyNow: '立即购买',
-    heroEyebrow: 'BUNNYERA AI 商业系统',
-    heroTitle: '用 AI Agents 运营你的线上业务。',
-    heroSubtitle: 'BunnyEra 帮助品牌生成商品内容、发布营销素材、处理客户、管理物流，并生成商业报告——无需组建完整团队。',
-    primaryCta: '开始使用 BunnyEra',
-    secondaryCta: '查看使用场景',
-    useCasesTitle: '真正执行商业工作的 AI 系统。',
-    agentsTitle: '一个品牌，一支自主运行的 AI 团队。',
-    commerceTitle: '从品牌流量到收入工作流。',
-    technologyTitle: 'BunnyEra 背后的运行体系。',
-    pricingTitle: '清晰套餐，真实执行。',
-    finalTitle: '打造品牌。运营商店。自动化公司。'
-  },
-  th: {
-    navUseCases: 'กรณีใช้งาน',
-    navAgents: 'AI Agents',
-    navCommerce: 'ระบบพาณิชย์',
-    navTechnology: 'เทคโนโลยี',
-    navPricing: 'ราคา',
-    navCompany: 'บริษัท',
-    contact: 'ติดต่อ',
-    buyNow: 'ซื้อเลย',
-    heroEyebrow: 'ระบบ AI Commerce ของ BunnyEra',
-    heroTitle: 'บริหารธุรกิจออนไลน์ด้วย AI Agents',
-    heroSubtitle: 'BunnyEra ช่วยแบรนด์สร้างรายการสินค้า ทำคอนเทนต์การตลาด ดูแลลูกค้า จัดการโลจิสติกส์ และสร้างรายงานธุรกิจ โดยไม่ต้องจ้างทีมเต็มรูปแบบ',
-    primaryCta: 'เริ่มใช้ BunnyEra',
-    secondaryCta: 'ดูกรณีใช้งาน',
-    useCasesTitle: 'ระบบ AI ที่ทำงานธุรกิจได้จริง',
-    agentsTitle: 'หนึ่งแบรนด์ หนึ่งทีม AI ที่ทำงานอัตโนมัติ',
-    commerceTitle: 'จากทราฟฟิกแบรนด์สู่รายได้',
-    technologyTitle: 'ระบบเทคโนโลยีเบื้องหลัง BunnyEra',
-    pricingTitle: 'แพ็กเกจชัดเจน ทำงานได้จริง',
-    finalTitle: 'สร้างแบรนด์ เปิดร้าน และทำให้บริษัททำงานอัตโนมัติ'
-  },
-  ja: {
-    navUseCases: 'ユースケース',
-    navAgents: 'AIエージェント',
-    navCommerce: 'コマース',
-    navTechnology: 'テクノロジー',
-    navPricing: '料金',
-    navCompany: '会社情報',
-    contact: 'お問い合わせ',
-    buyNow: '購入する',
-    heroEyebrow: 'BUNNYERA AI コマースシステム',
-    heroTitle: 'AIエージェントでオンラインビジネスを運営。',
-    heroSubtitle: 'BunnyEra は商品リスティング、マーケティング、顧客対応、物流管理、ビジネスレポートを AI エージェントで支援します。',
-    primaryCta: 'BunnyEra を始める',
-    secondaryCta: 'ユースケースを見る',
-    useCasesTitle: '実際のビジネス業務を行う AI システム。',
-    agentsTitle: '1つのブランドに、自律型AI運営チームを。',
-    commerceTitle: 'ブランド流入から収益ワークフローへ。',
-    technologyTitle: 'BunnyEra を支えるテクノロジースタック。',
-    pricingTitle: '明確なプラン。実行できる仕組み。',
-    finalTitle: 'ブランドを作り、ショップを運営し、会社を自動化する。'
-  },
-  ko: {
-    navUseCases: '사용 사례',
-    navAgents: 'AI 에이전트',
-    navCommerce: '커머스',
-    navTechnology: '기술',
-    navPricing: '가격',
-    navCompany: '회사',
-    contact: '문의',
-    buyNow: '구매하기',
-    heroEyebrow: 'BUNNYERA AI 커머스 시스템',
-    heroTitle: 'AI 에이전트로 온라인 비즈니스를 운영하세요.',
-    heroSubtitle: 'BunnyEra는 상품 등록, 마케팅 콘텐츠, 고객 응대, 물류 관리, 비즈니스 리포트를 AI 에이전트로 지원합니다.',
-    primaryCta: 'BunnyEra 시작하기',
-    secondaryCta: '사용 사례 보기',
-    useCasesTitle: '실제 비즈니스 업무를 수행하는 AI 시스템.',
-    agentsTitle: '하나의 브랜드, 하나의 자율 AI 운영팀.',
-    commerceTitle: '브랜드 트래픽에서 수익 워크플로우까지.',
-    technologyTitle: 'BunnyEra를 움직이는 기술 스택.',
-    pricingTitle: '명확한 패키지. 실제 실행.',
-    finalTitle: '브랜드를 만들고, 쇼핑몰을 운영하고, 회사를 자동화하세요.'
-  },
-  vi: {
-    navUseCases: 'Trường hợp sử dụng',
-    navAgents: 'AI Agents',
-    navCommerce: 'Thương mại',
-    navTechnology: 'Công nghệ',
-    navPricing: 'Giá',
-    navCompany: 'Công ty',
-    contact: 'Liên hệ',
-    buyNow: 'Mua ngay',
-    heroEyebrow: 'Hệ thống AI Commerce BunnyEra',
-    heroTitle: 'Vận hành kinh doanh online bằng AI Agents.',
-    heroSubtitle: 'BunnyEra giúp thương hiệu tạo nội dung sản phẩm, triển khai marketing, chăm sóc khách hàng, quản lý logistics và tạo báo cáo kinh doanh.',
-    primaryCta: 'Bắt đầu với BunnyEra',
-    secondaryCta: 'Xem trường hợp sử dụng',
-    useCasesTitle: 'Hệ thống AI làm việc kinh doanh thực tế.',
-    agentsTitle: 'Một thương hiệu, một đội AI tự vận hành.',
-    commerceTitle: 'Từ lưu lượng thương hiệu đến doanh thu.',
-    technologyTitle: 'Hệ thống công nghệ phía sau BunnyEra.',
-    pricingTitle: 'Gói rõ ràng. Thực thi thật.',
-    finalTitle: 'Xây dựng thương hiệu. Vận hành shop. Tự động hóa công ty.'
-  },
-  id: {
-    navUseCases: 'Use Case',
-    navAgents: 'AI Agents',
-    navCommerce: 'Commerce',
-    navTechnology: 'Teknologi',
-    navPricing: 'Harga',
-    navCompany: 'Perusahaan',
-    contact: 'Kontak',
-    buyNow: 'Beli Sekarang',
-    heroEyebrow: 'Sistem AI Commerce BunnyEra',
-    heroTitle: 'Jalankan bisnis online dengan AI Agents.',
-    heroSubtitle: 'BunnyEra membantu brand membuat listing produk, konten marketing, layanan pelanggan, logistik, dan laporan bisnis dengan AI agents.',
-    primaryCta: 'Mulai dengan BunnyEra',
-    secondaryCta: 'Lihat use case',
-    useCasesTitle: 'Sistem AI untuk pekerjaan bisnis nyata.',
-    agentsTitle: 'Satu brand, satu tim AI otomatis.',
-    commerceTitle: 'Dari traffic brand ke alur pendapatan.',
-    technologyTitle: 'Stack teknologi di balik BunnyEra.',
-    pricingTitle: 'Paket jelas. Eksekusi nyata.',
-    finalTitle: 'Bangun brand. Jalankan shop. Otomatiskan perusahaan.'
-  },
-  ms: {
-    navUseCases: 'Kes Penggunaan',
-    navAgents: 'AI Agents',
-    navCommerce: 'Perdagangan',
-    navTechnology: 'Teknologi',
-    navPricing: 'Harga',
-    navCompany: 'Syarikat',
-    contact: 'Hubungi',
-    buyNow: 'Beli Sekarang',
-    heroEyebrow: 'Sistem AI Commerce BunnyEra',
-    heroTitle: 'Jalankan perniagaan online anda dengan AI Agents.',
-    heroSubtitle: 'BunnyEra membantu jenama mencipta senarai produk, melancarkan kandungan pemasaran, mengurus pelanggan, logistik, dan laporan perniagaan.',
-    primaryCta: 'Mula dengan BunnyEra',
-    secondaryCta: 'Lihat kes penggunaan',
-    useCasesTitle: 'Sistem AI untuk kerja perniagaan sebenar.',
-    agentsTitle: 'Satu jenama, satu pasukan AI autonomi.',
-    commerceTitle: 'Daripada trafik jenama kepada aliran pendapatan.',
-    technologyTitle: 'Teknologi di sebalik BunnyEra.',
-    pricingTitle: 'Pakej jelas. Pelaksanaan sebenar.',
-    finalTitle: 'Bina jenama. Jalankan kedai. Automasi syarikat.'
-  },
-  lo: {
-    navUseCases: 'ກໍລະນີນຳໃຊ້',
-    navAgents: 'AI Agents',
-    navCommerce: 'ການຄ້າ',
-    navTechnology: 'ເຕັກໂນໂລຊີ',
-    navPricing: 'ລາຄາ',
-    navCompany: 'ບໍລິສັດ',
-    contact: 'ຕິດຕໍ່',
-    buyNow: 'ຊື້ຕອນນີ້',
-    heroEyebrow: 'ລະບົບ AI Commerce BunnyEra',
-    heroTitle: 'ດຳເນີນທຸລະກິດອອນລາຍດ້ວຍ AI Agents.',
-    heroSubtitle: 'BunnyEra ຊ່ວຍແບຣນສ້າງລາຍການສິນຄ້າ, ຄອນເທນການຕະຫຼາດ, ບໍລິການລູກຄ້າ, ໂລຈິສຕິກ ແລະ ລາຍງານທຸລະກິດ.',
-    primaryCta: 'ເລີ່ມກັບ BunnyEra',
-    secondaryCta: 'ເບິ່ງການນຳໃຊ້',
-    useCasesTitle: 'ລະບົບ AI ທີ່ເຮັດວຽກທຸລະກິດໄດ້ຈິງ.',
-    agentsTitle: 'ໜຶ່ງແບຣນ, ໜຶ່ງທີມ AI ອັດຕະໂນມັດ.',
-    commerceTitle: 'ຈາກທຣາຟຟິກແບຣນໄປສູ່ລາຍໄດ້.',
-    technologyTitle: 'ເຕັກໂນໂລຊີທີ່ຂັບເຄື່ອນ BunnyEra.',
-    pricingTitle: 'ແພັກເກດຊັດເຈນ. ປະຕິບັດໄດ້ຈິງ.',
-    finalTitle: 'ສ້າງແບຣນ. ເປີດຮ້ານ. ອັດຕະໂນມັດບໍລິສັດ.'
-  }
-}
+  <script>
+    const supportedLangs = ['en', 'zh', 'th', 'ja', 'ko', 'vi', 'id', 'ms', 'lo'];
 
-function normalizeLang(lang) {
-  const l = (lang || '').toLowerCase()
+    function normalizeLang(lang) {
+      const l = (lang || '').toLowerCase();
+      if (l.startsWith('zh')) return 'zh';
+      if (l.startsWith('th')) return 'th';
+      if (l.startsWith('ja')) return 'ja';
+      if (l.startsWith('ko')) return 'ko';
+      if (l.startsWith('vi')) return 'vi';
+      if (l.startsWith('id') || l.startsWith('in')) return 'id';
+      if (l.startsWith('ms') || l.includes('-my')) return 'ms';
+      if (l.startsWith('lo')) return 'lo';
+      return 'en';
+    }
 
-  if (l.startsWith('zh')) return 'zh'
-  if (l.startsWith('th')) return 'th'
-  if (l.startsWith('ja')) return 'ja'
-  if (l.startsWith('ko')) return 'ko'
-  if (l.startsWith('vi')) return 'vi'
-  if (l.startsWith('id') || l.startsWith('in')) return 'id'
-  if (l.startsWith('ms') || l.includes('-my')) return 'ms'
-  if (l.startsWith('lo')) return 'lo'
+    const detected = normalizeLang((navigator.languages && navigator.languages[0]) || navigator.language || 'en');
+    document.documentElement.lang = supportedLangs.includes(detected) ? detected : 'en';
 
-  return 'en'
-}
-
-function detectBrowserLanguage() {
-  const langs = navigator.languages && navigator.languages.length
-    ? navigator.languages
-    : [navigator.language || 'en']
-
-  for (const lang of langs) {
-    const normalized = normalizeLang(lang)
-    if (bunnyEraLang[normalized]) return normalized
-  }
-
-  return 'en'
-}
-
-function setText(selector, text) {
-  const el = document.querySelector(selector)
-  if (el && text) el.textContent = text
-}
-
-function applyLanguage(lang, save = true) {
-  const t = bunnyEraLang[lang] || bunnyEraLang.en
-
-  setText('.nav .usecases > span', t.navUseCases)
-  setText('.nav a[href="#agents"]', t.navAgents)
-  setText('.nav a[href="#commerce"]', t.navCommerce)
-  setText('.nav a[href="#technology"]', t.navTechnology)
-  setText('.nav a[href="#pricing"]', t.navPricing)
-  setText('.nav a[href="#company"]', t.navCompany)
-  setText('.ghost-link', t.contact)
-  setText('.primary-small', t.buyNow)
-  setText('.hero .eyebrow', t.heroEyebrow)
-  setText('.hero h1', t.heroTitle)
-  setText('.hero-subtitle', t.heroSubtitle)
-  setText('.hero-actions .primary-btn', t.primaryCta)
-  setText('.hero-actions .secondary-btn', t.secondaryCta)
-  setText('#use-cases .section-head h2', t.useCasesTitle)
-  setText('#agents .section-head h2', t.agentsTitle)
-  setText('#commerce h2', t.commerceTitle)
-  setText('#technology .section-head h2', t.technologyTitle)
-  setText('#pricing .section-head h2', t.pricingTitle)
-  setText('#company h2', t.finalTitle)
-
-  document.documentElement.lang = lang
-  if (save) localStorage.setItem('bunnyera_lang', lang)
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const langSelect = document.getElementById('langSelect')
-  const savedLang = localStorage.getItem('bunnyera_lang')
-  const initialLang = savedLang || detectBrowserLanguage()
-
-  if (langSelect) {
-    langSelect.value = initialLang
-    langSelect.addEventListener('change', (e) => {
-      applyLanguage(e.target.value, true)
-    })
-  }
-
-  applyLanguage(initialLang, Boolean(savedLang))
-})
-</script>
-<!-- BUNNYERA_LANG_SCRIPT_END -->
-
+    const btn = document.getElementById('langBtn');
+    const labels = { en:'EN', zh:'中文', th:'ไทย', ja:'日本語', ko:'한국어', vi:'VI', id:'ID', ms:'MY', lo:'ລາວ' };
+    btn.textContent = labels[document.documentElement.lang] || 'EN';
+  </script>
 </body>
 </html>
