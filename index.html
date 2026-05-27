@@ -40,21 +40,7 @@
       </nav>
 
       <div class="header-actions" aria-label="Header Actions">
-        <details class="lang">
-          <summary>Languages <span aria-hidden="true">▼</span></summary>
-          <div class="lang-menu" role="menu">
-            <a role="menuitem" href="#lang-en">English</a>
-            <a role="menuitem" href="#lang-zh">中文</a>
-            <a role="menuitem" href="#lang-th">ไทย</a>
-            <a role="menuitem" href="#region-au">Australia</a>
-            <a role="menuitem" href="#region-my">Malaysia</a>
-            <a role="menuitem" href="#lang-ja">日本語</a>
-            <a role="menuitem" href="#lang-ko">한국어</a>
-            <a role="menuitem" href="#lang-vi">Tiếng Việt</a>
-            <a role="menuitem" href="#lang-id">Indonesia</a>
-          </div>
-        </details>
-
+        <a class="lang-link" href="#lang-en">Languages</a>
         <a class="contact-link" href="#contact">Contact</a>
         <a class="header-cta" href="mailto:support@bunnyerapro.com">Start with BunnyEra</a>
       </div>
@@ -87,19 +73,28 @@
           </div>
 
           <div class="workflow-block">
-            <div class="workflow-label">Agent Steps</div>
-            <ol class="workflow-steps">
-              <li><span class="step-dot"></span><span class="step-desc">Leader analyzes intent</span></li>
-              <li><span class="step-dot"></span><span class="step-desc">Planner creates execution plan</span></li>
-              <li><span class="step-dot"></span><span class="step-desc">Executor generates output</span></li>
-              <li><span class="step-dot"></span><span class="step-desc">Reviewer checks risks</span></li>
-              <li><span class="step-dot"></span><span class="step-desc">Code Health Monitor scans systems</span></li>
-            </ol>
+            <div class="workflow-label">Agent Workflow</div>
+            <div class="workflow-track" aria-label="Agent workflow chain">
+              <span class="track-node">Leader</span>
+              <span class="track-arrow" aria-hidden="true">→</span>
+              <span class="track-node">Planner</span>
+              <span class="track-arrow" aria-hidden="true">→</span>
+              <span class="track-node">Executor</span>
+              <span class="track-arrow" aria-hidden="true">→</span>
+              <span class="track-node">Reviewer</span>
+              <span class="track-arrow" aria-hidden="true">→</span>
+              <span class="track-node">Code Health</span>
+            </div>
           </div>
 
           <div class="workflow-block">
             <div class="workflow-label">Output</div>
             <div class="workflow-output">Report · Review · Next Steps · Notification</div>
+          </div>
+
+          <div class="workflow-status" aria-label="Workflow status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span class="status-text">Status: ready for execution</span>
           </div>
         </aside>
       </div>
