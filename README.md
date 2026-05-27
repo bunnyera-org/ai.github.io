@@ -1,144 +1,63 @@
-# \# ai.github.io
+# ai.github.io
 
-# 
+BunnyEra Official Website (V1).
 
-# This repository hosts the official BunnyEra public website.
+This repository hosts the public-facing BunnyEra website for the `bunnyera.com` domain.
 
-# 
+## Tech Form
 
-# It showcases the BunnyEra ecosystem, AI company architecture, multi-agent systems, automation workflows, security tools, and developer resources.
+- Pure static HTML/CSS
+- No React / Next.js / Vite
+- No package.json
+- Pages must be viewable by directly opening `index.html`
 
-# 
+## Local View
 
-# \## Repository Role
+- Open [index.html](file:///d:/GitHub/BunnyEraRepos/ai.github.io/index.html) in a browser
+- No build steps, no dev server required
 
-# 
+## Domain
 
-# ```txt
+- Custom domain is configured via [CNAME](file:///d:/GitHub/BunnyEraRepos/ai.github.io/CNAME)
+- Do not delete `CNAME` unless domain configuration changes
 
-# ai.github.io = BunnyEra official public showcase website
+## Repository Rules (Public-Safe)
 
-# Domain
+Do not store or publish:
 
-# 
+- API keys, tokens, `.env`
+- Payment information
+- Customer private data
+- Internal credentials / private business documents
+- Any restricted BunnyEra/Momo/IP character image assets
 
-# This site is configured for:
+Public brand assets should live in `bunnyera-resources`. Official documentation should live in `bunnyera-docs`.
 
-# 
+## Project Structure
 
-# bunnyera.com
+```txt
+ai.github.io/
+├─ index.html
+├─ style.css
+├─ 404.html
+├─ robots.txt
+├─ sitemap.xml
+├─ assets/
+│  ├─ icons/
+│  └─ images/
+├─ docs/
+├─ models/
+├─ CNAME
+├─ LICENSE
+└─ README.md
+```
 
-# 
+## Related Repositories
 
-# The domain is managed through:
-
-# 
-
-# CNAME
-
-# 
-
-# Do not delete the CNAME file unless the domain configuration changes.
-
-# 
-
-# What Belongs Here
-
-# Public website homepage
-
-# BunnyEra ecosystem overview
-
-# Product showcase
-
-# AI Company introduction
-
-# Repository navigation
-
-# Community links
-
-# Documentation links
-
-# Public landing page content
-
-# What Does Not Belong Here
-
-# 
-
-# Do not store:
-
-# 
-
-# API keys
-
-# .env files
-
-# Customer private data
-
-# Private tutorials
-
-# Payment information
-
-# Identity documents
-
-# Internal credentials
-
-# Momo original source assets
-
-# Private business documents
-
-# 
-
-# Public brand assets should be stored in:
-
-# 
-
-# bunnyera-resources
-
-# 
-
-# Official documentation should be stored in:
-
-# 
-
-# bunnyera-docs
-
-# Project Structure
-
-# ai.github.io/
-
-# ├─ assets/
-
-# ├─ docs/
-
-# ├─ models/
-
-# ├─ index.html
-
-# ├─ style.css
-
-# ├─ CNAME
-
-# ├─ LICENSE
-
-# └─ README.md
-
-# Related Repositories
-
-# bunnyera-console
-
-# bunnyera-ai
-
-# bunnyera-claw
-
-# bunnyera-docs
-
-# bunnyera-resources
-
-# bunnyera-community
-
-# Status
-
-# 
-
-# Initial BunnyEra public website structure is being organized.
+- bunnyera-console
+- bunnyera-ai
+- bunnyera-claw
+- bunnyera-docs
+- bunnyera-resources
+- bunnyera-community
 
