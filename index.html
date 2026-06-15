@@ -455,21 +455,136 @@
         .data-label { color: #5d6475; font-size: 11px; font-weight: 700; margin-bottom: 8px; }
         .data-value { font-size: 26px; font-weight: 800; font-family: monospace; color: #00f2fe; }
 
-        /* Footer */
+        /* ==========================================
+           💎 NEW ULTIMATE HIGH-END FOOTER DESIGN
+           ========================================== */
         footer {
-            padding: 60px 8%;
-            background: #040507;
-            border-top: 1px solid rgba(255,255,255,0.02);
+            background: #030406;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 80px 8% 40px 8%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.5fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand .f-logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(45deg, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand .f-desc {
+            color: #5d6475;
+            font-size: 13px;
+            line-height: 1.6;
+            max-width: 320px;
+        }
+
+        .footer-title {
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        /* 办公地点与电话排版 */
+        .office-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .office-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .office-name {
+            color: #8c93a6;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .office-phone {
+            color: #00f2fe;
+            font-size: 15px;
+            font-weight: 700;
+            font-family: monospace;
+            text-decoration: none;
+            transition: text-shadow 0.3s;
+        }
+
+        .office-phone:hover {
+            text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+        }
+
+        /* 社交矩阵高亮图标卡片 */
+        .social-matrix {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .social-btn {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #8c93a6;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .social-btn span {
+            font-size: 16px;
+        }
+
+        /* 悬停微光动效：流出链接 */
+        .social-btn:hover {
+            background: rgba(0, 242, 254, 0.03);
+            border-color: rgba(0, 242, 254, 0.3);
+            color: #00f2fe;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 242, 254, 0.05);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            padding-top: 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             color: #4a505e;
-            font-size: 13px;
+            font-size: 12px;
         }
 
-        .footer-logo { font-weight: 700; color: #6e7587; }
-        .footer-links a { color: #4a505e; text-decoration: none; margin-left: 25px; transition: color 0.3s; }
-        .footer-links a:hover { color: #00f2fe; }
+        .f-legal a {
+            color: #4a505e;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        .f-legal a:hover {
+            color: #00f2fe;
+        }
 
         @keyframes breathe {
             0% { box-shadow: 0 0 20px rgba(0, 242, 254, 0.3), inset 0 0 15px rgba(0, 242, 254, 0.2); }
@@ -481,10 +596,11 @@
             .hero { flex-direction: column; text-align: center; padding-top: 160px; }
             .hero-content { margin-bottom: 60px; }
             .dash-panel { grid-template-columns: 1fr; }
-            footer { flex-direction: column; gap: 20px; text-align: center; }
-            .footer-links a { margin: 0 12px; }
             header { padding: 20px 4%; }
             nav { display: none; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
+            .f-legal a { margin: 0 10px; }
         }
     </style>
 </head>
@@ -663,11 +779,44 @@
     </section>
 
     <footer>
-        <div class="footer-logo">© 2024 - 2026 BunnyEra Org. All Rights Reserved.</div>
-        <div class="footer-links">
-            <a href="#">Privacy Protocol</a>
-            <a href="#">L2 Node Status</a>
-            <a href="#">Enterprise Cloud</a>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="f-logo">BunnyEra</div>
+                <p class="f-desc">Engineering next-generation autonomous retail pipelines and decentralized execution layers for global commercial optimization.</p>
+            </div>
+
+            <div>
+                <div class="footer-title">Global Headquarters</div>
+                <div class="office-list">
+                    <div class="office-item">
+                        <span class="office-name">New York, US</span>
+                        <a href="tel:+16469910001" class="office-phone">+1 646 991 0001</a>
+                    </div>
+                    <div class="office-item">
+                        <span class="office-name">Hong Kong, CN</span>
+                        <a href="tel:+85246076024" class="office-phone">+852 4607 6024</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="footer-title">Social Gateways</div>
+                <div class="social-matrix">
+                    <a href="#" target="_blank" class="social-btn"><span>📺</span> YouTube</a>
+                    <a href="#" target="_blank" class="social-btn"><span>✈️</span> Telegram</a>
+                    <a href="#" target="_blank" class="social-btn"><span>👾</span> Discord</a>
+                    <a href="#" target="_blank" class="social-btn"><span>🐙</span> GitHub</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="f-copyright">© 2024 - 2026 BunnyEra Org. All Rights Reserved.</div>
+            <div class="f-legal">
+                <a href="#">Privacy Framework</a>
+                <a href="#">Node Operations</a>
+                <a href="#">Clearance Protocol</a>
+            </div>
         </div>
     </footer>
 
