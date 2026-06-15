@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BunnyEra | 兔兔纪元官方网站</title>
     <style>
-        /* 全局样式重置与暗黑底色 */
+        /* 全局样式与现代平滑滚动 */
         * {
             margin: 0;
             padding: 0;
@@ -13,28 +13,33 @@
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-color: #0a0b0d;
+            background-color: #050608;
             color: #ffffff;
             overflow-x: hidden;
             background-image: 
-                radial-gradient(circle at 80% 20%, rgba(0, 242, 254, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 20% 80%, rgba(255, 0, 128, 0.05) 0%, transparent 40%);
+                radial-gradient(circle at 80% 20%, rgba(0, 242, 254, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 20% 50%, rgba(255, 0, 128, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 50% 80%, rgba(0, 242, 254, 0.08) 0%, transparent 50%);
         }
 
-        /* 导航栏设计 */
+        /* 1. 顶部导航栏 */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px 8%;
-            background: rgba(10, 11, 13, 0.8);
-            backdrop-filter: blur(10px);
+            background: rgba(5, 6, 8, 0.75);
+            backdrop-filter: blur(15px);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
         }
 
         .logo {
@@ -46,26 +51,24 @@
             -webkit-text-fill-color: transparent;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
-        /* 模拟图中霓虹兔子的Logo符号 */
         .logo-icon {
-            width: 30px;
-            height: 30px;
+            width: 24px;
+            height: 24px;
             border: 2px solid #00f2fe;
             border-radius: 50%;
             box-shadow: 0 0 10px #00f2fe;
-            display: inline-block;
-            position: relative;
         }
 
         nav a {
-            color: #a0a5b5;
+            color: #8a8f9e;
             text-decoration: none;
             margin-left: 35px;
             font-size: 15px;
-            transition: color 0.3s;
+            font-weight: 500;
+            transition: all 0.3s;
         }
 
         nav a:hover, nav a.active {
@@ -77,55 +80,53 @@
             background: transparent;
             border: 1px solid #00f2fe;
             color: #00f2fe;
-            padding: 8px 20px;
+            padding: 8px 24px;
             border-radius: 20px;
             cursor: pointer;
             font-weight: 600;
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
             transition: all 0.3s ease;
         }
 
         .btn-connect:hover {
             background: #00f2fe;
-            color: #0a0b0d;
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.8);
+            color: #050608;
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.7);
         }
 
-        /* 主视觉第一屏布局 */
+        /* 2. 第一屏：主视觉区 */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             padding: 0 8%;
             padding-top: 80px;
-            position: relative;
         }
 
         .hero-content {
             flex: 1;
             max-width: 600px;
-            z-index: 2;
         }
 
         .hero-subtitle {
             color: #00f2fe;
             text-transform: uppercase;
             letter-spacing: 3px;
-            font-size: 14px;
+            font-size: 13px;
             margin-bottom: 20px;
             font-weight: 700;
         }
 
         .hero-title {
             font-size: 56px;
-            line-height: 1.1;
+            line-height: 1.15;
             margin-bottom: 25px;
             font-weight: 800;
         }
 
         .hero-title span {
             color: #00f2fe;
-            text-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+            text-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
         }
 
         .hero-desc {
@@ -135,141 +136,266 @@
             margin-bottom: 40px;
         }
 
-        .cta-group {
-            display: flex;
-            gap: 20px;
-        }
-
         .btn-primary {
             background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-            color: #0a0b0d;
+            color: #050608;
             border: none;
-            padding: 15px 35px;
+            padding: 15px 38px;
             font-size: 16px;
             font-weight: 700;
             border-radius: 30px;
             cursor: pointer;
-            box-shadow: 0 5px 25px rgba(0, 242, 254, 0.4);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 25px rgba(0, 242, 254, 0.3);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 35px rgba(0, 242, 254, 0.7);
+            box-shadow: 0 8px 35px rgba(0, 242, 254, 0.6);
         }
 
-        /* 右侧高画质 3D 质感核心展示区 */
         .hero-display {
             flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
-            z-index: 2;
         }
 
-        /* 模拟图中的高质感立体水晶框效果 */
         .crystal-card {
             width: 380px;
-            height: 480px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: 460px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 24px;
             backdrop-filter: blur(20px);
-            padding: 30px;
+            padding: 40px 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.05);
-            position: relative;
-            transition: transform 0.5s ease;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,255,255,0.02);
+            transition: all 0.5s ease;
         }
 
         .crystal-card:hover {
-            transform: translateY(-10px) rotateY(5px);
-            border-color: rgba(0, 242, 254, 0.4);
+            transform: translateY(-10px);
+            border-color: rgba(0, 242, 254, 0.3);
+            box-shadow: 0 40px 70px rgba(0,242,254,0.1), inset 0 0 20px rgba(255,255,255,0.05);
         }
 
-        /* 图中的冷光兔子霓虹符号 */
         .neon-bunny {
-            width: 180px;
-            height: 180px;
-            border: 4px solid #00f2fe;
-            border-radius: 40px;
-            margin-top: 40px;
-            box-shadow: 0 0 30px #00f2fe, inset 0 0 20px #00f2fe;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 160px;
+            height: 160px;
+            border: 3px solid #00f2fe;
+            border-radius: 35px;
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.5), inset 0 0 15px rgba(0, 242, 254, 0.3);
             position: relative;
             animation: breathe 3s infinite alternate;
         }
 
-        /* 简易兔子耳朵线条效果 */
         .neon-bunny::before, .neon-bunny::after {
             content: '';
             position: absolute;
-            top: -45px;
-            width: 35px;
-            height: 60px;
-            border: 4px solid #00f2fe;
-            border-radius: 20px 20px 0 0;
-            box-shadow: 0 0 20px #00f2fe;
+            top: -40px;
+            width: 30px;
+            height: 55px;
+            border: 3px solid #00f2fe;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
         }
-        .neon-bunny::before { left: 35px; transform: rotate(-10px); }
-        .neon-bunny::after { right: 35px; transform: rotate(10px); }
+        .neon-bunny::before { left: 32px; transform: rotate(-10px); }
+        .neon-bunny::after { right: 32px; transform: rotate(10px); }
 
-        .card-info {
+        .card-info { text-align: center; }
+        .card-title { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+        .card-tag {
+            background: rgba(0, 242, 254, 0.08);
+            color: #00f2fe;
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(0, 242, 254, 0.15);
+        }
+
+        /* 3. 第二屏：核心潮玩/盲盒展示区 */
+        .section-products {
+            padding: 120px 8%;
+            background: rgba(5, 6, 8, 0.4);
+        }
+
+        .section-header {
             text-align: center;
-            width: 100%;
+            margin-bottom: 70px;
         }
 
-        .card-title {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 8px;
+        .section-title {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            color: #00f2fe;
+        }
+
+        .section-subtitle {
+            color: #6c7281;
+            font-size: 15px;
             letter-spacing: 1px;
         }
 
-        .card-tag {
-            display: inline-block;
-            background: rgba(0, 242, 254, 0.1);
-            color: #00f2fe;
-            padding: 4px 12px;
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* 致敬图中的高质感产品卡片排版 */
+        .product-card {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            width: 300px;
+            padding: 25px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(0, 242, 254, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* 模拟精美3D公仔留空区 */
+        .product-img-holder {
+            height: 240px;
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.05) 0%, transparent 70%);
             border-radius: 12px;
-            font-size: 12px;
-            font-weight: 600;
-            border: 1px solid rgba(0, 242, 254, 0.2);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(255,255,255,0.2);
+            font-size: 13px;
+            border: 1px dashed rgba(255,255,255,0.05);
         }
 
-        /* 霓虹呼吸动画 */
+        .product-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .product-desc {
+            color: #6c7281;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 15px;
+        }
+
+        .product-price {
+            color: #00f2fe;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        /* 4. 第三屏：纪元编年史 (Roadmap) */
+        .section-roadmap {
+            padding: 120px 8%;
+            position: relative;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto 0 auto;
+        }
+
+        /* 图中的冷光线条演变成时间轴 */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, #00f2fe, rgba(0,242,254,0.1));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item.left { left: 0; text-align: right; }
+        .timeline-item.right { left: 50%; text-align: left; }
+
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            background: #050608;
+            border: 3px solid #00f2fe;
+            border-radius: 50%;
+            position: absolute;
+            top: 15px;
+            z-index: 10;
+            box-shadow: 0 0 10px #00f2fe;
+        }
+        .left .timeline-dot { right: -8px; }
+        .right .timeline-dot { left: -8px; }
+
+        .timeline-date {
+            color: #00f2fe;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .timeline-content {
+            background: rgba(255,255,255,0.01);
+            border: 1px solid rgba(255,255,255,0.03);
+            padding: 20px;
+            border-radius: 12px;
+            display: inline-block;
+            max-width: 320px;
+        }
+
+        .timeline-content h4 { margin-bottom: 8px; font-size: 16px; }
+        .timeline-content p { color: #6c7281; font-size: 13px; line-height: 1.5; }
+
+        /* 动画与适配 */
         @keyframes breathe {
-            0% {
-                box-shadow: 0 0 20px rgba(0, 242, 254, 0.4), inset 0 0 15px rgba(0, 242, 254, 0.3);
-                opacity: 0.9;
-            }
-            100% {
-                box-shadow: 0 0 40px rgba(0, 242, 254, 0.9), inset 0 0 25px rgba(0, 242, 254, 0.6);
-                opacity: 1;
-            }
+            0% { box-shadow: 0 0 20px rgba(0, 242, 254, 0.3), inset 0 0 15px rgba(0, 242, 254, 0.2); }
+            100% { box-shadow: 0 0 40px rgba(0, 242, 254, 0.7), inset 0 0 25px rgba(0, 242, 254, 0.5); }
         }
 
-        /* 响应式适配 */
         @media (max-width: 968px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding-top: 140px;
-                padding-bottom: 60px;
-            }
-            .hero-content {
-                margin-bottom: 50px;
-                max-width: 100%;
-            }
-            .cta-group {
-                justify-content: center;
-            }
+            .hero { flex-direction: column; text-align: center; padding-top: 140px; }
+            .hero-content { margin-bottom: 50px; }
+            .timeline::before { left: 40px; }
+            .timeline-item { width: 100%; text-align: left !pximportant; padding-left: 70px; padding-right: 20px; }
+            .timeline-item.right { left: 0; }
+            .left .timeline-dot, .right .timeline-dot { left: 32px; }
+            .timeline-content { max-width: 100%; }
         }
     </style>
 </head>
@@ -282,8 +408,8 @@
         </div>
         <nav>
             <a href="#" class="active">首页</a>
-            <a href="#">纪元宇宙</a>
-            <a href="#">潮玩盲盒</a>
+            <a href="#universe">纪元宇宙</a>
+            <a href="#roadmap">编年史</a>
             <a href="#">关于我们</a>
         </nav>
         <button class="btn-connect">进入纪元</button>
@@ -296,18 +422,86 @@
             <p class="hero-desc">
                 打破传统网页的平庸布局，融合尖端暗黑赛博美学。在这里，每一个潮流数字盲盒、每一个IP角色都将被赋予全新的生命力。加入我们，开启属于未来的高质感视觉盛宴。
             </p>
-            <div class="cta-group">
-                <button class="btn-primary">探索盲盒空间</button>
-            </div>
+            <a href="#universe" class="btn-primary">探索盲盒空间</a>
         </div>
 
         <div class="hero-display">
             <div class="crystal-card">
-                <div class="neon-bunny">
-                    </div>
+                <div class="neon-bunny"></div>
                 <div class="card-info">
                     <h3 class="card-title">Bunny-Cyber #001</h3>
-                    <span class="card-tag">限量版纪念实体/NFT</span>
+                    <span class="card-tag">限量版纪念实体 / NFT</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-products" id="universe">
+        <div class="section-header">
+            <h2 class="section-title">限定系列 <span>盲盒空间</span></h2>
+            <p class="section-subtitle">探索超现实主义与数字潮玩的完美融合</p>
+        </div>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-img-holder">[ 建议放置：科技宇航兔 3D图 ]</div>
+                <h3 class="product-name">Cyber Space Bunny</h3>
+                <p class="product-desc">身穿微型冷光动力甲，探索未知的赛博兔兔第一纪元元宇宙。</p>
+                <div class="product-footer">
+                    <span class="product-price">¥ 129.00</span>
+                    <span class="card-tag" style="padding:2px 10px;">PROCEED</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-holder">[ 建议放置：暗黑朋克熊 3D图 ]</div>
+                <h3 class="product-name">Neon Cyber Bear</h3>
+                <p class="product-desc">兔兔纪元最忠实的机械朋克盟友，拥有晶体化霓虹外壳设计。</p>
+                <div class="product-footer">
+                    <span class="product-price">¥ 129.00</span>
+                    <span class="card-tag" style="padding:2px 10px;">PROCEED</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-img-holder">[ 建议放置：晶体幻彩兔 3D图 ]</div>
+                <h3 class="product-name">Glitch Bunny</h3>
+                <p class="product-desc">采用双重电光粒子渲染工艺，完美重现全息投影的失真美感。</p>
+                <div class="product-footer">
+                    <span class="product-price">¥ 159.00</span>
+                    <span class="card-tag" style="padding:2px 10px;">LIMITED</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-roadmap" id="roadmap">
+        <div class="section-header">
+            <h2 class="section-title">纪元 <span>编年史</span></h2>
+            <p class="section-subtitle">BunnyEra 品牌的进化轨迹与未来愿景</p>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">PHASE 01</div>
+                    <h4>灵感萌芽 & 角色诞生</h4>
+                    <p>构思兔兔纪元宏大世界观，首款 3D 赛博潮流兔视觉原型设计完成。</p>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">PHASE 02</div>
+                    <h4>全新官网与数字空间</h4>
+                    <p>上线全新重构的黑金霓虹美学官网，开放初代盲盒线上展示与技术白皮书。</p>
+                </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">PHASE 03</div>
+                    <h4>实体潮玩 & 联名跨界</h4>
+                    <p>联合顶尖3D工艺工厂，限量发售高精度水晶冷光实体公仔，开启全渠道布局。</p>
                 </div>
             </div>
         </div>
