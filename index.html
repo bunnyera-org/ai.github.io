@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BunnyEra | 兔兔纪元官方网站</title>
+    <title>BunnyEra | Autonomous Commerce Enterprise</title>
     <style>
         /* 全局样式与现代平滑滚动 */
         * {
@@ -118,8 +118,8 @@
         }
 
         .hero-title {
-            font-size: 56px;
-            line-height: 1.15;
+            font-size: 50px;
+            line-height: 1.2;
             margin-bottom: 25px;
             font-weight: 800;
         }
@@ -179,12 +179,6 @@
             transition: all 0.5s ease;
         }
 
-        .crystal-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(0, 242, 254, 0.3);
-            box-shadow: 0 40px 70px rgba(0,242,254,0.1), inset 0 0 20px rgba(255,255,255,0.05);
-        }
-
         .neon-bunny {
             width: 160px;
             height: 160px;
@@ -220,10 +214,11 @@
             border: 1px solid rgba(0, 242, 254, 0.15);
         }
 
-        /* 3. 第二屏：核心潮玩/盲盒展示区 */
-        .section-products {
+        /* 3. 第二屏：智能商业与供应链体系 (核心公司主体) */
+        .section-core-business {
             padding: 120px 8%;
-            background: rgba(5, 6, 8, 0.4);
+            background: rgba(10, 12, 16, 0.6);
+            border-top: 1px solid rgba(255,255,255,0.02);
         }
 
         .section-header {
@@ -237,14 +232,47 @@
             margin-bottom: 15px;
         }
 
-        .section-title span {
-            color: #00f2fe;
+        .section-title span { color: #00f2fe; }
+        .section-subtitle { color: #6c7281; font-size: 15px; letter-spacing: 1px; }
+
+        .business-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
         }
 
-        .section-subtitle {
-            color: #6c7281;
-            font-size: 15px;
-            letter-spacing: 1px;
+        /* 还原参考图中的电商卡片质感 */
+        .business-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.005) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 20px;
+            width: 340px;
+            padding: 35px 30px;
+            transition: all 0.4s ease;
+        }
+
+        .business-card:hover {
+            border-color: rgba(0, 242, 254, 0.3);
+            background: rgba(255, 255, 255, 0.01);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .biz-icon {
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: #00f2fe;
+            text-shadow: 0 0 10px rgba(0,242,254,0.4);
+        }
+
+        .biz-title { font-size: 20px; font-weight: 700; margin-bottom: 15px; letter-spacing: 0.5px; }
+        .biz-desc { color: #8a8f9e; font-size: 14px; line-height: 1.6; }
+
+        /* 4. 第三屏：产品矩阵（智能硬件、周边、云系统） */
+        .section-products {
+            padding: 120px 8%;
+            background: rgba(5, 6, 8, 0.4);
         }
 
         .product-grid {
@@ -254,7 +282,6 @@
             flex-wrap: wrap;
         }
 
-        /* 致敬图中的高质感产品卡片排版 */
         .product-card {
             background: rgba(255, 255, 255, 0.01);
             border: 1px solid rgba(255, 255, 255, 0.03);
@@ -262,43 +289,28 @@
             width: 300px;
             padding: 25px;
             transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
         }
 
         .product-card:hover {
-            background: rgba(255, 255, 255, 0.03);
             border-color: rgba(0, 242, 254, 0.2);
             transform: translateY(-5px);
         }
 
-        /* 模拟精美3D公仔留空区 */
         .product-img-holder {
-            height: 240px;
-            background: radial-gradient(circle, rgba(0, 242, 254, 0.05) 0%, transparent 70%);
+            height: 200px;
+            background: radial-gradient(circle, rgba(0, 242, 254, 0.04) 0%, transparent 70%);
             border-radius: 12px;
             margin-bottom: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.3);
             font-size: 13px;
             border: 1px dashed rgba(255,255,255,0.05);
         }
 
-        .product-name {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .product-desc {
-            color: #6c7281;
-            font-size: 13px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
+        .product-name { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+        .product-desc { color: #6c7281; font-size: 13px; line-height: 1.5; margin-bottom: 15px; }
         .product-footer {
             display: flex;
             justify-content: space-between;
@@ -306,83 +318,84 @@
             border-top: 1px solid rgba(255,255,255,0.05);
             padding-top: 15px;
         }
+        .product-status { color: #00f2fe; font-weight: 700; font-size: 14px; }
 
-        .product-price {
-            color: #00f2fe;
-            font-weight: 700;
-            font-size: 16px;
-        }
-
-        /* 4. 第三屏：纪元编年史 (Roadmap) */
-        .section-roadmap {
+        /* 5. 第五屏：系统底层与技术架构数据看板 (致敬参考图中的L2 Layer等元素) */
+        .section-architecture {
             padding: 120px 8%;
-            position: relative;
+            background: rgba(10, 12, 16, 0.8);
         }
 
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 50px auto 0 auto;
+        .dashboard-mockup {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #0d0f13;
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.6);
         }
 
-        /* 图中的冷光线条演变成时间轴 */
-        .timeline::before {
-            content: '';
-            position: absolute;
-            width: 2px;
-            background: linear-gradient(to bottom, #00f2fe, rgba(0,242,254,0.1));
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+        .dash-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
+        .dash-dots { display: flex; gap: 8px; }
+        .dash-dot { width: 12px; height: 12px; border-radius: 50%; background: #28c940; }
+        .dash-dot:nth-child(2) { background: #f2a134; }
+        .dash-dot:nth-child(3) { background: #e9534f; }
+        .dash-title { color: #6c7281; font-size: 13px; font-family: monospace; }
+
+        .dash-body {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
         }
 
-        .timeline-item.left { left: 0; text-align: right; }
-        .timeline-item.right { left: 50%; text-align: left; }
-
-        .timeline-dot {
-            width: 16px;
-            height: 16px;
-            background: #050608;
-            border: 3px solid #00f2fe;
-            border-radius: 50%;
-            position: absolute;
-            top: 15px;
-            z-index: 10;
-            box-shadow: 0 0 10px #00f2fe;
-        }
-        .left .timeline-dot { right: -8px; }
-        .right .timeline-dot { left: -8px; }
-
-        .timeline-date {
-            color: #00f2fe;
-            font-weight: 700;
-            font-size: 14px;
-            margin-bottom: 5px;
-            letter-spacing: 1px;
-        }
-
-        .timeline-content {
+        .dash-sidebar {
             background: rgba(255,255,255,0.01);
-            border: 1px solid rgba(255,255,255,0.03);
-            padding: 20px;
-            border-radius: 12px;
-            display: inline-block;
-            max-width: 320px;
+            border-right: 1px solid rgba(255,255,255,0.05);
+            padding-right: 15px;
         }
 
-        .timeline-content h4 { margin-bottom: 8px; font-size: 16px; }
-        .timeline-content p { color: #6c7281; font-size: 13px; line-height: 1.5; }
+        .dash-item {
+            padding: 12px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.02);
+            margin-bottom: 10px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid transparent;
+        }
+        .dash-item.active {
+            border-color: rgba(0, 242, 254, 0.3);
+            background: rgba(0, 242, 254, 0.05);
+            color: #00f2fe;
+        }
 
-        /* 动画与适配 */
+        .dash-main {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .stat-box {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .stat-label { color: #6c7281; font-size: 12px; margin-bottom: 5px; }
+        .stat-value { font-size: 20px; font-weight: 700; font-family: monospace; color: #00f2fe; }
+
+        /* 动画 */
         @keyframes breathe {
             0% { box-shadow: 0 0 20px rgba(0, 242, 254, 0.3), inset 0 0 15px rgba(0, 242, 254, 0.2); }
             100% { box-shadow: 0 0 40px rgba(0, 242, 254, 0.7), inset 0 0 25px rgba(0, 242, 254, 0.5); }
@@ -391,11 +404,8 @@
         @media (max-width: 968px) {
             .hero { flex-direction: column; text-align: center; padding-top: 140px; }
             .hero-content { margin-bottom: 50px; }
-            .timeline::before { left: 40px; }
-            .timeline-item { width: 100%; text-align: left !pximportant; padding-left: 70px; padding-right: 20px; }
-            .timeline-item.right { left: 0; }
-            .left .timeline-dot, .right .timeline-dot { left: 32px; }
-            .timeline-content { max-width: 100%; }
+            .dash-body { grid-template-columns: 1fr; }
+            .dash-sidebar { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 15px; }
         }
     </style>
 </head>
@@ -407,101 +417,136 @@
             BunnyEra
         </div>
         <nav>
-            <a href="#" class="active">首页</a>
-            <a href="#universe">纪元宇宙</a>
-            <a href="#roadmap">编年史</a>
-            <a href="#">关于我们</a>
+            <a href="#" class="active">企业首页</a>
+            <a href="#core">核心业务</a>
+            <a href="#products">产品生态</a>
+            <a href="#architecture">网络架构</a>
         </nav>
-        <button class="btn-connect">进入纪元</button>
+        <button class="btn-connect">智能后台连接</button>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-subtitle">Next-Gen IP Ecosystem</div>
-            <h1 class="hero-title">欢迎来到全新的<br><span>兔兔纪元</span></h1>
+            <div class="hero-subtitle">The Autonomous Commerce Enterprise</div>
+            <h1 class="hero-title">自主商业新纪元<br>智能规划 <span>美好生活</span></h1>
             <p class="hero-desc">
-                打破传统网页的平庸布局，融合尖端暗黑赛博美学。在这里，每一个潮流数字盲盒、每一个IP角色都将被赋予全新的生命力。加入我们，开启属于未来的高质感视觉盛宴。
+                BunnyEra（2024-2026）是一家专注于下一代智能商业体系的前沿企业。依托去中心化网络架构、智能硬件终端与柔性供应链，提供一站式自动化电商、高质感硬周边与全球物流分发底座。
             </p>
-            <a href="#universe" class="btn-primary">探索盲盒空间</a>
+            <a href="#core" class="btn-primary">进入自主生态</a>
         </div>
 
         <div class="hero-display">
             <div class="crystal-card">
                 <div class="neon-bunny"></div>
                 <div class="card-info">
-                    <h3 class="card-title">Bunny-Cyber #001</h3>
-                    <span class="card-tag">限量版纪念实体 / NFT</span>
+                    <h3 class="card-title">Autonomous Hub</h3>
+                    <span class="card-tag">Smart Plans, Better Life</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-products" id="universe">
+    <section class="section-core-business" id="core">
         <div class="section-header">
-            <h2 class="section-title">限定系列 <span>盲盒空间</span></h2>
-            <p class="section-subtitle">探索超现实主义与数字潮玩的完美融合</p>
+            <h2 class="section-title">核心业务 <span>主体板块</span></h2>
+            <p class="section-subtitle">打通线上自动化商业逻辑与线下实体供应链</p>
+        </div>
+        
+        <div class="business-grid">
+            <div class="business-card">
+                <div class="biz-icon">⚡</div>
+                <h3 class="biz-title">自主商业系统 (Autonomous Commerce)</h3>
+                <p class="biz-desc">提供下一代智能商业运营矩阵，通过 AI 决策流自动调度全球零售网络，完成精准市场投放与自动化资金结算。</p>
+            </div>
+            <div class="business-card">
+                <div class="biz-icon">📦</div>
+                <h3 class="biz-title">柔性跨境供应链 (Global Supply Chain)</h3>
+                <p class="biz-desc">联动智能立体仓储与物流节点。图中的智慧包裹及全链路追踪系统，保障全球零售硬件与潮玩的高质、快速通达。</p>
+            </div>
+            <div class="business-card">
+                <div class="biz-icon">⛓️</div>
+                <h3 class="biz-title">分布式网络底座 (L2 Infrastructure)</h3>
+                <p class="biz-desc">依托高度安全的 Layer 2 基础网络架构，实现商业数据、节点结算与 IP 资产的秒级合规确权上链。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-products" id="products">
+        <div class="section-header">
+            <h2 class="section-title">软硬件 <span>产品生态</span></h2>
+            <p class="section-subtitle">致敬硬核美学：图中所见的实体硬件与智能周边矩阵</p>
         </div>
         
         <div class="product-grid">
             <div class="product-card">
-                <div class="product-img-holder">[ 建议放置：科技宇航兔 3D图 ]</div>
-                <h3 class="product-name">Cyber Space Bunny</h3>
-                <p class="product-desc">身穿微型冷光动力甲，探索未知的赛博兔兔第一纪元元宇宙。</p>
+                <div class="product-img-holder">[ 建议放置：多头发光数据线 3D图 ]</div>
+                <h3 class="product-name">Multi-Node Cyber Cable</h3>
+                <p class="product-desc">多协议多分支智能快充线缆，带有 BunnyEra 冷光智能芯片，实时监控电压电流。</p>
                 <div class="product-footer">
-                    <span class="product-price">¥ 129.00</span>
-                    <span class="card-tag" style="padding:2px 10px;">PROCEED</span>
+                    <span class="product-status">硬件已量产</span>
+                    <span class="card-tag" style="padding:2px 10px;">Specs</span>
                 </div>
             </div>
             <div class="product-card">
-                <div class="product-img-holder">[ 建议放置：暗黑朋克熊 3D图 ]</div>
-                <h3 class="product-name">Neon Cyber Bear</h3>
-                <p class="product-desc">兔兔纪元最忠实的机械朋克盟友，拥有晶体化霓虹外壳设计。</p>
+                <div class="product-img-holder">[ 建议放置：水晶发光体/硬件终端 ]</div>
+                <h3 class="product-name">Neon Crystal Node</h3>
+                <p class="product-desc">图中展示的高级冷光水晶立方体。不仅是品牌的桌面视觉符号，更是微型智能商业网关。</p>
                 <div class="product-footer">
-                    <span class="product-price">¥ 129.00</span>
-                    <span class="card-tag" style="padding:2px 10px;">PROCEED</span>
+                    <span class="product-status">限量定制</span>
+                    <span class="card-tag" style="padding:2px 10px;">View</span>
                 </div>
             </div>
             <div class="product-card">
-                <div class="product-img-holder">[ 建议放置：晶体幻彩兔 3D图 ]</div>
-                <h3 class="product-name">Glitch Bunny</h3>
-                <p class="product-desc">采用双重电光粒子渲染工艺，完美重现全息投影的失真美感。</p>
+                <div class="product-img-holder">[ 建议放置：电商/智能面板系统 ]</div>
+                <h3 class="product-name">Enterprise Cloud SaaS</h3>
+                <p class="product-desc">智能商业中枢管理看板。秒级调控跨境运力，全面支持智能化、无缝化电商运营。</p>
                 <div class="product-footer">
-                    <span class="product-price">¥ 159.00</span>
-                    <span class="card-tag" style="padding:2px 10px;">LIMITED</span>
+                    <span class="product-status">2.0 运行中</span>
+                    <span class="card-tag" style="padding:2px 10px;">Launch</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-roadmap" id="roadmap">
+    <section class="section-architecture" id="architecture">
         <div class="section-header">
-            <h2 class="section-title">纪元 <span>编年史</span></h2>
-            <p class="section-subtitle">BunnyEra 品牌的进化轨迹与未来愿景</p>
+            <h2 class="section-title">底座 <span>网络架构看板</span></h2>
+            <p class="section-subtitle">企业级分布式商业系统的实时运营状态演示</p>
         </div>
 
-        <div class="timeline">
-            <div class="timeline-item left">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">PHASE 01</div>
-                    <h4>灵感萌芽 & 角色诞生</h4>
-                    <p>构思兔兔纪元宏大世界观，首款 3D 赛博潮流兔视觉原型设计完成。</p>
+        <div class="dashboard-mockup">
+            <div class="dash-header">
+                <div class="dash-dots">
+                    <div class="dash-dot"></div>
+                    <div class="dash-dot"></div>
+                    <div class="dash-dot"></div>
                 </div>
+                <div class="dash-title">BUNNYERA_CORE_PROTOCOL v2.05_L2</div>
             </div>
-            <div class="timeline-item right">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">PHASE 02</div>
-                    <h4>全新官网与数字空间</h4>
-                    <p>上线全新重构的黑金霓虹美学官网，开放初代盲盒线上展示与技术白皮书。</p>
+            <div class="dash-body">
+                <div class="dash-sidebar">
+                    <div class="dash-item active">
+                        <span>● Core Network</span>
+                        <span>Active</span>
+                    </div>
+                    <div class="dash-item">
+                        <span>API Layers</span>
+                        <span>100%</span>
+                    </div>
+                    <div class="dash-item">
+                        <span>Supply Chain Hub</span>
+                        <span>Global</span>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item left">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-date">PHASE 03</div>
-                    <h4>实体潮玩 & 联名跨界</h4>
-                    <p>联合顶尖3D工艺工厂，限量发售高精度水晶冷光实体公仔，开启全渠道布局。</p>
+                <div class="dash-main">
+                    <div class="stat-box">
+                        <div class="stat-label">TOTAL COMMERCIAL NODE VOLUME (24H)</div>
+                        <div class="stat-value">$14,892,105.42</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">LAYER-2 PROTOCOL SETTLEMENT SPEED</div>
+                        <div class="stat-value">2,400 TPS (0.002s latency)</div>
+                    </div>
                 </div>
             </div>
         </div>
