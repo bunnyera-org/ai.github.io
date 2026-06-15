@@ -24,9 +24,9 @@
             color: #ffffff;
             overflow-x: hidden;
             background-image: 
-                radial-gradient(circle at 85% 15%, rgba(0, 242, 254, 0.15) 0%, transparent 60%),
-                radial-gradient(circle at 15% 45%, rgba(255, 0, 128, 0.04) 0%, transparent 50%),
-                radial-gradient(circle at 50% 85%, rgba(0, 242, 254, 0.08) 0%, transparent 60%);
+                radial-gradient(circle at 85% 15%, rgba(0, 242, 254, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 15% 45%, rgba(255, 0, 128, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 50% 85%, rgba(0, 242, 254, 0.06) 0%, transparent 60%);
             background-attachment: fixed;
         }
 
@@ -44,7 +44,6 @@
             background: rgba(0, 242, 254, 0.5);
         }
 
-        /* Header Control Tower */
         header {
             display: flex;
             justify-content: space-between;
@@ -112,7 +111,6 @@
             box-shadow: 0 0 25px rgba(0, 242, 254, 0.8);
         }
 
-        /* Sections Layout */
         section {
             padding: 140px 8%;
             border-top: 1px solid rgba(255, 255, 255, 0.02);
@@ -147,16 +145,17 @@
             text-transform: uppercase;
         }
 
-        /* Hero Scene */
+        /* Hero Scene - Now upgraded with image_af0d84.jpg */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             padding-top: 120px;
+            gap: 40px;
         }
 
         .hero-content {
-            flex: 1.2;
+            flex: 1.1;
             max-width: 650px;
         }
 
@@ -209,74 +208,36 @@
             box-shadow: 0 8px 35px rgba(0, 242, 254, 0.6);
         }
 
-        /* Neon Crystal Card Visual */
+        /* Hero Display Container for Ecosystem Showcase */
         .hero-display {
-            flex: 0.8;
+            flex: 0.9;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .crystal-card {
-            width: 380px;
-            height: 480px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.005) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 28px;
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.6), inset 0 0 20px rgba(255,255,255,0.02);
-            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .crystal-card:hover {
-            transform: translateY(-12px);
-            border-color: rgba(0, 242, 254, 0.3);
-            box-shadow: 0 50px 90px rgba(0, 242, 254, 0.15);
-        }
-
-        .neon-bunny {
-            width: 170px;
-            height: 170px;
-            border: 3px solid #00f2fe;
-            border-radius: 40px;
-            box-shadow: 0 0 30px rgba(0, 242, 254, 0.4), inset 0 0 20px rgba(0, 242, 254, 0.2);
             position: relative;
-            animation: breathe 4s infinite alternate ease-in-out;
         }
 
-        .neon-bunny::before, .neon-bunny::after {
-            content: '';
-            position: absolute;
-            top: -42px;
-            width: 32px;
-            height: 60px;
-            border: 3px solid #00f2fe;
-            border-radius: 18px 18px 0 0;
-            box-shadow: 0 0 18px rgba(0, 242, 254, 0.4);
-        }
-        .neon-bunny::before { left: 34px; transform: rotate(-8px); }
-        .neon-bunny::after { right: 34px; transform: rotate(8px); }
-
-        .card-info { text-align: center; }
-        .card-title { font-size: 24px; font-weight: 800; margin-bottom: 12px; }
-        .card-tag {
-            background: rgba(0, 242, 254, 0.08);
-            color: #00f2fe;
-            padding: 6px 18px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            border: 1px solid rgba(0, 242, 254, 0.15);
-            letter-spacing: 0.5px;
+        .hero-img-frame {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 40px rgba(0, 242, 254, 0.15);
+            transition: transform 0.5s ease;
+            overflow: hidden;
         }
 
-        /* Infrastructure Info Block */
+        .hero-img-frame:hover {
+            transform: scale(1.02) translateY(-5px);
+        }
+
+        .hero-img-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Tech Infrastructure Cards */
         .tech-grid {
             display: flex;
             justify-content: center;
@@ -302,7 +263,7 @@
         .tech-title { font-size: 20px; font-weight: 700; margin-bottom: 15px; }
         .tech-desc { color: #8c93a6; font-size: 14px; line-height: 1.6; }
 
-        /* Hardware Terminal Box */
+        /* Hardware Matrix Section Upgraded with image_9e400e.jpg */
         .prod-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -323,17 +284,21 @@
         }
 
         .prod-viewport {
-            height: 220px;
-            background: radial-gradient(circle, rgba(0, 242, 254, 0.05) 0%, transparent 75%);
+            height: 240px;
+            background: #0d0f14;
             border-radius: 16px;
             margin-bottom: 25px;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: rgba(255,255,255,0.25);
-            font-size: 11px;
-            border: 1px dashed rgba(255,255,255,0.04);
-            font-family: monospace;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .prod-viewport img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .prod-name { font-size: 19px; font-weight: 700; margin-bottom: 10px; }
@@ -346,6 +311,15 @@
             padding-top: 18px;
         }
         .prod-status { color: #00f2fe; font-weight: 700; font-size: 12px; font-family: monospace; }
+        .card-tag {
+            background: rgba(0, 242, 254, 0.08);
+            color: #00f2fe;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            border: 1px solid rgba(0, 242, 254, 0.15);
+        }
 
         /* Founders Panel */
         .founders-grid {
@@ -392,7 +366,7 @@
         .founder-role { color: #00f2fe; font-size: 12px; font-weight: 700; margin-bottom: 15px; font-family: monospace; }
         .founder-bio { color: #6e7587; font-size: 13px; line-height: 1.5; }
 
-        /* Dashboard Interface */
+        /* Dashboard Global Console Matrix */
         .dashboard-container {
             max-width: 1000px;
             margin: 0 auto;
@@ -456,7 +430,7 @@
         .data-value { font-size: 26px; font-weight: 800; font-family: monospace; color: #00f2fe; }
 
         /* ==========================================
-           💎 NEW ULTIMATE HIGH-END FOOTER DESIGN
+           💎 HIGH-END FOOTER WITH SOCMED HOOK
            ========================================== */
         footer {
             background: #030406;
@@ -496,7 +470,6 @@
             margin-bottom: 25px;
         }
 
-        /* 办公地点与电话排版 */
         .office-list {
             display: flex;
             flex-direction: column;
@@ -530,7 +503,7 @@
             text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
         }
 
-        /* 社交矩阵高亮图标卡片 */
+        /* 社交矩阵设计 */
         .social-matrix {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -556,7 +529,6 @@
             font-size: 16px;
         }
 
-        /* 悬停微光动效：流出链接 */
         .social-btn:hover {
             background: rgba(0, 242, 254, 0.03);
             border-color: rgba(0, 242, 254, 0.3);
@@ -586,15 +558,9 @@
             color: #00f2fe;
         }
 
-        @keyframes breathe {
-            0% { box-shadow: 0 0 20px rgba(0, 242, 254, 0.3), inset 0 0 15px rgba(0, 242, 254, 0.2); }
-            100% { box-shadow: 0 0 45px rgba(0, 242, 254, 0.7), inset 0 0 25px rgba(0, 242, 254, 0.5); }
-        }
-
-        /* Responsive Breakpoints */
         @media (max-width: 968px) {
             .hero { flex-direction: column; text-align: center; padding-top: 160px; }
-            .hero-content { margin-bottom: 60px; }
+            .hero-content { margin-bottom: 40px; }
             .dash-panel { grid-template-columns: 1fr; }
             header { padding: 20px 4%; }
             nav { display: none; }
@@ -632,12 +598,8 @@
         </div>
 
         <div class="hero-display">
-            <div class="crystal-card">
-                <div class="neon-bunny"></div>
-                <div class="card-info">
-                    <h3 class="card-title">Autonomous Hub</h3>
-                    <span class="card-tag">SMART PLANS, BETTER LIFE.</span>
-                </div>
+            <div class="hero-img-frame">
+                <img src="image_af0d84.jpg" alt="BunnyEra Brand Ecosystem Showcase">
             </div>
         </div>
     </section>
@@ -675,19 +637,23 @@
 
         <div class="prod-grid">
             <div class="prod-card">
-                <div class="prod-viewport">[ 3D VIEWPORT: MULTI-NODE CABLE ]</div>
-                <h3 class="prod-name">Multi-Node Cyber Cable</h3>
-                <p class="prod-desc">As featured in our blueprint blueprints. A high-performance multi-fork fast-charging cable embedded with our proprietary power monitoring chipsets.</p>
+                <div class="prod-viewport">
+                    <img src="image_9e400e.jpg" alt="AR Spatial Retail Hub">
+                </div>
+                <h3 class="prod-name">Spatial Retail Mobile Hub</h3>
+                <p class="prod-desc">Next-generation AR e-commerce interface rendering retail physical objects into real-time interactive floating data structures.</p>
                 <div class="prod-meta">
-                    <span class="prod-status">ACTIVE // MASS PRODUCTION</span>
-                    <span class="card-tag">HARDWARE</span>
+                    <span class="prod-status">ACTIVE // INTERACTIVE</span>
+                    <span class="card-tag">MOBILE</span>
                 </div>
             </div>
 
             <div class="prod-card">
-                <div class="prod-viewport">[ 3D VIEWPORT: CRYSTAL TERMINAL ]</div>
-                <h3 class="prod-name">Neon Crystal Node</h3>
-                <p class="prod-desc">The signature high-gloss glowing crystal cube. Not just an iconic visual masterpiece, but a physical gateway terminal for micro-commerce computing.</p>
+                <div class="prod-viewport">
+                    <img src="image_aefae2.jpg" alt="Cyber Bunny Node Terminal">
+                </div>
+                <h3 class="prod-name">Neon Crystal Node V1</h3>
+                <p class="prod-desc">The signature interactive user gateway terminal featuring neon light piping technology and encrypted asset hardware modules.</p>
                 <div class="prod-meta">
                     <span class="prod-status">LIMITED EDITION</span>
                     <span class="card-tag">TERMINAL</span>
@@ -695,12 +661,14 @@
             </div>
 
             <div class="prod-card">
-                <div class="prod-viewport">[ 3D VIEWPORT: LOGISTICS BOX ]</div>
-                <h3 class="prod-name">Autonomous Logistics Box</h3>
-                <p class="prod-desc">Smart eco-friendly packaging branded with our core symbol. Integrated into the global logistics line with passive tracking to secure physical asset routing.</p>
+                <div class="prod-viewport">
+                    <img src="image_9e4064.jpg" alt="Multi-Channel Matrix Control">
+                </div>
+                <h3 class="prod-name">Multi-Channel Ad Matrix</h3>
+                <p class="prod-desc">Integrated dashboard synchronization connecting cross-border store nodes directly into international ad distribution centers.</p>
                 <div class="prod-meta">
-                    <span class="prod-status">DEPLOYED // TRACKING</span>
-                    <span class="card-tag">LOGISTICS</span>
+                    <span class="prod-status">DEPLOYED // LIVE</span>
+                    <span class="card-tag">MARKETING</span>
                 </div>
             </div>
         </div>
