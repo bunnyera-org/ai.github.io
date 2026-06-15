@@ -1,413 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BunnyEra | Autonomous Commerce Enterprise</title>
-    <style>
-        /* 全局样式与现代平滑滚动 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: #050608;
-            color: #ffffff;
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 80% 20%, rgba(0, 242, 254, 0.12) 0%, transparent 50%),
-                radial-gradient(circle at 20% 50%, rgba(255, 0, 128, 0.03) 0%, transparent 40%),
-                radial-gradient(circle at 50% 80%, rgba(0, 242, 254, 0.08) 0%, transparent 50%);
-        }
-
-        /* 1. 顶部导航栏 */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background: rgba(5, 6, 8, 0.75);
-            backdrop-filter: blur(15px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            background: linear-gradient(45deg, #00f2fe, #4facfe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-icon {
-            width: 24px;
-            height: 24px;
-            border: 2px solid #00f2fe;
-            border-radius: 50%;
-            box-shadow: 0 0 10px #00f2fe;
-        }
-
-        nav a {
-            color: #8a8f9e;
-            text-decoration: none;
-            margin-left: 35px;
-            font-size: 15px;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-
-        nav a:hover, nav a.active {
-            color: #00f2fe;
-            text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
-        }
-
-        .btn-connect {
-            background: transparent;
-            border: 1px solid #00f2fe;
-            color: #00f2fe;
-            padding: 8px 24px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .btn-connect:hover {
-            background: #00f2fe;
-            color: #050608;
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.7);
-        }
-
-        /* 2. 第一屏：主视觉区 */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 0 8%;
-            padding-top: 80px;
-        }
-
-        .hero-content {
-            flex: 1;
-            max-width: 600px;
-        }
-
-        .hero-subtitle {
-            color: #00f2fe;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 13px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .hero-title {
-            font-size: 50px;
-            line-height: 1.2;
-            margin-bottom: 25px;
-            font-weight: 800;
-        }
-
-        .hero-title span {
-            color: #00f2fe;
-            text-shadow: 0 0 20px rgba(0, 242, 254, 0.5);
-        }
-
-        .hero-desc {
-            color: #8a8f9e;
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-            color: #050608;
-            border: none;
-            padding: 15px 38px;
-            font-size: 16px;
-            font-weight: 700;
-            border-radius: 30px;
-            cursor: pointer;
-            box-shadow: 0 5px 25px rgba(0, 242, 254, 0.3);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 35px rgba(0, 242, 254, 0.6);
-        }
-
-        .hero-display {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .crystal-card {
-            width: 380px;
-            height: 460px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 24px;
-            backdrop-filter: blur(20px);
-            padding: 40px 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,255,255,0.02);
-            transition: all 0.5s ease;
-        }
-
-        .neon-bunny {
-            width: 160px;
-            height: 160px;
-            border: 3px solid #00f2fe;
-            border-radius: 35px;
-            box-shadow: 0 0 25px rgba(0, 242, 254, 0.5), inset 0 0 15px rgba(0, 242, 254, 0.3);
-            position: relative;
-            animation: breathe 3s infinite alternate;
-        }
-
-        .neon-bunny::before, .neon-bunny::after {
-            content: '';
-            position: absolute;
-            top: -40px;
-            width: 30px;
-            height: 55px;
-            border: 3px solid #00f2fe;
-            border-radius: 15px 15px 0 0;
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
-        }
-        .neon-bunny::before { left: 32px; transform: rotate(-10px); }
-        .neon-bunny::after { right: 32px; transform: rotate(10px); }
-
-        .card-info { text-align: center; }
-        .card-title { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
-        .card-tag {
-            background: rgba(0, 242, 254, 0.08);
-            color: #00f2fe;
-            padding: 5px 16px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            border: 1px solid rgba(0, 242, 254, 0.15);
-        }
-
-        /* 3. 第二屏：智能商业与供应链体系 (核心公司主体) */
-        .section-core-business {
-            padding: 120px 8%;
-            background: rgba(10, 12, 16, 0.6);
-            border-top: 1px solid rgba(255,255,255,0.02);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 70px;
-        }
-
-        .section-title {
-            font-size: 38px;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .section-title span { color: #00f2fe; }
-        .section-subtitle { color: #6c7281; font-size: 15px; letter-spacing: 1px; }
-
-        .business-grid {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        /* 还原参考图中的电商卡片质感 */
-        .business-card {
-            background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.005) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            border-radius: 20px;
-            width: 340px;
-            padding: 35px 30px;
-            transition: all 0.4s ease;
-        }
-
-        .business-card:hover {
-            border-color: rgba(0, 242, 254, 0.3);
-            background: rgba(255, 255, 255, 0.01);
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-
-        .biz-icon {
-            font-size: 32px;
-            margin-bottom: 25px;
-            color: #00f2fe;
-            text-shadow: 0 0 10px rgba(0,242,254,0.4);
-        }
-
-        .biz-title { font-size: 20px; font-weight: 700; margin-bottom: 15px; letter-spacing: 0.5px; }
-        .biz-desc { color: #8a8f9e; font-size: 14px; line-height: 1.6; }
-
-        /* 4. 第三屏：产品矩阵（智能硬件、周边、云系统） */
-        .section-products {
-            padding: 120px 8%;
-            background: rgba(5, 6, 8, 0.4);
-        }
-
-        .product-grid {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .product-card {
-            background: rgba(255, 255, 255, 0.01);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 20px;
-            width: 300px;
-            padding: 25px;
-            transition: all 0.4s ease;
-        }
-
-        .product-card:hover {
-            border-color: rgba(0, 242, 254, 0.2);
-            transform: translateY(-5px);
-        }
-
-        .product-img-holder {
-            height: 200px;
-            background: radial-gradient(circle, rgba(0, 242, 254, 0.04) 0%, transparent 70%);
-            border-radius: 12px;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: rgba(255,255,255,0.3);
-            font-size: 13px;
-            border: 1px dashed rgba(255,255,255,0.05);
-        }
-
-        .product-name { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-        .product-desc { color: #6c7281; font-size: 13px; line-height: 1.5; margin-bottom: 15px; }
-        .product-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 15px;
-        }
-        .product-status { color: #00f2fe; font-weight: 700; font-size: 14px; }
-
-        /* 5. 第五屏：系统底层与技术架构数据看板 (致敬参考图中的L2 Layer等元素) */
-        .section-architecture {
-            padding: 120px 8%;
-            background: rgba(10, 12, 16, 0.8);
-        }
-
-        .dashboard-mockup {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #0d0f13;
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 40px 80px rgba(0,0,0,0.6);
-        }
-
-        .dash-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-
-        .dash-dots { display: flex; gap: 8px; }
-        .dash-dot { width: 12px; height: 12px; border-radius: 50%; background: #28c940; }
-        .dash-dot:nth-child(2) { background: #f2a134; }
-        .dash-dot:nth-child(3) { background: #e9534f; }
-        .dash-title { color: #6c7281; font-size: 13px; font-family: monospace; }
-
-        .dash-body {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 20px;
-        }
-
-        .dash-sidebar {
-            background: rgba(255,255,255,0.01);
-            border-right: 1px solid rgba(255,255,255,0.05);
-            padding-right: 15px;
-        }
-
-        .dash-item {
-            padding: 12px;
-            border-radius: 8px;
-            background: rgba(255,255,255,0.02);
-            margin-bottom: 10px;
-            font-size: 13px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid transparent;
-        }
-        .dash-item.active {
-            border-color: rgba(0, 242, 254, 0.3);
-            background: rgba(0, 242, 254, 0.05);
-            color: #00f2fe;
-        }
-
-        .dash-main {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .stat-box {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.04);
-            border-radius: 8px;
-            padding: 15px;
-        }
-        .stat-label { color: #6c7281; font-size: 12px; margin-bottom: 5px; }
-        .stat-value { font-size: 20px; font-weight: 700; font-family: monospace; color: #00f2fe; }
-
-        /* 动画 */
-        @keyframes breathe {
-            0% { box-shadow: 0 0 20px rgba(0, 242, 254, 0.3), inset 0 0 15px rgba(0, 242, 254, 0.2); }
-            100% { box-shadow: 0 0 40px rgba(0, 242, 254, 0.7), inset 0 0 25px rgba(0, 242, 254, 0.5); }
-        }
-
-        @media (max-width: 968px) {
-            .hero { flex-direction: column; text-align: center; padding-top: 140px; }
-            .hero-content { margin-bottom: 50px; }
-            .dash-body { grid-template-columns: 1fr; }
-            .dash-sidebar { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 15px; }
-        }
-    </style>
+    <title>BunnyEra | The Autonomous Commerce Enterprise</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -417,22 +14,23 @@
             BunnyEra
         </div>
         <nav>
-            <a href="#" class="active">企业首页</a>
-            <a href="#core">核心业务</a>
-            <a href="#products">产品生态</a>
-            <a href="#architecture">网络架构</a>
+            <a href="#" class="active">Enterprise Hub</a>
+            <a href="#core">Infrastructure</a>
+            <a href="#hardware">Hardware Ecosystem</a>
+            <a href="#founders">Founders</a>
+            <a href="#network">Global Console</a>
         </nav>
-        <button class="btn-connect">智能后台连接</button>
+        <button class="btn-connect" onclick="alert('Accessing Autonomous Commerce Node Data...')">Launch Console</button>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-subtitle">The Autonomous Commerce Enterprise</div>
-            <h1 class="hero-title">自主商业新纪元<br>智能规划 <span>美好生活</span></h1>
+            <div class="hero-subtitle">The Autonomous Commerce Enterprise // 2024-2026</div>
+            <h1 class="hero-title">The Next Era of<br>Autonomous Commerce.<br><span>Smart Plans, Better Life.</span></h1>
             <p class="hero-desc">
-                BunnyEra（2024-2026）是一家专注于下一代智能商业体系的前沿企业。依托去中心化网络架构、智能硬件终端与柔性供应链，提供一站式自动化电商、高质感硬周边与全球物流分发底座。
+                BunnyEra is a pioneering global enterprise bridging cyber-aesthetics, intelligent hardware terminals, and decentralized settlement infrastructure. We reject mediocrity, engineering autonomous retail cloud networks powered by next-gen workflows.
             </p>
-            <a href="#core" class="btn-primary">进入自主生态</a>
+            <a href="#core" class="btn-primary">Explore Ecosystem</a>
         </div>
 
         <div class="hero-display">
@@ -440,117 +38,156 @@
                 <div class="neon-bunny"></div>
                 <div class="card-info">
                     <h3 class="card-title">Autonomous Hub</h3>
-                    <span class="card-tag">Smart Plans, Better Life</span>
+                    <span class="card-tag">SMART PLANS, BETTER LIFE.</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-core-business" id="core">
+    <section id="core">
         <div class="section-header">
-            <h2 class="section-title">核心业务 <span>主体板块</span></h2>
-            <p class="section-subtitle">打通线上自动化商业逻辑与线下实体供应链</p>
+            <h2 class="section-title">Core <span>Infrastructure</span></h2>
+            <p class="section-subtitle">Automating Global Retail Flow & Settlement</p>
         </div>
         
-        <div class="business-grid">
-            <div class="business-card">
-                <div class="biz-icon">⚡</div>
-                <h3 class="biz-title">自主商业系统 (Autonomous Commerce)</h3>
-                <p class="biz-desc">提供下一代智能商业运营矩阵，通过 AI 决策流自动调度全球零售网络，完成精准市场投放与自动化资金结算。</p>
+        <div class="tech-grid">
+            <div class="tech-card">
+                <div class="tech-icon">⚙️</div>
+                <h3 class="tech-title">Autonomous Commerce</h3>
+                <p class="tech-desc">AI-driven commercial management systems that automate data analysis, seamless payment orchestration, and agile market dispatching across global store networks.</p>
             </div>
-            <div class="business-card">
-                <div class="biz-icon">📦</div>
-                <h3 class="biz-title">柔性跨境供应链 (Global Supply Chain)</h3>
-                <p class="biz-desc">联动智能立体仓储与物流节点。图中的智慧包裹及全链路追踪系统，保障全球零售硬件与潮玩的高质、快速通达。</p>
+            <div class="tech-card">
+                <div class="tech-icon">🌐</div>
+                <h3 class="tech-title">Global Smart SCM</h3>
+                <p class="tech-desc">Next-gen physical supply chain integration. Leveraging autonomous logistics boxes and multi-layered tracking nodes for ultra-low latency global distribution.</p>
             </div>
-            <div class="business-card">
-                <div class="biz-icon">⛓️</div>
-                <h3 class="biz-title">分布式网络底座 (L2 Infrastructure)</h3>
-                <p class="biz-desc">依托高度安全的 Layer 2 基础网络架构，实现商业数据、节点结算与 IP 资产的秒级合规确权上链。</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-products" id="products">
-        <div class="section-header">
-            <h2 class="section-title">软硬件 <span>产品生态</span></h2>
-            <p class="section-subtitle">致敬硬核美学：图中所见的实体硬件与智能周边矩阵</p>
-        </div>
-        
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-img-holder">[ 建议放置：多头发光数据线 3D图 ]</div>
-                <h3 class="product-name">Multi-Node Cyber Cable</h3>
-                <p class="product-desc">多协议多分支智能快充线缆，带有 BunnyEra 冷光智能芯片，实时监控电压电流。</p>
-                <div class="product-footer">
-                    <span class="product-status">硬件已量产</span>
-                    <span class="card-tag" style="padding:2px 10px;">Specs</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-img-holder">[ 建议放置：水晶发光体/硬件终端 ]</div>
-                <h3 class="product-name">Neon Crystal Node</h3>
-                <p class="product-desc">图中展示的高级冷光水晶立方体。不仅是品牌的桌面视觉符号，更是微型智能商业网关。</p>
-                <div class="product-footer">
-                    <span class="product-status">限量定制</span>
-                    <span class="card-tag" style="padding:2px 10px;">View</span>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-img-holder">[ 建议放置：电商/智能面板系统 ]</div>
-                <h3 class="product-name">Enterprise Cloud SaaS</h3>
-                <p class="product-desc">智能商业中枢管理看板。秒级调控跨境运力，全面支持智能化、无缝化电商运营。</p>
-                <div class="product-footer">
-                    <span class="product-status">2.0 运行中</span>
-                    <span class="card-tag" style="padding:2px 10px;">Launch</span>
-                </div>
+            <div class="tech-card">
+                <div class="tech-icon">🧬</div>
+                <h3 class="tech-title">Layer-2 Infrastructure</h3>
+                <p class="tech-desc">Our proprietary high-security, low-latency enterprise settlement protocol. Securing digital asset rights and deploying concurrent multi-node clearing pipelines.</p>
             </div>
         </div>
     </section>
 
-    <section class="section-architecture" id="architecture">
+    <section id="hardware" class="bg-darker">
         <div class="section-header">
-            <h2 class="section-title">底座 <span>网络架构看板</span></h2>
-            <p class="section-subtitle">企业级分布式商业系统的实时运营状态演示</p>
+            <h2 class="section-title">Intelligent <span>Hardware</span></h2>
+            <p class="section-subtitle">Honoring Industrial Precision & Neon Circuit Aesthetics</p>
         </div>
 
-        <div class="dashboard-mockup">
-            <div class="dash-header">
-                <div class="dash-dots">
-                    <div class="dash-dot"></div>
-                    <div class="dash-dot"></div>
-                    <div class="dash-dot"></div>
+        <div class="prod-grid">
+            <div class="prod-card">
+                <div class="prod-viewport">[ 3D VIEWPORT: MULTI-NODE CABLE ]</div>
+                <h3 class="prod-name">Multi-Node Cyber Cable</h3>
+                <p class="prod-desc">As featured in our blueprint blueprints. A high-performance multi-fork fast-charging cable embedded with our proprietary power monitoring chipsets.</p>
+                <div class="prod-meta">
+                    <span class="prod-status">ACTIVE // MASS PRODUCTION</span>
+                    <span class="card-tag">HARDWARE</span>
                 </div>
-                <div class="dash-title">BUNNYERA_CORE_PROTOCOL v2.05_L2</div>
             </div>
-            <div class="dash-body">
-                <div class="dash-sidebar">
-                    <div class="dash-item active">
-                        <span>● Core Network</span>
-                        <span>Active</span>
+
+            <div class="prod-card">
+                <div class="prod-viewport">[ 3D VIEWPORT: CRYSTAL TERMINAL ]</div>
+                <h3 class="prod-name">Neon Crystal Node</h3>
+                <p class="prod-desc">The signature high-gloss glowing crystal cube. Not just an iconic visual masterpiece, but a physical gateway terminal for micro-commerce computing.</p>
+                <div class="prod-meta">
+                    <span class="prod-status">LIMITED EDITION</span>
+                    <span class="card-tag">TERMINAL</span>
+                </div>
+            </div>
+
+            <div class="prod-card">
+                <div class="prod-viewport">[ 3D VIEWPORT: LOGISTICS BOX ]</div>
+                <h3 class="prod-name">Autonomous Logistics Box</h3>
+                <p class="prod-desc">Smart eco-friendly packaging branded with our core symbol. Integrated into the global logistics line with passive tracking to secure physical asset routing.</p>
+                <div class="prod-meta">
+                    <span class="prod-status">DEPLOYED // TRACKING</span>
+                    <span class="card-tag">LOGISTICS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="founders">
+        <div class="section-header">
+            <h2 class="section-title">BunnyEra <span>Founders</span></h2>
+            <p class="section-subtitle">The Strategic Core Driving Distributed Commerce</p>
+        </div>
+
+        <div class="founders-grid">
+            <div class="founder-card">
+                <div class="founder-avatar-holder">
+                    <div class="founder-avatar-inner">[ ARCHITECT ]</div>
+                </div>
+                <h3 class="founder-name">Chief Architect</h3>
+                <p class="founder-role">SYSTEM FOUNDER</p>
+                <p class="founder-bio">Architecting BunnyEra's distributed commerce foundation and high-concurrency Layer-2 protocol matrix.</p>
+            </div>
+
+            <div class="founder-card">
+                <div class="founder-avatar-holder">
+                    <div class="founder-avatar-inner">[ SUPPLY ]</div>
+                </div>
+                <h3 class="founder-name">SCM Director</h3>
+                <p class="founder-role">CO-FOUNDER</p>
+                <p class="founder-bio">Masterminding automated cross-border fulfillment networks and global logistics hardware deployments.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="network" class="bg-darker">
+        <div class="section-header">
+            <h2 class="section-title">Global Distributed <span>Console</span></h2>
+            <p class="section-subtitle">Real-time Node Transparency & Protocol Performance</p>
+        </div>
+
+        <div class="dashboard-container">
+            <div class="dash-top">
+                <div class="dash-signals">
+                    <div class="dash-sig"></div>
+                    <div class="dash-sig"></div>
+                </div>
+                <div class="dash-meta-title">BUNNYERA_AUTONOMOUS_NETWORK_v2.05_L2</div>
+            </div>
+            
+            <div class="dash-panel">
+                <div class="dash-nav">
+                    <div class="dash-nav-btn active">
+                        <span>● L2 Layer Protocol</span>
+                        <span>RUNNING</span>
                     </div>
-                    <div class="dash-item">
-                        <span>API Layers</span>
+                    <div class="dash-nav-btn">
+                        <span>Smart Hardware Hub</span>
+                        <span>ONLINE</span>
+                    </div>
+                    <div class="dash-nav-btn">
+                        <span>Cross-Border SCM</span>
                         <span>100%</span>
                     </div>
-                    <div class="dash-item">
-                        <span>Supply Chain Hub</span>
-                        <span>Global</span>
-                    </div>
                 </div>
-                <div class="dash-main">
-                    <div class="stat-box">
-                        <div class="stat-label">TOTAL COMMERCIAL NODE VOLUME (24H)</div>
-                        <div class="stat-value">$14,892,105.42</div>
+
+                <div class="dash-stats">
+                    <div class="data-card">
+                        <div class="data-label">TOTAL COMMERCIAL PROTOCOL VOLUME (24H)</div>
+                        <div class="data-value">$14,892,105.42</div>
                     </div>
-                    <div class="stat-box">
-                        <div class="stat-label">LAYER-2 PROTOCOL SETTLEMENT SPEED</div>
-                        <div class="stat-value">2,400 TPS (0.002s latency)</div>
+                    <div class="data-card">
+                        <div class="data-label">LAYER-2 PROTOCOL SETTLEMENT SPEED</div>
+                        <div class="data-value">2,400 TPS (0.002s latency)</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="footer-logo">© 2024 - 2026 BunnyEra Org. All Rights Reserved.</div>
+        <div class="footer-links">
+            <a href="#">Privacy Protocol</a>
+            <a href="#">L2 Node Status</a>
+            <a href="#">Enterprise Cloud</a>
+        </div>
+    </footer>
 
 </body>
 </html>
