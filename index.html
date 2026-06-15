@@ -1,406 +1,317 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BunnyEra | AI-driven Cross-border Technology Company</title>
-  <meta name="description" content="BunnyEra is an AI-driven cross-border technology company building an AI Company OS to build, operate, and automate global digital businesses with AI agents and automation workflows." />
-  <link rel="canonical" href="https://bunnyera.com/" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#050816" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BunnyEra | 兔兔纪元官方网站</title>
+    <style>
+        /* 全局样式重置与暗黑底色 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
 
-  <meta property="og:title" content="BunnyEra | AI-driven Cross-border Technology Company" />
-  <meta property="og:description" content="Build, operate, and automate global digital businesses with AI Company OS." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bunnyera.com/" />
-  <meta property="og:site_name" content="BunnyEra" />
+        body {
+            background-color: #0a0b0d;
+            color: #ffffff;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 80% 20%, rgba(0, 242, 254, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(255, 0, 128, 0.05) 0%, transparent 40%);
+        }
 
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="BunnyEra | AI-driven Cross-border Technology Company" />
-  <meta name="twitter:description" content="Build, operate, and automate global digital businesses with AI Company OS." />
-  <link rel="stylesheet" href="style.css" />
+        /* 导航栏设计 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(10, 11, 13, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            background: linear-gradient(45deg, #00f2fe, #4facfe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* 模拟图中霓虹兔子的Logo符号 */
+        .logo-icon {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #00f2fe;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00f2fe;
+            display: inline-block;
+            position: relative;
+        }
+
+        nav a {
+            color: #a0a5b5;
+            text-decoration: none;
+            margin-left: 35px;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #00f2fe;
+            text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+        }
+
+        .btn-connect {
+            background: transparent;
+            border: 1px solid #00f2fe;
+            color: #00f2fe;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn-connect:hover {
+            background: #00f2fe;
+            color: #0a0b0d;
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.8);
+        }
+
+        /* 主视觉第一屏布局 */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            padding-top: 80px;
+            position: relative;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .hero-subtitle {
+            color: #00f2fe;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-title {
+            font-size: 56px;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+
+        .hero-title span {
+            color: #00f2fe;
+            text-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+        }
+
+        .hero-desc {
+            color: #8a8f9e;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            color: #0a0b0d;
+            border: none;
+            padding: 15px 35px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 5px 25px rgba(0, 242, 254, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 35px rgba(0, 242, 254, 0.7);
+        }
+
+        /* 右侧高画质 3D 质感核心展示区 */
+        .hero-display {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* 模拟图中的高质感立体水晶框效果 */
+        .crystal-card {
+            width: 380px;
+            height: 480px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.4), inset 0 0 20px rgba(255,255,255,0.05);
+            position: relative;
+            transition: transform 0.5s ease;
+        }
+
+        .crystal-card:hover {
+            transform: translateY(-10px) rotateY(5px);
+            border-color: rgba(0, 242, 254, 0.4);
+        }
+
+        /* 图中的冷光兔子霓虹符号 */
+        .neon-bunny {
+            width: 180px;
+            height: 180px;
+            border: 4px solid #00f2fe;
+            border-radius: 40px;
+            margin-top: 40px;
+            box-shadow: 0 0 30px #00f2fe, inset 0 0 20px #00f2fe;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            animation: breathe 3s infinite alternate;
+        }
+
+        /* 简易兔子耳朵线条效果 */
+        .neon-bunny::before, .neon-bunny::after {
+            content: '';
+            position: absolute;
+            top: -45px;
+            width: 35px;
+            height: 60px;
+            border: 4px solid #00f2fe;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 0 20px #00f2fe;
+        }
+        .neon-bunny::before { left: 35px; transform: rotate(-10px); }
+        .neon-bunny::after { right: 35px; transform: rotate(10px); }
+
+        .card-info {
+            text-align: center;
+            width: 100%;
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: rgba(0, 242, 254, 0.1);
+            color: #00f2fe;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid rgba(0, 242, 254, 0.2);
+        }
+
+        /* 霓虹呼吸动画 */
+        @keyframes breathe {
+            0% {
+                box-shadow: 0 0 20px rgba(0, 242, 254, 0.4), inset 0 0 15px rgba(0, 242, 254, 0.3);
+                opacity: 0.9;
+            }
+            100% {
+                box-shadow: 0 0 40px rgba(0, 242, 254, 0.9), inset 0 0 25px rgba(0, 242, 254, 0.6);
+                opacity: 1;
+            }
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 968px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 140px;
+                padding-bottom: 60px;
+            }
+            .hero-content {
+                margin-bottom: 50px;
+                max-width: 100%;
+            }
+            .cta-group {
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="container header-layout">
-      <a class="brand" href="#top" aria-label="BunnyEra Home">
-        <img class="brand-logo" src="assets/logo-header.png" alt="BunnyEra" />
-        <span class="brand-wordmark">BunnyEra</span>
-      </a>
-
-      <nav class="header-nav" aria-label="Primary">
-        <a href="#solutions">Solutions</a>
-        <a href="#ai-company-os">AI Company OS</a>
-        <a href="#agent-workflow">Agent Workflow</a>
-        <a href="#ecosystem">Ecosystem</a>
-        <a href="#milestones">Milestones</a>
-        <a href="#company">Company</a>
-      </nav>
-
-      <div class="header-actions" aria-label="Header Actions">
-        <a class="lang-link" href="#lang-en">Languages</a>
-        <a class="contact-link" href="#contact">Contact</a>
-        <a class="header-cta" href="mailto:support@bunnyerapro.com">Start with BunnyEra</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section id="top" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="hero-kicker">Your AI Company Partner</div>
-          <h1 class="hero-title">Operate a global digital company with AI agents.</h1>
-          <p class="hero-lead">BunnyEra helps teams research products, create listings, generate campaigns, monitor code health, and coordinate execution workflows across global markets.</p>
-
-          <div class="hero-actions">
-            <a class="button primary" href="mailto:support@bunnyerapro.com">Start with BunnyEra</a>
-            <a class="button secondary" href="#agent-workflow">Explore Agent Workflow</a>
-          </div>
+    <header>
+        <div class="logo">
+            <div class="logo-icon"></div>
+            BunnyEra
         </div>
+        <nav>
+            <a href="#" class="active">首页</a>
+            <a href="#">纪元宇宙</a>
+            <a href="#">潮玩盲盒</a>
+            <a href="#">关于我们</a>
+        </nav>
+        <button class="btn-connect">进入纪元</button>
+    </header>
 
-        <aside class="workflow-card" aria-label="AI Agent Workflow">
-          <div class="workflow-top">
-            <div class="workflow-title">AI Agent Workflow</div>
-            <div class="workflow-subtitle">Execution-ready company operations</div>
-          </div>
-
-          <div class="workflow-block">
-            <div class="workflow-label">Input Task</div>
-            <div class="workflow-text">Generate a product research report for BunnyEra</div>
-          </div>
-
-          <div class="workflow-block">
-            <div class="workflow-label">Agent Workflow</div>
-            <div class="workflow-track" aria-label="Agent workflow chain">
-              <span class="track-node">Leader</span>
-              <span class="track-arrow" aria-hidden="true">→</span>
-              <span class="track-node">Planner</span>
-              <span class="track-arrow" aria-hidden="true">→</span>
-              <span class="track-node">Executor</span>
-              <span class="track-arrow" aria-hidden="true">→</span>
-              <span class="track-node">Reviewer</span>
-              <span class="track-arrow" aria-hidden="true">→</span>
-              <span class="track-node">Code Health</span>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-subtitle">Next-Gen IP Ecosystem</div>
+            <h1 class="hero-title">欢迎来到全新的<br><span>兔兔纪元</span></h1>
+            <p class="hero-desc">
+                打破传统网页的平庸布局，融合尖端暗黑赛博美学。在这里，每一个潮流数字盲盒、每一个IP角色都将被赋予全新的生命力。加入我们，开启属于未来的高质感视觉盛宴。
+            </p>
+            <div class="cta-group">
+                <button class="btn-primary">探索盲盒空间</button>
             </div>
-          </div>
+        </div>
 
-          <div class="workflow-block">
-            <div class="workflow-label">Output</div>
-            <div class="workflow-output">Report · Review · Next Steps · Notification</div>
-          </div>
-
-          <div class="workflow-status" aria-label="Workflow status">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span class="status-text">Status: ready for execution</span>
-          </div>
-        </aside>
-      </div>
-
-      <div class="container trustbar" aria-label="Milestone status">
-        <div class="trust-item">Console V1</div>
-        <div class="trust-item">AI Brain V1.2</div>
-        <div class="trust-item">Provider Router</div>
-        <div class="trust-item">Code Health Monitor</div>
-        <div class="trust-item">Official Website V1</div>
-        <div class="trust-item">Local Ollama Ready</div>
-      </div>
+        <div class="hero-display">
+            <div class="crystal-card">
+                <div class="neon-bunny">
+                    </div>
+                <div class="card-info">
+                    <h3 class="card-title">Bunny-Cyber #001</h3>
+                    <span class="card-tag">限量版纪念实体/NFT</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="solutions" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Company Overview</div>
-          <h2>AI Company OS for cross-border digital businesses.</h2>
-          <p class="section-lead">BunnyEra is an AI-driven cross-border technology company building AI Company OS, AI Brain, agent workflows, automation systems, ecommerce intelligence, social operations, and code health monitoring.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="ai-company-os" class="section section-surface">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Agentic Intelligence</div>
-          <h2>Agentic Intelligence for Company Operations</h2>
-          <p class="section-lead">BunnyEra does not only generate content. It structures tasks, routes them through agents, reviews outputs, monitors code health, and prepares execution-ready workflows.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="info-card">
-            <h3>Multi-Agent Reasoning</h3>
-            <p>Leader, Planner, Executor, Reviewer, and Coder agents structure work before execution.</p>
-          </article>
-          <article class="info-card">
-            <h3>Provider Router</h3>
-            <p>BunnyEra AI can route between mock, Ollama, OpenRouter, Gemini, and Groq providers with fallback.</p>
-          </article>
-          <article class="info-card">
-            <h3>Code Health Monitor</h3>
-            <p>BunnyEra AI scans repositories, detects risks, and generates local maintenance reports.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="agent-workflow" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Agent Workflow</div>
-          <h2>Plan · Generate · Review · Monitor · Execute</h2>
-          <p class="section-lead">A structured workflow where agents transform a task into deliverables, risk checks, and next-step execution plans.</p>
-        </div>
-
-        <div class="workflow-strip" aria-label="Workflow strip">
-          <div class="workflow-node">
-            <div class="node-title">Leader</div>
-            <div class="node-desc">Clarify intent & constraints</div>
-          </div>
-          <div class="workflow-node">
-            <div class="node-title">Planner</div>
-            <div class="node-desc">Execution plan & tasks</div>
-          </div>
-          <div class="workflow-node">
-            <div class="node-title">Executor</div>
-            <div class="node-desc">Generate deliverables</div>
-          </div>
-          <div class="workflow-node">
-            <div class="node-title">Reviewer</div>
-            <div class="node-desc">Check risks & quality</div>
-          </div>
-          <div class="workflow-node">
-            <div class="node-title">Code Health</div>
-            <div class="node-desc">Scan systems & reports</div>
-          </div>
-          <div class="workflow-node accent">
-            <div class="node-title">Notify</div>
-            <div class="node-desc">Report & next steps</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="capabilities" class="section section-surface">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Capabilities</div>
-          <h2>Operate, beyond generation.</h2>
-          <p class="section-lead">Built for real company operations: structured tasks, reusable workflows, and execution-ready outputs.</p>
-        </div>
-
-        <div class="grid-4">
-          <article class="mini-card">
-            <h3>Product Research</h3>
-            <p>Structured research briefs with intent, risks, and next-step actions.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Listing Automation</h3>
-            <p>Titles, selling points, SEO structures, and localization outputs.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Marketing Copy</h3>
-            <p>Campaign ideas, ad variants, and channel-ready content packs.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Social Workflow</h3>
-            <p>Publishing plans that connect content, schedule, and execution steps.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Customer Support</h3>
-            <p>Support replies, FAQs, follow-ups, and operational templates.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Code Health Inspection</h3>
-            <p>Repo scans, risk detection, and local maintenance reports.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Daily Reports</h3>
-            <p>Actionable summaries and alerts across teams and workflows.</p>
-          </article>
-          <article class="mini-card">
-            <h3>Execution Planning</h3>
-            <p>Plans and checklists that make tasks ready for execution.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="core-systems" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Core Systems</div>
-          <h2>The operating stack behind BunnyEra.</h2>
-        </div>
-
-        <div class="cards-grid">
-          <article class="card">
-            <div class="card-kicker">BunnyEra Console</div>
-            <h3>AI Company OS / control center</h3>
-            <p>Control plane for agents, tasks, workflows, settings, and observability.</p>
-          </article>
-
-          <article class="card">
-            <div class="card-kicker">BunnyEra AI</div>
-            <h3>AI Brain / multi-agent intelligence system</h3>
-            <p>Agent routing, prompts, memory, and intelligence workflows.</p>
-          </article>
-
-          <article class="card">
-            <div class="card-kicker">BunnyEra Claw</div>
-            <h3>Autonomous execution engine</h3>
-            <p>Execution runtime for automation, orchestration, and safe pipelines.</p>
-          </article>
-
-          <article class="card">
-            <div class="card-kicker">BunnyPost / Social OS</div>
-            <h3>Social content and publishing workflow</h3>
-            <p>Publishing workflows connecting ideas, production, schedule, and delivery.</p>
-          </article>
-
-          <article class="card">
-            <div class="card-kicker">BunnyEra Notify Center</div>
-            <h3>Company reports and alert center</h3>
-            <p>Operational reports, notifications, alerts, and summaries.</p>
-          </article>
-
-          <article class="card">
-            <div class="card-kicker">BunnyEra Code Health Monitor</div>
-            <h3>AI codebase inspection and maintenance reports</h3>
-            <p>Repo scanning, risk detection, and maintenance-ready outputs.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="directions" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Business Directions</div>
-          <h2>Focus areas we build and automate.</h2>
-        </div>
-
-        <div class="tag-grid" role="list">
-          <div class="tag" role="listitem">Cross-border AI operations</div>
-          <div class="tag" role="listitem">Social media workflow automation</div>
-          <div class="tag" role="listitem">Ecommerce intelligence</div>
-          <div class="tag" role="listitem">Enterprise notification center</div>
-          <div class="tag" role="listitem">AI code health monitoring</div>
-          <div class="tag" role="listitem">Account and workflow operations</div>
-          <div class="tag" role="listitem">Compliance-first automation tools</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="milestones" class="section section-surface">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Current Milestones</div>
-          <h2>Delivery milestones across the OS.</h2>
-        </div>
-
-        <ol class="timeline">
-          <li class="timeline-item"><span class="timeline-badge">Completed</span><span class="timeline-text">Console V1 Shell completed</span></li>
-          <li class="timeline-item"><span class="timeline-badge">Completed</span><span class="timeline-text">AI Brain V1 completed</span></li>
-          <li class="timeline-item"><span class="timeline-badge">Completed</span><span class="timeline-text">AI Provider Router V1.1 completed</span></li>
-          <li class="timeline-item"><span class="timeline-badge">Completed</span><span class="timeline-text">Console AI Brain Connector completed</span></li>
-          <li class="timeline-item"><span class="timeline-badge">Completed</span><span class="timeline-text">AI Brain UI completed</span></li>
-          <li class="timeline-item"><span class="timeline-badge">Completed</span><span class="timeline-text">Code Health Monitor completed</span></li>
-          <li class="timeline-item"><span class="timeline-badge">Completed</span><span class="timeline-text">Official Website V1 launched</span></li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="ecosystem" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Ecosystem / Projects</div>
-          <h2>Project matrix of BunnyEra.</h2>
-          <p class="section-lead">Links are placeholders for now.</p>
-        </div>
-
-        <div class="project-grid">
-          <a class="project-card" href="#"><span class="link-title">bunnyera-console</span><span class="link-desc">AI Company OS / control center</span></a>
-          <a class="project-card" href="#"><span class="link-title">bunnyera-ai</span><span class="link-desc">AI Brain / multi-agent intelligence</span></a>
-          <a class="project-card" href="#"><span class="link-title">bunnyera-claw</span><span class="link-desc">Autonomous execution engine</span></a>
-          <a class="project-card" href="#"><span class="link-title">bunnyera-resources</span><span class="link-desc">Public resources and assets</span></a>
-          <a class="project-card" href="#"><span class="link-title">bunnyera-docs</span><span class="link-desc">Documentation</span></a>
-          <a class="project-card" href="#"><span class="link-title">bunnyera-community</span><span class="link-desc">Community space</span></a>
-          <a class="project-card" href="#"><span class="link-title">bunnyera-browser</span><span class="link-desc">Browser automation</span></a>
-          <a class="project-card" href="#"><span class="link-title">bunnyera-creative-studio</span><span class="link-desc">Creative workflows</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="company" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Company</div>
-          <h2>AI-driven cross-border technology company.</h2>
-          <p class="section-lead">BunnyEra builds a company operating system for cross-border digital businesses, combining AI agents, workflow automation, social operations, ecommerce intelligence, and code health monitoring.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="community" class="section section-surface">
-      <div class="container">
-        <div class="section-heading">
-          <div class="eyebrow">Community / Growth</div>
-          <h2>Follow and build with BunnyEra.</h2>
-          <p class="section-lead">Social and community links are placeholders for now.</p>
-        </div>
-
-        <div class="tag-grid" role="list">
-          <a class="tag tag-link" role="listitem" href="#">GitHub</a>
-          <a class="tag tag-link" role="listitem" href="#">LinkedIn</a>
-          <a class="tag tag-link" role="listitem" href="#">X / Twitter</a>
-          <a class="tag tag-link" role="listitem" href="#">Facebook</a>
-          <a class="tag tag-link" role="listitem" href="#">Telegram Channel</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-cta">
-      <div class="container">
-        <div class="cta">
-          <div>
-            <div class="eyebrow">Contact / CTA</div>
-            <h2>Build your AI-powered operation with BunnyEra.</h2>
-            <p class="cta-lead">Create a company operating system where agents plan, generate, review, monitor, and prepare work for execution.</p>
-            <p class="cta-lead">Email: <a class="inline-link" href="mailto:support@bunnyerapro.com">support@bunnyerapro.com</a></p>
-          </div>
-          <div class="cta-actions">
-            <a class="button primary" href="mailto:support@bunnyerapro.com">Contact BunnyEra</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="anchor-sink" aria-hidden="true">
-      <span id="lang-en"></span>
-      <span id="lang-zh"></span>
-      <span id="lang-th"></span>
-      <span id="region-au"></span>
-      <span id="region-my"></span>
-      <span id="lang-ja"></span>
-      <span id="lang-ko"></span>
-      <span id="lang-vi"></span>
-      <span id="lang-id"></span>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brandline">
-        <span class="footer-name">BunnyEra</span>
-        <span class="footer-tagline">AI-driven Cross-border Technology Company</span>
-      </div>
-      <div class="footer-meta">
-        <span>bunnyera.com</span>
-        <span><a class="inline-link" href="mailto:support@bunnyerapro.com">support@bunnyerapro.com</a></span>
-        <span>© 2026 BunnyEra</span>
-      </div>
-    </div>
-  </footer>
 </body>
 </html>
