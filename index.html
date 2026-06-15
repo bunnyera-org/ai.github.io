@@ -6,9 +6,9 @@
     <title>BunnyEra | The Next-Gen Autonomous Commerce Infrastructure</title>
     
     <style>
-        /* ==========================================
-           BUNNYERA MASTER CYBER DESIGN // THE ENDGAME
-           ========================================== */
+        /* ==================================================
+           BUNNYERA SUPREME CYBER OPERATING VISUAL EMBED
+           ================================================== */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
@@ -20,26 +20,26 @@
             scroll-behavior: smooth;
         }
 
-        /* 宇宙流光液体背景 + 深度空间数字网格纹理 */
+        /* 宇宙暗能液体流向 + 数字化高精密雷达线矩阵背景 */
         body {
-            background-color: #020306;
+            background-color: #010306;
             color: #ffffff;
             overflow-x: hidden;
             background-image: 
-                radial-gradient(circle at 85% 15%, rgba(0, 242, 254, 0.2) 0%, transparent 55%),
-                radial-gradient(circle at 15% 55%, rgba(255, 0, 128, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 50% 85%, rgba(0, 242, 254, 0.12) 0%, transparent 60%),
-                linear-gradient(rgba(255, 255, 255, 0.007) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.007) 1px, transparent 1px);
-            background-size: 200% 200%, 200% 200%, 200% 200%, 45px 45px, 45px 45px;
+                radial-gradient(circle at 85% 15%, rgba(0, 242, 254, 0.22) 0%, transparent 50%),
+                radial-gradient(circle at 15% 65%, rgba(255, 0, 128, 0.09) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(0, 242, 254, 0.05) 0%, transparent 60%),
+                linear-gradient(rgba(0, 242, 254, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 242, 254, 0.015) 1px, transparent 1px);
+            background-size: 200% 200%, 200% 200%, 200% 200%, 50px 50px, 50px 50px;
             background-attachment: fixed;
-            animation: backgroundFluid 20s infinite alternate ease-in-out;
+            animation: backgroundShift 25s infinite alternate ease-in-out;
         }
 
-        @keyframes backgroundFluid {
+        @keyframes backgroundShift {
             0% { background-position: 0% 50%, 0% 0%, 0% 0%, 0px 0px, 0px 0px; }
-            50% { background-position: 100% 50%, 0% 0%, 0% 0%, 22px 22px, 22px 22px; }
-            100% { background-position: 50% 100%, 0% 0%, 0% 0%, 45px 45px, 45px 45px; }
+            50% { background-position: 100% 50%, 0% 0%, 0% 0%, 25px 25px, 25px 25px; }
+            100% { background-position: 50% 100%, 0% 0%, 0% 0%, 50px 50px, 50px 50px; }
         }
 
         /* HEADER & NAVIGATION */
@@ -48,31 +48,32 @@
             justify-content: space-between;
             align-items: center;
             padding: 24px 8%;
-            background: rgba(2, 3, 6, 0.8);
+            background: rgba(1, 3, 6, 0.85);
             backdrop-filter: blur(30px);
             -webkit-backdrop-filter: blur(30px);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 9999;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(0, 242, 254, 0.06);
         }
 
         .logo {
             font-size: 26px;
             font-weight: 900;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             background: linear-gradient(45deg, #00f2fe, #4facfe);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: flex;
             align-items: center;
             gap: 12px;
+            text-transform: uppercase;
         }
 
         .logo-icon {
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             border: 2px solid #00f2fe;
             border-radius: 50%;
             box-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
@@ -80,17 +81,17 @@
         }
 
         @keyframes logoPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 10px rgba(0, 242, 254, 0.5); }
-            50% { transform: scale(1.15); box-shadow: 0 0 25px rgba(0, 242, 254, 0.9); }
+            0%, 100% { transform: scale(1); box-shadow: 0 0 8px rgba(0, 242, 254, 0.4); }
+            50% { transform: scale(1.15); box-shadow: 0 0 20px rgba(0, 242, 254, 0.8); }
         }
 
         nav a {
-            color: #81889a;
+            color: #798296;
             text-decoration: none;
             margin-left: 40px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -101,277 +102,298 @@
         }
 
         .btn-connect {
-            background: transparent;
-            border: 1px solid rgba(0, 242, 254, 0.5);
+            background: rgba(0, 242, 254, 0.03);
+            border: 1px solid rgba(0, 242, 254, 0.4);
             color: #00f2fe;
             padding: 10px 28px;
-            border-radius: 25px;
+            border-radius: 4px;
             cursor: pointer;
             font-weight: 700;
-            font-size: 12px;
-            letter-spacing: 1px;
+            font-size: 11px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-connect::before {
+            content: ''; position: absolute; width: 4px; height: 4px; background: #00f2fe; top:0; left:0;
         }
 
         .btn-connect:hover {
             background: #00f2fe;
-            color: #040507;
-            box-shadow: 0 0 30px rgba(0, 242, 254, 0.8);
+            color: #010306;
+            box-shadow: 0 0 30px rgba(0, 242, 254, 0.7);
         }
 
-        /* LAYOUT CORE */
-        section { padding: 140px 8%; border-top: 1px solid rgba(255, 255, 255, 0.01); }
-        .bg-darker { background: rgba(1, 2, 4, 0.5); }
-        .section-header { text-align: center; margin-bottom: 70px; }
-        .section-title { font-size: 42px; font-weight: 900; margin-bottom: 16px; letter-spacing: -0.5px; }
+        /* LAYOUT MASTER */
+        section { padding: 160px 8%; border-top: 1px solid rgba(255, 255, 255, 0.01); }
+        .bg-darker { background: rgba(1, 2, 4, 0.7); }
+        .section-header { text-align: center; margin-bottom: 80px; }
+        .section-title { font-size: 44px; font-weight: 900; margin-bottom: 18px; letter-spacing: -0.5px; }
         .section-title span { background: linear-gradient(90deg, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .section-subtitle { color: #4e5566; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; }
+        .section-subtitle { color: #4e5566; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; font-weight: 700; }
 
-        /* HERO SECTION - 豪华重构多维空间 */
-        .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 140px; gap: 70px; position: relative; }
-        .hero-content { flex: 1; max-width: 640px; z-index: 10; position: relative; }
+        /* HERO AREA - 豪华立体排版 */
+        .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 140px; gap: 80px; position: relative; }
+        .hero-content { flex: 1.1; max-width: 650px; z-index: 10; position: relative; }
         
-        /* 炫酷首屏辅助小饰品挂件 */
         .hero-fui-badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 6px 14px;
-            border-radius: 30px;
+            gap: 10px;
+            background: rgba(0, 242, 254, 0.05);
+            border: 1px solid rgba(0, 242, 254, 0.15);
+            padding: 6px 16px;
+            border-radius: 4px;
             font-family: monospace;
-            font-size: 10px;
-            color: #697081;
-            margin-bottom: 25px;
-            letter-spacing: 1px;
+            font-size: 11px;
+            color: #00f2fe;
+            margin-bottom: 28px;
+            letter-spacing: 1.5px;
+            text-shadow: 0 0 5px rgba(0,242,254,0.4);
         }
-        .hero-fui-badge span { width: 6px; height: 6px; background: #00f2fe; border-radius: 50%; box-shadow: 0 0 8px #00f2fe; animation: logoPulse 1.5s infinite; }
+        .hero-fui-badge span { width: 6px; height: 6px; background: #ff0080; border-radius: 50%; box-shadow: 0 0 10px #ff0080; animation: logoPulse 1s infinite alternate; }
 
-        .hero-subtitle { color: #00f2fe; text-transform: uppercase; letter-spacing: 4px; font-size: 11px; margin-bottom: 20px; font-weight: 800; display: flex; align-items: center; gap: 10px; }
-        .hero-subtitle::before { content: ''; width: 16px; height: 1px; background: #00f2fe; display: inline-block; }
-        .hero-title { font-size: 60px; line-height: 1.12; margin-bottom: 30px; font-weight: 900; letter-spacing: -1.5px; }
+        .hero-subtitle { color: #697081; text-transform: uppercase; letter-spacing: 4px; font-size: 11px; margin-bottom: 20px; font-weight: 800; display: flex; align-items: center; gap: 10px; }
+        .hero-title { font-size: 64px; line-height: 1.1; margin-bottom: 30px; font-weight: 900; letter-spacing: -2px; }
         .hero-title span { background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-desc { color: #8c93a6; font-size: 16px; line-height: 1.8; margin-bottom: 45px; }
+        .hero-desc { color: #878f9f; font-size: 16px; line-height: 1.8; margin-bottom: 45px; }
 
-        /* 左侧额外增加的一排动态硬核工业系统指标数据线 */
-        .hero-live-telemetry {
-            display: flex;
-            gap: 35px;
-            margin-top: 45px;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
+        /* 左侧加密区块挂件：增强细节密度 */
+        .hero-crypto-stream {
+            margin-top: 40px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.06);
             padding-top: 25px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
-        .telemetry-item { font-family: monospace; }
-        .telemetry-label { color: #434956; font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 5px; letter-spacing: 0.5px;}
-        .telemetry-value { color: #81889a; font-size: 13px; font-weight: 700; }
-        .telemetry-value span { color: #00f2fe; }
+        .crypto-node { font-family: monospace; }
+        .crypto-lbl { color: #434956; font-size: 10px; text-transform: uppercase; margin-bottom: 4px; font-weight: bold; }
+        .crypto-val { font-size: 12px; color: #7e8697; }
+        .crypto-val span { color: #00f2fe; font-weight: bold; }
 
         .btn-primary {
             background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-            color: #020306;
+            color: #010306;
             border: none;
             padding: 18px 45px;
             font-size: 13px;
             font-weight: 800;
-            border-radius: 30px;
+            border-radius: 4px;
             cursor: pointer;
-            box-shadow: 0 5px 25px rgba(0, 242, 254, 0.25);
+            box-shadow: 0 5px 30px rgba(0, 242, 254, 0.3);
             text-decoration: none;
             display: inline-block;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: all 0.3s ease;
         }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 35px rgba(0, 242, 254, 0.5); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 40px rgba(0, 242, 254, 0.6); }
 
-        /* HERO 右侧大舱：多图层高科技叠加 */
-        .hero-display { flex: 1.3; position: relative; display: flex; justify-content: center; align-items: center; }
+        /* 中间衔接：全息像素度量横卡尺（填补中间真空区） */
+        .hologram-caliper {
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            transform: translate(-50%, -50%);
+            width: 140px;
+            height: 2px;
+            background: linear-gradient(to right, rgba(0,242,254,0.6), rgba(255,0,128,0.3));
+            z-index: 1;
+            opacity: 0.6;
+        }
+        .hologram-caliper::before {
+            content: 'FUI_SCALE_902';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            font-size: 8px;
+            color: #00f2fe;
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+
+        /* HERO 右侧大舱：HUD 监视矩阵框 */
+        .hero-display { flex: 1.3; position: relative; display: flex; justify-content: center; align-items: center; z-index: 5; }
         
-        /* 核心看板立体流光容器 */
         .hero-cyber-card {
             width: 100%;
-            max-width: 580px;
-            border-radius: 24px;
-            padding: 8px;
-            background: linear-gradient(135deg, rgba(0, 242, 254, 0.25), rgba(255, 0, 128, 0.08));
-            box-shadow: 0 40px 90px rgba(0, 0, 0, 0.75), 0 0 50px rgba(0, 242, 254, 0.12);
-            animation: heroFloat 6s infinite ease-in-out alternate;
-            overflow: hidden;
+            max-width: 590px;
+            border-radius: 4px;
+            padding: 12px;
+            background: rgba(6, 9, 15, 0.85);
+            border: 1px solid rgba(0, 242, 254, 0.25);
+            box-shadow: 0 45px 100px rgba(0, 0, 0, 0.85), 0 0 60px rgba(0, 242, 254, 0.15);
+            animation: heroFloat MatrixFloat 6s infinite ease-in-out alternate;
             position: relative;
-            border: 1px solid rgba(255, 255, 255, 0.03);
         }
+        /* HUD 伺服四角边框线 */
+        .hero-cyber-card::before, .hero-cyber-card::after {
+            content: ''; position: absolute; width: 16px; height: 16px; border: 2px solid #00f2fe; z-index: 10;
+        }
+        .hero-cyber-card::before { top: -2px; left: -2px; border-right: 0; border-bottom: 0; }
+        .hero-cyber-card::after { bottom: -2px; right: -2px; border-left: 0; border-top: 0; }
+
         .hero-cyber-card img {
             width: 100%;
             height: auto;
-            border-radius: 18px;
+            border-radius: 2px;
             display: block;
+            filter: contrast(1.05) brightness(0.95);
         }
         @keyframes heroFloat {
-            0% { transform: translateY(0px) rotateX(1.5deg) rotateY(-0.5deg); }
-            100% { transform: translateY(-15px) rotateX(-1.5deg) rotateY(0.5deg); }
+            0% { transform: translateY(0px) rotateX(2deg) rotateY(-1deg); }
+            100% { transform: translateY(-16px) rotateX(-2deg) rotateY(1deg); }
         }
 
-        /* 看板内置的全息 FUI 浮雕文字挂件 */
         .panel-tag-hologram {
             position: absolute;
-            bottom: 25px;
-            left: 25px;
-            background: rgba(4, 5, 7, 0.8);
-            border: 1px solid rgba(0, 242, 254, 0.5);
-            padding: 5px 14px;
-            border-radius: 4px;
+            top: -14px;
+            right: 30px;
+            background: #010306;
+            border: 1px solid #ff0080;
+            padding: 3px 12px;
             font-family: monospace;
-            font-size: 10px;
+            font-size: 9px;
             letter-spacing: 1.5px;
-            color: #00f2fe;
-            text-shadow: 0 0 5px #00f2fe;
-            backdrop-filter: blur(10px);
+            color: #ff0080;
+            text-shadow: 0 0 5px #ff0080;
         }
 
-        /* --------------------------------------------------
-           🐰 终极进化：HIGH-PRECISION MECH-BUNNY IP CORE
-           -------------------------------------------------- */
+        /* ------------------------------------------------------------------
+           🐰 终极硬核重组：HIGH-DENSITY CYBER MECH-BUNNY MASK IP (高阶面谱化)
+           ------------------------------------------------------------------ */
         .cyber-bunny-ip {
             position: absolute;
-            top: -65px;
-            right: 15px;
-            width: 120px;
-            height: 150px;
-            z-index: 20;
+            top: -95px;
+            right: -25px;
+            width: 150px;
+            height: 180px;
+            z-index: 99;
             cursor: pointer;
-            animation: ipFloat 3.5s infinite ease-in-out alternate;
-            filter: drop-shadow(0 0 20px rgba(0, 242, 254, 0.5));
+            animation: ipTacticalFloat 4s infinite ease-in-out alternate;
         }
 
-        @keyframes ipFloat {
-            0% { transform: translateY(0px) scale(1) rotate(0deg); }
-            100% { transform: translateY(-12px) scale(1.04) rotate(1deg); }
+        @keyframes ipTacticalFloat {
+            0% { transform: translateY(0px) scale(1) rotate(-1deg); filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.4)); }
+            100% { transform: translateY(-14px) scale(1.03) rotate(2deg); filter: drop-shadow(0 0 30px rgba(0, 242, 254, 0.7)); }
         }
 
-        /* 机械液压长耳 */
+        /* 棱角折线立体机械兔耳 */
         .bunny-ear {
             position: absolute;
-            width: 13px;
-            height: 60px;
-            background: linear-gradient(to bottom, #00f2fe, rgba(255, 0, 128, 0.25));
-            border-radius: 30px 30px 4px 4px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            position: relative;
+            width: 18px;
+            height: 75px;
+            background: linear-gradient(135deg, #02050a 0%, #0c1524 100%);
+            border: 2px solid #00f2fe;
+            clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0% 100%, 0% 20%);
         }
-        /* 耳朵内部的高能等离子天线线芯 */
+        /* 耳内高能激光发射槽 */
         .bunny-ear::after {
             content: '';
             position: absolute;
-            bottom: 6px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 3px;
-            height: 70%;
-            background: #ff0080;
-            border-radius: 10px;
+            top: 20%; left: 50%; transform: translateX(-50%);
+            width: 4px; height: 60%;
+            background: linear-gradient(to bottom, #ff0080, transparent);
             box-shadow: 0 0 8px #ff0080;
         }
-        .ear-left { left: 34px; transform: rotate(-10px); transform-origin: bottom center; }
-        .ear-right { right: 34px; transform: rotate(10px); transform-origin: bottom center; animation: earTwitch 5s infinite ease-in-out; }
+        .ear-left { left: 42px; transform: rotate(-14deg); transform-origin: bottom center; }
+        .ear-right { right: 42px; transform: rotate(14deg); transform-origin: bottom center; animation: earSonar 6s infinite ease-in-out; }
 
-        @keyframes earTwitch {
-            0%, 92%, 100% { transform: rotate(10px); }
-            95% { transform: rotate(24px); }
+        @keyframes earSonar {
+            0%, 90%, 100% { transform: rotate(14deg); }
+            93%, 97% { transform: rotate(22deg) scaleY(0.95); }
         }
 
-        /* 机械玉兔机壳体（带环绕发光外框圈） */
+        /* 精密机甲面具核心脸部 (盾型下巴结构) */
         .bunny-head {
             position: absolute;
-            top: 50px;
+            top: 62px;
             left: 50%;
             transform: translateX(-50%);
-            width: 58px;
-            height: 56px;
-            background: rgba(2, 4, 8, 0.9);
+            width: 72px;
+            height: 72px;
+            background: #040811;
             border: 2px solid #00f2fe;
-            border-radius: 24px;
-            box-shadow: inset 0 0 15px rgba(0, 242, 254, 0.6), 0 0 15px rgba(0, 242, 254, 0.2);
+            box-shadow: inset 0 0 20px rgba(0, 242, 254, 0.7);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 50% 100%, 0% 60%);
             position: relative;
         }
 
-        /* 眉心追加一处闪烁的量子能量核心处理器 */
-        .bunny-core-node {
+        /* 机械面谱中轴对称散热装甲线 */
+        .bunny-head::before {
+            content: '';
             position: absolute;
-            top: 6px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 6px;
-            height: 6px;
-            background: #00f2fe;
-            border-radius: 50%;
-            box-shadow: 0 0 8px #00f2fe;
-            animation: logoPulse 1s infinite alternate;
+            top: 0; left: 50%; transform: translateX(-50%);
+            width: 2px; height: 100%;
+            background: rgba(0, 242, 254, 0.3);
         }
 
-        /* 高维等离子视网膜双眼 */
+        /* 电子战阵红外红光复眼 (锐利折线形) */
         .bunny-eyes {
             position: absolute;
-            top: 22px;
-            width: 12px;
-            height: 4px;
+            top: 24px;
+            width: 18px;
+            height: 5px;
             background: #ff0080;
-            border-radius: 3px;
-            box-shadow: 0 0 10px #ff0080, 0 0 20px #ff0080;
-            animation: eyeBlink 3.5s infinite linear;
+            box-shadow: 0 0 12px #ff0080, 0 0 25px #ff0080;
+            animation: eyePulseScan 4s infinite linear;
         }
-        .eye-left { left: 10px; }
-        .eye-right { right: 10px; }
+        .eye-left { left: 8px; clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 60%); }
+        .eye-right { right: 8px; clip-path: polygon(0 40%, 100% 0, 100% 60%, 0 100%); }
 
-        @keyframes eyeBlink {
-            0%, 48%, 52%, 100% { transform: scaleY(1); }
-            50% { transform: scaleY(0); }
+        @keyframes eyePulseScan {
+            0%, 45%, 55%, 100% { opacity: 1; transform: scaleY(1); }
+            50% { opacity: 0.2; transform: scaleY(0.1); }
         }
 
-        /* 高科技数据环座（环绕基底） */
+        /* 暗能量浮空逆向双重数据轨道（底座） */
         .bunny-ring {
             position: absolute;
-            bottom: 20px;
+            bottom: 25px;
             left: 50%;
-            transform: translateX(-50%) rotateX(75deg);
-            width: 90px;
-            height: 90px;
-            border: 2px dashed rgba(0, 242, 254, 0.6);
-            border-radius: 50%;
-            animation: rotateBase 5s infinite linear;
-        }
-        /* 基座底部的第二道反向粒子逆向环 */
-        .bunny-ring-outer {
-            position: absolute;
-            bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%) rotateX(75deg);
+            transform: translateX(-50%) rotateX(80deg);
             width: 110px;
             height: 110px;
-            border: 1px dotted rgba(255, 0, 128, 0.4);
+            border: 2px dashed #00f2fe;
             border-radius: 50%;
-            animation: rotateBaseOuter 8s infinite linear;
+            animation: ringSpinCcw 4s infinite linear;
         }
-        @keyframes rotateBase { 100% { transform: translateX(-50%) rotateX(75deg) rotate(360deg); } }
-        @keyframes rotateBaseOuter { 100% { transform: translateX(-50%) rotateX(75deg) rotate(-360deg); } }
+        .bunny-ring-outer {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%) rotateX(80deg);
+            width: 140px;
+            height: 140px;
+            border: 1px solid rgba(255, 0, 128, 0.5);
+            border-radius: 50%;
+            animation: ringSpinCw 8s infinite linear;
+        }
+        @keyframes ringSpinCcw { 100% { transform: translateX(-50%) rotateX(80deg) rotate(-360deg); } }
+        @keyframes ringSpinCw { 100% { transform: translateX(-50%) rotateX(80deg) rotate(360deg); } }
 
-        /* TECH GRID */
+
+        /* TECH INFRASTRUCTURE */
         .tech-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
-        .tech-card { background: rgba(255,255,255,0.003); border: 1px solid rgba(255,255,255,0.015); border-radius: 24px; width: 350px; padding: 45px 35px; transition: all 0.4s; }
-        .tech-card:hover { border-color: rgba(0, 242, 254, 0.25); background: rgba(255, 255, 255, 0.01); transform: translateY(-5px); }
-        .tech-icon { font-size: 32px; margin-bottom: 28px; color: #00f2fe; }
-        .tech-title { font-size: 21px; font-weight: 800; margin-bottom: 16px; }
-        .tech-desc { color: #81889a; font-size: 14px; line-height: 1.7; }
+        .tech-card { background: rgba(255,255,255,0.002); border: 1px solid rgba(255,255,255,0.015); border-radius: 4px; width: 350px; padding: 45px 35px; transition: all 0.4s; position: relative; }
+        .tech-card::before { content:''; position:absolute; top:0; left:0; width:4px; height:0; background:#00f2fe; transition:all 0.4s; }
+        .tech-card:hover::before { height:100%; }
+        .tech-card:hover { border-color: rgba(0, 242, 254, 0.25); background: rgba(255, 255, 255, 0.01); transform: translateY(-4px); }
+        .tech-icon { font-size: 30px; margin-bottom: 28px; color: #00f2fe; }
+        .tech-title { font-size: 21px; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.5px;}
+        .tech-desc { color: #7e8697; font-size: 14px; line-height: 1.7; }
 
-        /* HARDWARE MATRIX WITH RAW IMAGE VIEWPORTS */
+        /* TERMINAL MATRIX & IMAGE VIEWPORTS */
         .prod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 35px; }
-        .prod-card { background: rgba(255, 255, 255, 0.003); border: 1px solid rgba(255, 255, 255, 0.015); border-radius: 24px; padding: 20px; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
-        .prod-card:hover { border-color: rgba(0, 242, 254, 0.3); transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
+        .prod-card { background: rgba(255, 255, 255, 0.002); border: 1px solid rgba(255, 255, 255, 0.015); border-radius: 4px; padding: 20px; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .prod-card:hover { border-color: rgba(0, 242, 254, 0.3); transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.7); }
 
         .image-viewport {
             height: 250px;
-            border-radius: 16px;
+            border-radius: 2px;
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
@@ -379,7 +401,7 @@
             justify-content: center;
             align-items: center;
             border: 1px solid rgba(255,255,255,0.03);
-            background: #06080c;
+            background: #05070a;
         }
         .image-viewport img {
             width: 100%;
@@ -387,74 +409,76 @@
             object-fit: cover;
             transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .prod-card:hover .image-viewport img { transform: scale(1.06); }
+        .prod-card:hover .image-viewport img { transform: scale(1.05); }
 
         .hologram-overlay {
             position: absolute;
             width: 100%;
-            height: 4px;
-            background: linear-gradient(to right, transparent, rgba(0, 242, 254, 0.6), transparent);
+            height: 3px;
+            background: linear-gradient(to right, transparent, rgba(0, 242, 254, 0.7), transparent);
             top: 0;
-            box-shadow: 0 0 15px #00f2fe;
-            animation: scanRadar 4s infinite linear;
+            box-shadow: 0 0 12px #00f2fe;
+            animation: scanRadar 3.5s infinite linear;
             z-index: 2;
         }
         @keyframes scanRadar { 0% { top: 0%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { top: 100%; opacity: 0; } }
 
         .prod-name { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
-        .prod-desc { color: #697081; font-size: 13px; line-height: 1.6; margin-bottom: 24px; }
+        .prod-desc { color: #646c7c; font-size: 13px; line-height: 1.6; margin-bottom: 24px; }
         .prod-meta { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.03); padding-top: 20px; }
         .prod-status { color: #00f2fe; font-weight: 700; font-size: 11px; font-family: monospace; }
-        .card-tag { background: rgba(0, 242, 254, 0.06); color: #00f2fe; padding: 5px 16px; border-radius: 20px; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+        .card-tag { background: rgba(0, 242, 254, 0.05); color: #00f2fe; padding: 4px 14px; border-radius: 2px; font-size: 10px; font-weight: 700; text-transform: uppercase; border: 1px solid rgba(0,242,254,0.1); }
 
         /* FOUNDERS PANEL */
         .founders-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; }
-        .founder-card { background: rgba(255,255,255,0.003); border: 1px solid rgba(255,255,255,0.015); border-radius: 24px; padding: 45px 35px; width: 320px; text-align: center; }
-        .founder-avatar-holder { width: 84px; height: 84px; border-radius: 50%; background: linear-gradient(135deg, #00f2fe, #ff0080); margin: 0 auto 24px auto; padding: 2px; }
-        .founder-avatar-inner { width: 100%; height: 100%; background: #020306; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #4e5566; font-size: 10px; font-family: monospace; }
+        .founder-card { background: rgba(255,255,255,0.002); border: 1px solid rgba(255,255,255,0.015); border-radius: 4px; padding: 45px 35px; width: 320px; text-align: center; }
+        .founder-avatar-holder { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #00f2fe, #ff0080); margin: 0 auto 24px auto; padding: 2px; }
+        .founder-avatar-inner { width: 100%; height: 100%; background: #010306; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #434956; font-size: 11px; font-family: monospace; }
         .founder-name { font-size: 19px; font-weight: 800; margin-bottom: 6px; }
-        .founder-role { color: #00f2fe; font-size: 11px; font-weight: 700; margin-bottom: 18px; font-family: monospace; }
-        .founder-bio { color: #697081; font-size: 13px; line-height: 1.6; }
+        .founder-role { color: #00f2fe; font-size: 11px; font-weight: 700; margin-bottom: 18px; font-family: monospace; letter-spacing: 1px;}
+        .founder-bio { color: #646c7c; font-size: 13px; line-height: 1.6; }
 
-        /* SYSTEM CONSOLE TERMINAL */
-        .dashboard-container { max-width: 1000px; margin: 0 auto; background: #06070a; border: 1px solid rgba(255,255,255,0.03); border-radius: 24px; padding: 35px; box-shadow: 0 60px 120px rgba(0,0,0,0.8); }
-        .dash-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.02); padding-bottom: 22px; margin-bottom: 30px; }
+        /* REAL-TIME SYSTEM CONSOLE CONTAINER */
+        .dashboard-container { max-width: 1000px; margin: 0 auto; background: #04060a; border: 1px solid rgba(0,242,254,0.1); border-radius: 4px; padding: 35px; box-shadow: 0 60px 120px rgba(0,0,0,0.9); position: relative; }
+        .dashboard-container::before { content:''; position:absolute; width:6px; height:6px; background:#00f2fe; top:-3px; left:-3px; }
+        .dash-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 22px; margin-bottom: 30px; }
         .dash-signals { display: flex; gap: 8px; }
-        .dash-sig { width: 9px; height: 9px; border-radius: 50%; background: #00f2fe; box-shadow: 0 0 10px #00f2fe; }
+        .dash-sig { width: 8px; height: 8px; border-radius: 50%; background: #00f2fe; box-shadow: 0 0 10px #00f2fe; }
         .dash-sig:nth-child(2) { background: #ff0080; box-shadow: 0 0 10px #ff0080; animation: logoPulse 1s infinite alternate; }
-        .dash-meta-title { font-family: monospace; font-size: 11px; color: #4e5566; font-weight: 700; }
+        .dash-meta-title { font-family: monospace; font-size: 11px; color: #4e5566; font-weight: 700; letter-spacing: 1px;}
         .dash-panel { display: grid; grid-template-columns: 1fr 2fr; gap: 35px; }
         .dash-nav { display: flex; flex-direction: column; gap: 14px; }
-        .dash-nav-btn { background: rgba(255,255,255,0.003); border: 1px solid rgba(255,255,255,0.01); padding: 16px 20px; border-radius: 12px; font-size: 13px; text-align: left; color: #81889a; display: flex; justify-content: space-between; }
+        .dash-nav-btn { background: rgba(255,255,255,0.002); border: 1px solid rgba(255,255,255,0.01); padding: 16px 20px; border-radius: 4px; font-size: 13px; text-align: left; color: #7e8697; display: flex; justify-content: space-between; font-family: monospace; }
         .dash-nav-btn.active { background: rgba(0, 242, 254, 0.03); border-color: rgba(0, 242, 254, 0.2); color: #00f2fe; font-weight: 700; }
         .dash-stats { display: flex; flex-direction: column; gap: 24px; }
-        .data-card { background: rgba(255, 255, 255, 0.003); border: 1px solid rgba(255, 255, 255, 0.015); border-radius: 14px; padding: 24px; }
-        .data-label { color: #4e5566; font-size: 11px; font-weight: 700; margin-bottom: 10px; }
-        .data-value { font-size: 28px; font-weight: 800; font-family: monospace; color: #00f2fe; text-shadow: 0 0 20px rgba(0,242,254,0.2); }
+        .data-card { background: rgba(255, 255, 255, 0.002); border: 1px solid rgba(255, 255, 255, 0.015); border-radius: 4px; padding: 24px; }
+        .data-label { color: #434956; font-size: 11px; font-weight: 700; margin-bottom: 10px; letter-spacing: 0.5px; }
+        .data-value { font-size: 28px; font-weight: 800; font-family: monospace; color: #00f2fe; text-shadow: 0 0 20px rgba(0,242,254,0.25); }
 
-        /* FOOTER */
-        footer { background: #010203; border-top: 1px solid rgba(255, 255, 255, 0.02); padding: 90px 8% 45px 8%; }
+        /* FOOTER STRUCTURE */
+        footer { background: #000102; border-top: 1px solid rgba(0, 242, 254, 0.05); padding: 90px 8% 45px 8%; }
         .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1.4fr; gap: 60px; margin-bottom: 70px; }
-        .footer-brand .f-logo { font-size: 26px; font-weight: 900; background: linear-gradient(45deg, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 24px; }
+        .footer-brand .f-logo { font-size: 26px; font-weight: 900; background: linear-gradient(45deg, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 2px;}
         .footer-brand .f-desc { color: #4e5566; font-size: 13px; line-height: 1.7; max-width: 340px; }
-        .footer-title { color: #ffffff; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px; }
+        .footer-title { color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px; }
         .office-list { display: flex; flex-direction: column; gap: 24px; }
         .office-item { display: flex; flex-direction: column; gap: 6px; }
-        .office-name { color: #697081; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+        .office-name { color: #646c7c; font-size: 11px; font-weight: 700; text-transform: uppercase; font-family: monospace; }
         .office-phone { color: #00f2fe; font-size: 16px; font-weight: 700; font-family: monospace; text-decoration: none; }
         .social-matrix { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-        .social-btn { background: rgba(255, 255, 255, 0.003); border: 1px solid rgba(255, 255, 255, 0.015); border-radius: 14px; padding: 16px; display: flex; align-items: center; gap: 14px; color: #81889a; text-decoration: none; font-size: 13px; font-weight: 700; transition: all 0.4s; }
-        .social-btn:hover { background: rgba(0, 242, 254, 0.02); border-color: rgba(0, 242, 254, 0.3); color: #00f2fe; transform: translateY(-3px); }
+        .social-btn { background: rgba(255, 255, 255, 0.002); border: 1px solid rgba(255, 255, 255, 0.015); border-radius: 4px; padding: 16px; display: flex; align-items: center; gap: 14px; color: #7e8697; text-decoration: none; font-size: 13px; font-weight: 700; transition: all 0.4s; }
+        .social-btn:hover { background: rgba(0, 242, 254, 0.02); border-color: rgba(0, 242, 254, 0.3); color: #00f2fe; transform: translateY(-2px); }
         .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.01); padding-top: 35px; display: flex; justify-content: space-between; align-items: center; color: #434956; font-size: 12px; }
         .f-legal a { color: #434956; text-decoration: none; margin-left: 25px; }
         .f-legal a:hover { color: #00f2fe; }
 
-        /* RESPONSIVE */
+        /* RESPONSIVE TERMINAL PIPELINES */
         @media (max-width: 968px) {
-            .hero { flex-direction: column; text-align: center; padding-top: 160px; gap: 50px; }
-            .hero-display { width: 100%; margin-top: 60px; }
-            .cyber-bunny-ip { top: -65px; right: 50%; transform: translateX(50%); }
-            .hero-live-telemetry { justify-content: center; gap: 20px; }
+            .hero { flex-direction: column; text-align: center; padding-top: 150px; gap: 60px; }
+            .hero-display { width: 100%; margin-top: 80px; }
+            .cyber-bunny-ip { top: -95px; right: 50%; transform: translateX(50%); }
+            .hologram-caliper { display: none; }
+            .hero-crypto-stream { justify-content: center; text-align: left; }
             .dash-panel { grid-template-columns: 1fr; }
             header { padding: 20px 4%; }
             nav { display: none; }
@@ -483,7 +507,7 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-fui-badge">
-                <span></span> PROT_CORE_ACTIVE // NODE_01
+                <span></span> AUTH_RETAIL_PROTOCOL_v3.0 // ACTIVE
             </div>
 
             <div class="hero-subtitle">The Autonomous Commerce Enterprise Platform // 2024-2026</div>
@@ -494,29 +518,30 @@
             
             <a href="#infrastructure" class="btn-primary">Initialize Protocol Overview</a>
 
-            <div class="hero-live-telemetry">
-                <div class="telemetry-item">
-                    <div class="telemetry-label">NETWORK STATUS</div>
-                    <div class="telemetry-value">SYS_CORE: <span>ONLINE</span></div>
+            <div class="hero-crypto-stream">
+                <div class="crypto-node">
+                    <div class="crypto-lbl">BLOCK_HASH_L2</div>
+                    <div class="crypto-val">0x8F3A...<span>9EEF</span></div>
                 </div>
-                <div class="telemetry-item">
-                    <div class="telemetry-label">SECURE LINKS</div>
-                    <div class="telemetry-value">TLS_1.3: <span>ACTIVE</span></div>
+                <div class="crypto-node">
+                    <div class="crypto-lbl">NODE_INTEGRITY</div>
+                    <div class="crypto-val">SIGMA: <span>99.98%</span></div>
                 </div>
-                <div class="telemetry-item">
-                    <div class="telemetry-label">PING TIME</div>
-                    <div class="telemetry-value">LATENCY: <span>0.002s</span></div>
+                <div class="crypto-node">
+                    <div class="crypto-lbl">MATRIX_STREAM</div>
+                    <div class="crypto-val">FLOW: <span>2.4k/s</span></div>
                 </div>
             </div>
         </div>
 
+        <div class="hologram-caliper"></div>
+
         <div class="hero-display">
             
-            <div class="cyber-bunny-ip" onclick="alert('BUNNY_CORE: Quantum Protocol Node Online.')">
+            <div class="cyber-bunny-ip" onclick="alert('TACTICAL_BUNNY_CORE: Firewalls Decrypted.')">
                 <div class="bunny-ear ear-left"></div>
                 <div class="bunny-ear ear-right"></div>
                 <div class="bunny-head">
-                    <div class="bunny-core-node"></div>
                     <div class="bunny-eyes eye-left"></div>
                     <div class="bunny-eyes eye-right"></div>
                 </div>
@@ -526,7 +551,7 @@
 
             <div class="hero-cyber-card">
                 <img src="assets/hero-screen.png" alt="BunnyEra Global AI Topology Canvas">
-                <div class="panel-tag-hologram">CORE_MATRIX_v2.06</div>
+                <div class="panel-tag-hologram">MONITOR_GRID_08</div>
             </div>
         </div>
     </section>
@@ -630,7 +655,7 @@
                     <div class="dash-sig"></div>
                     <div class="dash-sig"></div>
                 </div>
-                <div class="dash-meta-title">BUNNYERA_AUTONOMOUS_MATRIX_v2.06_PROD</div>
+                <div class="dash-meta-title">BUNNYERA_AUTONOMOUS_MATRIX_v3.0_PROD</div>
             </div>
             
             <div class="dash-panel">
