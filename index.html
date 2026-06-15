@@ -7,7 +7,7 @@
     
     <style>
         /* ==========================================
-           BUNNYERA MASTER CYBER DESIGN WITH LIVE ANIMS
+           BUNNYERA MASTER CYBER DESIGN WITH IMAGES
            ========================================== */
         * {
             margin: 0;
@@ -20,15 +20,15 @@
             scroll-behavior: smooth;
         }
 
-        /* 宇宙流光液体背景动画 */
+        /* 宇宙流光液体背景 */
         body {
             background-color: #040507;
             color: #ffffff;
             overflow-x: hidden;
             background-image: 
-                radial-gradient(circle at 85% 15%, rgba(0, 242, 254, 0.2) 0%, transparent 55%),
-                radial-gradient(circle at 15% 55%, rgba(255, 0, 128, 0.06) 0%, transparent 50%),
-                radial-gradient(circle at 50% 85%, rgba(0, 242, 254, 0.12) 0%, transparent 60%);
+                radial-gradient(circle at 85% 15%, rgba(0, 242, 254, 0.18) 0%, transparent 55%),
+                radial-gradient(circle at 15% 55%, rgba(255, 0, 128, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 50% 85%, rgba(0, 242, 254, 0.1) 0%, transparent 60%);
             background-attachment: fixed;
             background-size: 200% 200%;
             animation: backgroundFluid 15s infinite alternate ease-in-out;
@@ -119,21 +119,21 @@
         }
 
         /* LAYOUT CORE */
-        section { padding: 160px 8%; border-top: 1px solid rgba(255, 255, 255, 0.01); }
+        section { padding: 140px 8%; border-top: 1px solid rgba(255, 255, 255, 0.01); }
         .bg-darker { background: rgba(2, 3, 5, 0.4); }
-        .section-header { text-align: center; margin-bottom: 90px; }
-        .section-title { font-size: 42px; font-weight: 900; margin-bottom: 16px; }
+        .section-header { text-align: center; margin-bottom: 70px; }
+        .section-title { font-size: 42px; font-weight: 900; margin-bottom: 16px; letter-spacing: -0.5px; }
         .section-title span { background: linear-gradient(90deg, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .section-subtitle { color: #4e5566; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; }
 
-        /* HERO SECTION */
-        .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 100px; gap: 60px; }
-        .hero-content { flex: 1.2; max-width: 680px; }
-        .hero-subtitle { color: #00f2fe; text-transform: uppercase; letter-spacing: 4px; font-size: 11px; margin-bottom: 28px; font-weight: 800; display: flex; align-items: center; gap: 10px; }
+        /* HERO SECTION - 完美容纳大屏看板图片 */
+        .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 120px; gap: 50px; }
+        .hero-content { flex: 1; max-width: 620px; }
+        .hero-subtitle { color: #00f2fe; text-transform: uppercase; letter-spacing: 4px; font-size: 11px; margin-bottom: 24px; font-weight: 800; display: flex; align-items: center; gap: 10px; }
         .hero-subtitle::before { content: ''; width: 16px; height: 1px; background: #00f2fe; display: inline-block; }
-        .hero-title { font-size: 58px; line-height: 1.15; margin-bottom: 35px; font-weight: 900; letter-spacing: -1.5px; }
+        .hero-title { font-size: 56px; line-height: 1.15; margin-bottom: 30px; font-weight: 900; letter-spacing: -1.5px; }
         .hero-title span { background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-desc { color: #8c93a6; font-size: 16px; line-height: 1.8; margin-bottom: 50px; }
+        .hero-desc { color: #8c93a6; font-size: 16px; line-height: 1.8; margin-bottom: 40px; }
 
         .btn-primary {
             background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
@@ -151,43 +151,29 @@
         }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 35px rgba(0, 242, 254, 0.5); }
 
-        /* 3D 旋转量子环动效（右侧未来动态资产舱） */
-        .hero-display { flex: 0.8; display: flex; justify-content: center; align-items: center; }
-        .cyber-dynamic-core {
-            width: 300px;
-            height: 300px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            perspective: 800px;
-        }
-        .core-glowing-orb {
-            width: 60px;
-            height: 60px;
-            background: radial-gradient(circle, #00f2fe 0%, transparent 70%);
-            border-radius: 50%;
-            box-shadow: 0 0 50px #00f2fe, 0 0 100px rgba(0, 242, 254, 0.6);
-            animation: orbPulse 3s infinite ease-in-out alternate;
-        }
-        @keyframes orbPulse {
-            0% { transform: scale(0.9); opacity: 0.8; filter: drop-shadow(0 0 20px #ff0080); }
-            100% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 40px #00f2fe); }
-        }
-        .orbital-ring {
-            position: absolute;
+        /* 资产图 1：Hero 悬浮背光大屏卡片 */
+        .hero-display { flex: 1.2; position: relative; display: flex; justify-content: center; align-items: center; }
+        .hero-cyber-card {
             width: 100%;
-            height: 100%;
-            border: 2px dashed rgba(0, 242, 254, 0.4);
-            border-radius: 50%;
+            max-width: 580px;
+            border-radius: 20px;
+            padding: 6px;
+            background: linear-gradient(135deg, rgba(0, 242, 254, 0.3), rgba(255, 0, 128, 0.1));
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5), 0 0 40px rgba(0, 242, 254, 0.15);
+            animation: heroFloat 4s infinite ease-in-out alternate;
+            overflow: hidden;
         }
-        .ring-1 { transform: rotateX(60deg) rotateY(20deg); animation: rotateRing1 6s infinite linear; }
-        .ring-2 { transform: rotateX(30deg) rotateY(70deg); border-color: rgba(255, 0, 128, 0.4); animation: rotateRing2 9s infinite linear; }
-        .ring-3 { transform: rotateX(75deg) rotateY(-45deg); border-style: dotted; animation: rotateRing3 12s infinite linear; }
-
-        @keyframes rotateRing1 { 0% { transform: rotateX(60deg) rotateY(20deg) rotateZ(0deg); } 100% { transform: rotateX(60deg) rotateY(20deg) rotateZ(360deg); } }
-        @keyframes rotateRing2 { 0% { transform: rotateX(30deg) rotateY(70deg) rotateZ(360deg); } 100% { transform: rotateX(30deg) rotateY(70deg) rotateZ(0deg); } }
-        @keyframes rotateRing3 { 0% { transform: rotateX(75deg) rotateY(-45deg) rotateZ(0deg); } 100% { transform: rotateX(75deg) rotateY(-45deg) rotateZ(360deg); } }
+        .hero-cyber-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            display: block;
+            filter: saturate(1.1) brightness(1.05);
+        }
+        @keyframes heroFloat {
+            0% { transform: translateY(0px) rotateX(2deg); }
+            100% { transform: translateY(-15px) rotateX(-2deg); }
+        }
 
         /* TECH GRID */
         .tech-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
@@ -197,13 +183,14 @@
         .tech-title { font-size: 21px; font-weight: 800; margin-bottom: 16px; }
         .tech-desc { color: #81889a; font-size: 14px; line-height: 1.7; }
 
-        /* HARDWARE TERMINAL MATRIX WITH FULL DYNAMIC BACKGROUNDS */
-        .prod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
-        .prod-card { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.015); border-radius: 24px; padding: 24px; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        /* HARDWARE MATRIX WITH RAW IMAGE VIEWPORTS */
+        .prod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 35px; }
+        .prod-card { background: rgba(255, 255, 255, 0.005); border: 1px solid rgba(255, 255, 255, 0.015); border-radius: 24px; padding: 20px; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
         .prod-card:hover { border-color: rgba(0, 242, 254, 0.3); transform: translateY(-10px); box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
 
-        .dynamic-viewport {
-            height: 220px;
+        /* 用于高保真图片的霓虹视窗容器 */
+        .image-viewport {
+            height: 250px;
             border-radius: 16px;
             margin-bottom: 25px;
             position: relative;
@@ -211,48 +198,31 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.03);
+            background: #080a0f;
         }
-        .node-cyan { background: radial-gradient(circle at center, rgba(0, 242, 254, 0.2) 0%, #080a0f 100%); }
-        .node-pink { background: radial-gradient(circle at center, rgba(255, 0, 128, 0.15) 0%, #080a0f 100%); }
-        .node-blue { background: radial-gradient(circle at center, rgba(79, 172, 254, 0.2) 0%, #080a0f 100%); }
-
-        /* 动态网格背景流动 */
-        .cyber-pulse-grid {
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 20px 20px;
-            transform: rotateX(45deg);
-            animation: gridScroll 8s linear infinite;
+        .image-viewport img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        @keyframes gridScroll { 0% { transform: rotateX(45deg) translateY(0); } 100% { transform: rotateX(45deg) translateY(-40px); } }
+        .prod-card:hover .image-viewport img {
+            transform: scale(1.06);
+        }
 
-        /* 全息雷达扫描条动效 */
-        .hologram-scanner {
+        /* 覆盖在图片上的全息动态扫描条 */
+        .hologram-overlay {
             position: absolute;
             width: 100%;
             height: 4px;
-            background: linear-gradient(to right, transparent, #00f2fe, transparent);
+            background: linear-gradient(to right, transparent, rgba(0, 242, 254, 0.6), transparent);
             top: 0;
             box-shadow: 0 0 15px #00f2fe;
             animation: scanRadar 4s infinite linear;
             z-index: 2;
         }
         @keyframes scanRadar { 0% { top: 0%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { top: 100%; opacity: 0; } }
-
-        .matrix-code {
-            font-family: monospace;
-            font-size: 16px;
-            font-weight: 700;
-            color: rgba(0, 242, 254, 0.8);
-            text-shadow: 0 0 10px #00f2fe;
-            z-index: 3;
-            letter-spacing: 2px;
-            animation: textFlicker 2s infinite alternate;
-        }
-        @keyframes textFlicker { 0%, 100% { opacity: 0.9; } 50% { opacity: 0.4; color: #ff0080; text-shadow: 0 0 10px #ff0080; } }
 
         .prod-name { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
         .prod-desc { color: #697081; font-size: 13px; line-height: 1.6; margin-bottom: 24px; }
@@ -305,6 +275,7 @@
         /* RESPONSIVE */
         @media (max-width: 968px) {
             .hero { flex-direction: column; text-align: center; padding-top: 160px; gap: 40px; }
+            .hero-display { width: 100%; }
             .dash-panel { grid-template-columns: 1fr; }
             header { padding: 20px 4%; }
             nav { display: none; }
@@ -341,11 +312,8 @@
         </div>
 
         <div class="hero-display">
-            <div class="cyber-dynamic-core">
-                <div class="core-glowing-orb"></div>
-                <div class="orbital-ring ring-1"></div>
-                <div class="orbital-ring ring-2"></div>
-                <div class="orbital-ring ring-3"></div>
+            <div class="hero-cyber-card">
+                <img src="assets/hero-screen.png" alt="BunnyEra Global AI Topology Canvas">
             </div>
         </div>
     </section>
@@ -383,44 +351,28 @@
 
         <div class="prod-grid">
             <div class="prod-card">
-                <div class="dynamic-viewport node-cyan">
-                    <div class="hologram-scanner"></div>
-                    <div class="cyber-pulse-grid"></div>
-                    <div class="matrix-code">NODE // 01</div>
-                </div>
-                <h3 class="prod-name">Spatial AR Mobile Node</h3>
-                <p class="prod-desc">Advanced holographic interface displaying retail SKUs as 3D spatial card projections for real-time mobile touchpoints.</p>
-                <div class="prod-meta">
-                    <span class="prod-status">ACTIVE // USER-END</span>
-                    <span class="card-tag">MOBILE</span>
-                </div>
-            </div>
-
-            <div class="prod-card">
-                <div class="dynamic-viewport node-pink">
-                    <div class="hologram-scanner"></div>
-                    <div class="cyber-pulse-grid"></div>
-                    <div class="matrix-code">SYS // LOGIC</div>
-                </div>
-                <h3 class="prod-name">Cyber Crystal Node V1</h3>
-                <p class="prod-desc">Signature physical interactive terminal embedded with glowing neon circuitry and cryptography validation architectures.</p>
-                <div class="prod-meta">
-                    <span class="prod-status">PRODUCTION PHASE II</span>
-                    <span class="card-tag">TERMINAL</span>
-                </div>
-            </div>
-
-            <div class="prod-card">
-                <div class="dynamic-viewport node-blue">
-                    <div class="hologram-scanner"></div>
-                    <div class="cyber-pulse-grid"></div>
-                    <div class="matrix-code">DATA // FLOW</div>
+                <div class="image-viewport">
+                    <div class="hologram-overlay"></div>
+                    <img src="assets/laptop-social.jpg" alt="Cross-Channel Analytics Pipeline">
                 </div>
                 <h3 class="prod-name">Cross-Channel Analytics Pipeline</h3>
                 <p class="prod-desc">Enterprise operational dashboard piping store performance data directly into multi-layered international marketing matrixes.</p>
                 <div class="prod-meta">
                     <span class="prod-status">LIVE // DISTRIBUTED</span>
                     <span class="card-tag">MARKETING</span>
+                </div>
+            </div>
+
+            <div class="prod-card">
+                <div class="image-viewport">
+                    <div class="hologram-overlay"></div>
+                    <img src="assets/phone-terminal.jpg" alt="Cyber Crystal Node V1">
+                </div>
+                <h3 class="prod-name">Cyber Crystal Node V1</h3>
+                <p class="prod-desc">Signature physical interactive terminal embedded with glowing neon circuitry and cryptography validation architectures.</p>
+                <div class="prod-meta">
+                    <span class="prod-status">PRODUCTION PHASE II</span>
+                    <span class="card-tag">TERMINAL</span>
                 </div>
             </div>
         </div>
