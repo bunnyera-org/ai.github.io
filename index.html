@@ -1,734 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BunnyEra | The Next-Gen Autonomous Commerce Infrastructure</title>
-    
-    <style>
-        /* ==================================================
-           BUNNYERA SUPREME CYBER OPERATING VISUAL EMBED
-           ================================================== */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* 宇宙暗能液体流向 + 数字化高精密雷达线矩阵背景 */
-        body {
-            background-color: #010306;
-            color: #ffffff;
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 85% 15%, rgba(0, 242, 254, 0.22) 0%, transparent 50%),
-                radial-gradient(circle at 15% 65%, rgba(255, 0, 128, 0.09) 0%, transparent 45%),
-                radial-gradient(circle at 50% 50%, rgba(0, 242, 254, 0.05) 0%, transparent 60%),
-                linear-gradient(rgba(0, 242, 254, 0.015) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 242, 254, 0.015) 1px, transparent 1px);
-            background-size: 200% 200%, 200% 200%, 200% 200%, 50px 50px, 50px 50px;
-            background-attachment: fixed;
-            animation: backgroundShift 25s infinite alternate ease-in-out;
-        }
-
-        @keyframes backgroundShift {
-            0% { background-position: 0% 50%, 0% 0%, 0% 0%, 0px 0px, 0px 0px; }
-            50% { background-position: 100% 50%, 0% 0%, 0% 0%, 25px 25px, 25px 25px; }
-            100% { background-position: 50% 100%, 0% 0%, 0% 0%, 50px 50px, 50px 50px; }
-        }
-
-        /* HEADER & NAVIGATION */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 8%;
-            background: rgba(1, 3, 6, 0.85);
-            backdrop-filter: blur(30px);
-            -webkit-backdrop-filter: blur(30px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 9999;
-            border-bottom: 1px solid rgba(0, 242, 254, 0.06);
-        }
-
-        .logo {
-            font-size: 26px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            background: linear-gradient(45deg, #00f2fe, #4facfe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-transform: uppercase;
-        }
-
-        .logo-icon {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #00f2fe;
-            border-radius: 50%;
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.8);
-            animation: logoPulse 2s infinite ease-in-out;
-        }
-
-        @keyframes logoPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 8px rgba(0, 242, 254, 0.4); }
-            50% { transform: scale(1.15); box-shadow: 0 0 20px rgba(0, 242, 254, 0.8); }
-        }
-
-        nav a {
-            color: #798296;
-            text-decoration: none;
-            margin-left: 40px;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        nav a:hover, nav a.active {
-            color: #00f2fe;
-            text-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
-        }
-
-        .btn-connect {
-            background: rgba(0, 242, 254, 0.03);
-            border: 1px solid rgba(0, 242, 254, 0.4);
-            color: #00f2fe;
-            padding: 10px 28px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 11px;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: all 0.4s;
-            position: relative;
-            overflow: hidden;
-        }
-        .btn-connect::before {
-            content: ''; position: absolute; width: 4px; height: 4px; background: #00f2fe; top:0; left:0;
-        }
-
-        .btn-connect:hover {
-            background: #00f2fe;
-            color: #010306;
-            box-shadow: 0 0 30px rgba(0, 242, 254, 0.7);
-        }
-
-        /* LAYOUT MASTER */
-        section { padding: 160px 8%; border-top: 1px solid rgba(255, 255, 255, 0.01); }
-        .bg-darker { background: rgba(1, 2, 4, 0.7); }
-        .section-header { text-align: center; margin-bottom: 80px; }
-        .section-title { font-size: 44px; font-weight: 900; margin-bottom: 18px; letter-spacing: -0.5px; }
-        .section-title span { background: linear-gradient(90deg, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .section-subtitle { color: #4e5566; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; font-weight: 700; }
-
-        /* HERO AREA - 豪华立体排版 */
-        .hero { min-height: 100vh; display: flex; align-items: center; padding-top: 140px; gap: 80px; position: relative; }
-        .hero-content { flex: 1.1; max-width: 650px; z-index: 10; position: relative; }
-        
-        .hero-fui-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: rgba(0, 242, 254, 0.05);
-            border: 1px solid rgba(0, 242, 254, 0.15);
-            padding: 6px 16px;
-            border-radius: 4px;
-            font-family: monospace;
-            font-size: 11px;
-            color: #00f2fe;
-            margin-bottom: 28px;
-            letter-spacing: 1.5px;
-            text-shadow: 0 0 5px rgba(0,242,254,0.4);
-        }
-        .hero-fui-badge span { width: 6px; height: 6px; background: #ff0080; border-radius: 50%; box-shadow: 0 0 10px #ff0080; animation: logoPulse 1s infinite alternate; }
-
-        .hero-subtitle { color: #697081; text-transform: uppercase; letter-spacing: 4px; font-size: 11px; margin-bottom: 20px; font-weight: 800; display: flex; align-items: center; gap: 10px; }
-        .hero-title { font-size: 64px; line-height: 1.1; margin-bottom: 30px; font-weight: 900; letter-spacing: -2px; }
-        .hero-title span { background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-desc { color: #878f9f; font-size: 16px; line-height: 1.8; margin-bottom: 45px; }
-
-        /* 左侧加密区块挂件：增强细节密度 */
-        .hero-crypto-stream {
-            margin-top: 40px;
-            border-top: 1px dashed rgba(255, 255, 255, 0.06);
-            padding-top: 25px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        .crypto-node { font-family: monospace; }
-        .crypto-lbl { color: #434956; font-size: 10px; text-transform: uppercase; margin-bottom: 4px; font-weight: bold; }
-        .crypto-val { font-size: 12px; color: #7e8697; }
-        .crypto-val span { color: #00f2fe; font-weight: bold; }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
-            color: #010306;
-            border: none;
-            padding: 18px 45px;
-            font-size: 13px;
-            font-weight: 800;
-            border-radius: 4px;
-            cursor: pointer;
-            box-shadow: 0 5px 30px rgba(0, 242, 254, 0.3);
-            text-decoration: none;
-            display: inline-block;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-        }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 40px rgba(0, 242, 254, 0.6); }
-
-        /* 中间衔接：全息像素度量横卡尺（填补中间真空区） */
-        .hologram-caliper {
-            position: absolute;
-            left: 50%;
-            top: 45%;
-            transform: translate(-50%, -50%);
-            width: 140px;
-            height: 2px;
-            background: linear-gradient(to right, rgba(0,242,254,0.6), rgba(255,0,128,0.3));
-            z-index: 1;
-            opacity: 0.6;
-        }
-        .hologram-caliper::before {
-            content: 'FUI_SCALE_902';
-            position: absolute;
-            top: -15px;
-            left: 20px;
-            font-size: 8px;
-            color: #00f2fe;
-            font-family: monospace;
-            letter-spacing: 1px;
-        }
-
-        /* HERO 右侧大舱：HUD 监视矩阵框 */
-        .hero-display { flex: 1.3; position: relative; display: flex; justify-content: center; align-items: center; z-index: 5; }
-        
-        .hero-cyber-card {
-            width: 100%;
-            max-width: 590px;
-            border-radius: 4px;
-            padding: 12px;
-            background: rgba(6, 9, 15, 0.85);
-            border: 1px solid rgba(0, 242, 254, 0.25);
-            box-shadow: 0 45px 100px rgba(0, 0, 0, 0.85), 0 0 60px rgba(0, 242, 254, 0.15);
-            animation: heroFloat MatrixFloat 6s infinite ease-in-out alternate;
-            position: relative;
-        }
-        /* HUD 伺服四角边框线 */
-        .hero-cyber-card::before, .hero-cyber-card::after {
-            content: ''; position: absolute; width: 16px; height: 16px; border: 2px solid #00f2fe; z-index: 10;
-        }
-        .hero-cyber-card::before { top: -2px; left: -2px; border-right: 0; border-bottom: 0; }
-        .hero-cyber-card::after { bottom: -2px; right: -2px; border-left: 0; border-top: 0; }
-
-        .hero-cyber-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 2px;
-            display: block;
-            filter: contrast(1.05) brightness(0.95);
-        }
-        @keyframes heroFloat {
-            0% { transform: translateY(0px) rotateX(2deg) rotateY(-1deg); }
-            100% { transform: translateY(-16px) rotateX(-2deg) rotateY(1deg); }
-        }
-
-        .panel-tag-hologram {
-            position: absolute;
-            top: -14px;
-            right: 30px;
-            background: #010306;
-            border: 1px solid #ff0080;
-            padding: 3px 12px;
-            font-family: monospace;
-            font-size: 9px;
-            letter-spacing: 1.5px;
-            color: #ff0080;
-            text-shadow: 0 0 5px #ff0080;
-        }
-
-        /* ------------------------------------------------------------------
-           🐰 终极硬核重组：HIGH-DENSITY CYBER MECH-BUNNY MASK IP (高阶面谱化)
-           ------------------------------------------------------------------ */
-        .cyber-bunny-ip {
-            position: absolute;
-            top: -95px;
-            right: -25px;
-            width: 150px;
-            height: 180px;
-            z-index: 99;
-            cursor: pointer;
-            animation: ipTacticalFloat 4s infinite ease-in-out alternate;
-        }
-
-        @keyframes ipTacticalFloat {
-            0% { transform: translateY(0px) scale(1) rotate(-1deg); filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.4)); }
-            100% { transform: translateY(-14px) scale(1.03) rotate(2deg); filter: drop-shadow(0 0 30px rgba(0, 242, 254, 0.7)); }
-        }
-
-        /* 棱角折线立体机械兔耳 */
-        .bunny-ear {
-            position: absolute;
-            width: 18px;
-            height: 75px;
-            background: linear-gradient(135deg, #02050a 0%, #0c1524 100%);
-            border: 2px solid #00f2fe;
-            clip-path: polygon(50% 0%, 100% 20%, 100% 100%, 0% 100%, 0% 20%);
-        }
-        /* 耳内高能激光发射槽 */
-        .bunny-ear::after {
-            content: '';
-            position: absolute;
-            top: 20%; left: 50%; transform: translateX(-50%);
-            width: 4px; height: 60%;
-            background: linear-gradient(to bottom, #ff0080, transparent);
-            box-shadow: 0 0 8px #ff0080;
-        }
-        .ear-left { left: 42px; transform: rotate(-14deg); transform-origin: bottom center; }
-        .ear-right { right: 42px; transform: rotate(14deg); transform-origin: bottom center; animation: earSonar 6s infinite ease-in-out; }
-
-        @keyframes earSonar {
-            0%, 90%, 100% { transform: rotate(14deg); }
-            93%, 97% { transform: rotate(22deg) scaleY(0.95); }
-        }
-
-        /* 精密机甲面具核心脸部 (盾型下巴结构) */
-        .bunny-head {
-            position: absolute;
-            top: 62px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 72px;
-            height: 72px;
-            background: #040811;
-            border: 2px solid #00f2fe;
-            box-shadow: inset 0 0 20px rgba(0, 242, 254, 0.7);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 50% 100%, 0% 60%);
-            position: relative;
-        }
-
-        /* 机械面谱中轴对称散热装甲线 */
-        .bunny-head::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 50%; transform: translateX(-50%);
-            width: 2px; height: 100%;
-            background: rgba(0, 242, 254, 0.3);
-        }
-
-        /* 电子战阵红外红光复眼 (锐利折线形) */
-        .bunny-eyes {
-            position: absolute;
-            top: 24px;
-            width: 18px;
-            height: 5px;
-            background: #ff0080;
-            box-shadow: 0 0 12px #ff0080, 0 0 25px #ff0080;
-            animation: eyePulseScan 4s infinite linear;
-        }
-        .eye-left { left: 8px; clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 60%); }
-        .eye-right { right: 8px; clip-path: polygon(0 40%, 100% 0, 100% 60%, 0 100%); }
-
-        @keyframes eyePulseScan {
-            0%, 45%, 55%, 100% { opacity: 1; transform: scaleY(1); }
-            50% { opacity: 0.2; transform: scaleY(0.1); }
-        }
-
-        /* 暗能量浮空逆向双重数据轨道（底座） */
-        .bunny-ring {
-            position: absolute;
-            bottom: 25px;
-            left: 50%;
-            transform: translateX(-50%) rotateX(80deg);
-            width: 110px;
-            height: 110px;
-            border: 2px dashed #00f2fe;
-            border-radius: 50%;
-            animation: ringSpinCcw 4s infinite linear;
-        }
-        .bunny-ring-outer {
-            position: absolute;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%) rotateX(80deg);
-            width: 140px;
-            height: 140px;
-            border: 1px solid rgba(255, 0, 128, 0.5);
-            border-radius: 50%;
-            animation: ringSpinCw 8s infinite linear;
-        }
-        @keyframes ringSpinCcw { 100% { transform: translateX(-50%) rotateX(80deg) rotate(-360deg); } }
-        @keyframes ringSpinCw { 100% { transform: translateX(-50%) rotateX(80deg) rotate(360deg); } }
-
-
-        /* TECH INFRASTRUCTURE */
-        .tech-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
-        .tech-card { background: rgba(255,255,255,0.002); border: 1px solid rgba(255,255,255,0.015); border-radius: 4px; width: 350px; padding: 45px 35px; transition: all 0.4s; position: relative; }
-        .tech-card::before { content:''; position:absolute; top:0; left:0; width:4px; height:0; background:#00f2fe; transition:all 0.4s; }
-        .tech-card:hover::before { height:100%; }
-        .tech-card:hover { border-color: rgba(0, 242, 254, 0.25); background: rgba(255, 255, 255, 0.01); transform: translateY(-4px); }
-        .tech-icon { font-size: 30px; margin-bottom: 28px; color: #00f2fe; }
-        .tech-title { font-size: 21px; font-weight: 800; margin-bottom: 16px; letter-spacing: -0.5px;}
-        .tech-desc { color: #7e8697; font-size: 14px; line-height: 1.7; }
-
-        /* TERMINAL MATRIX & IMAGE VIEWPORTS */
-        .prod-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 35px; }
-        .prod-card { background: rgba(255, 255, 255, 0.002); border: 1px solid rgba(255, 255, 255, 0.015); border-radius: 4px; padding: 20px; transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
-        .prod-card:hover { border-color: rgba(0, 242, 254, 0.3); transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.7); }
-
-        .image-viewport {
-            height: 250px;
-            border-radius: 2px;
-            margin-bottom: 25px;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid rgba(255,255,255,0.03);
-            background: #05070a;
-        }
-        .image-viewport img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .prod-card:hover .image-viewport img { transform: scale(1.05); }
-
-        .hologram-overlay {
-            position: absolute;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(to right, transparent, rgba(0, 242, 254, 0.7), transparent);
-            top: 0;
-            box-shadow: 0 0 12px #00f2fe;
-            animation: scanRadar 3.5s infinite linear;
-            z-index: 2;
-        }
-        @keyframes scanRadar { 0% { top: 0%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { top: 100%; opacity: 0; } }
-
-        .prod-name { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
-        .prod-desc { color: #646c7c; font-size: 13px; line-height: 1.6; margin-bottom: 24px; }
-        .prod-meta { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.03); padding-top: 20px; }
-        .prod-status { color: #00f2fe; font-weight: 700; font-size: 11px; font-family: monospace; }
-        .card-tag { background: rgba(0, 242, 254, 0.05); color: #00f2fe; padding: 4px 14px; border-radius: 2px; font-size: 10px; font-weight: 700; text-transform: uppercase; border: 1px solid rgba(0,242,254,0.1); }
-
-        /* FOUNDERS PANEL */
-        .founders-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto; }
-        .founder-card { background: rgba(255,255,255,0.002); border: 1px solid rgba(255,255,255,0.015); border-radius: 4px; padding: 45px 35px; width: 320px; text-align: center; }
-        .founder-avatar-holder { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #00f2fe, #ff0080); margin: 0 auto 24px auto; padding: 2px; }
-        .founder-avatar-inner { width: 100%; height: 100%; background: #010306; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #434956; font-size: 11px; font-family: monospace; }
-        .founder-name { font-size: 19px; font-weight: 800; margin-bottom: 6px; }
-        .founder-role { color: #00f2fe; font-size: 11px; font-weight: 700; margin-bottom: 18px; font-family: monospace; letter-spacing: 1px;}
-        .founder-bio { color: #646c7c; font-size: 13px; line-height: 1.6; }
-
-        /* REAL-TIME SYSTEM CONSOLE CONTAINER */
-        .dashboard-container { max-width: 1000px; margin: 0 auto; background: #04060a; border: 1px solid rgba(0,242,254,0.1); border-radius: 4px; padding: 35px; box-shadow: 0 60px 120px rgba(0,0,0,0.9); position: relative; }
-        .dashboard-container::before { content:''; position:absolute; width:6px; height:6px; background:#00f2fe; top:-3px; left:-3px; }
-        .dash-top { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 22px; margin-bottom: 30px; }
-        .dash-signals { display: flex; gap: 8px; }
-        .dash-sig { width: 8px; height: 8px; border-radius: 50%; background: #00f2fe; box-shadow: 0 0 10px #00f2fe; }
-        .dash-sig:nth-child(2) { background: #ff0080; box-shadow: 0 0 10px #ff0080; animation: logoPulse 1s infinite alternate; }
-        .dash-meta-title { font-family: monospace; font-size: 11px; color: #4e5566; font-weight: 700; letter-spacing: 1px;}
-        .dash-panel { display: grid; grid-template-columns: 1fr 2fr; gap: 35px; }
-        .dash-nav { display: flex; flex-direction: column; gap: 14px; }
-        .dash-nav-btn { background: rgba(255,255,255,0.002); border: 1px solid rgba(255,255,255,0.01); padding: 16px 20px; border-radius: 4px; font-size: 13px; text-align: left; color: #7e8697; display: flex; justify-content: space-between; font-family: monospace; }
-        .dash-nav-btn.active { background: rgba(0, 242, 254, 0.03); border-color: rgba(0, 242, 254, 0.2); color: #00f2fe; font-weight: 700; }
-        .dash-stats { display: flex; flex-direction: column; gap: 24px; }
-        .data-card { background: rgba(255, 255, 255, 0.002); border: 1px solid rgba(255, 255, 255, 0.015); border-radius: 4px; padding: 24px; }
-        .data-label { color: #434956; font-size: 11px; font-weight: 700; margin-bottom: 10px; letter-spacing: 0.5px; }
-        .data-value { font-size: 28px; font-weight: 800; font-family: monospace; color: #00f2fe; text-shadow: 0 0 20px rgba(0,242,254,0.25); }
-
-        /* FOOTER STRUCTURE */
-        footer { background: #000102; border-top: 1px solid rgba(0, 242, 254, 0.05); padding: 90px 8% 45px 8%; }
-        .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1.4fr; gap: 60px; margin-bottom: 70px; }
-        .footer-brand .f-logo { font-size: 26px; font-weight: 900; background: linear-gradient(45deg, #00f2fe, #4facfe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 2px;}
-        .footer-brand .f-desc { color: #4e5566; font-size: 13px; line-height: 1.7; max-width: 340px; }
-        .footer-title { color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 28px; }
-        .office-list { display: flex; flex-direction: column; gap: 24px; }
-        .office-item { display: flex; flex-direction: column; gap: 6px; }
-        .office-name { color: #646c7c; font-size: 11px; font-weight: 700; text-transform: uppercase; font-family: monospace; }
-        .office-phone { color: #00f2fe; font-size: 16px; font-weight: 700; font-family: monospace; text-decoration: none; }
-        .social-matrix { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-        .social-btn { background: rgba(255, 255, 255, 0.002); border: 1px solid rgba(255, 255, 255, 0.015); border-radius: 4px; padding: 16px; display: flex; align-items: center; gap: 14px; color: #7e8697; text-decoration: none; font-size: 13px; font-weight: 700; transition: all 0.4s; }
-        .social-btn:hover { background: rgba(0, 242, 254, 0.02); border-color: rgba(0, 242, 254, 0.3); color: #00f2fe; transform: translateY(-2px); }
-        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.01); padding-top: 35px; display: flex; justify-content: space-between; align-items: center; color: #434956; font-size: 12px; }
-        .f-legal a { color: #434956; text-decoration: none; margin-left: 25px; }
-        .f-legal a:hover { color: #00f2fe; }
-
-        /* RESPONSIVE TERMINAL PIPELINES */
-        @media (max-width: 968px) {
-            .hero { flex-direction: column; text-align: center; padding-top: 150px; gap: 60px; }
-            .hero-display { width: 100%; margin-top: 80px; }
-            .cyber-bunny-ip { top: -95px; right: 50%; transform: translateX(50%); }
-            .hologram-caliper { display: none; }
-            .hero-crypto-stream { justify-content: center; text-align: left; }
-            .dash-panel { grid-template-columns: 1fr; }
-            header { padding: 20px 4%; }
-            nav { display: none; }
-            .footer-grid { grid-template-columns: 1fr; gap: 45px; }
-            .footer-bottom { flex-direction: column; gap: 18px; text-align: center; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BunnyEra LLC | AI-Assisted Ecommerce Operations</title>
+  <meta name="description" content="BunnyEra LLC provides AI-assisted ecommerce operations, product research, content creation, website support, and workflow automation for cross-border sellers and online brands." />
+  <style>
+    :root {
+      --bg: #071018;
+      --panel: #0d1824;
+      --panel-2: #101f2e;
+      --text: #f5f7fb;
+      --muted: #a7b3c3;
+      --soft: #748297;
+      --brand: #48d7ff;
+      --brand-2: #8d7cff;
+      --line: rgba(255,255,255,.10);
+      --ok: #55e6a5;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at 80% 0%, rgba(72,215,255,.22), transparent 34%), radial-gradient(circle at 10% 20%, rgba(141,124,255,.18), transparent 32%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, 92%); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(7,16,24,.82);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .logo { font-weight: 900; letter-spacing: .2px; font-size: 22px; }
+    .logo span { color: var(--brand); }
+    nav { display: flex; align-items: center; gap: 22px; font-size: 14px; color: var(--muted); }
+    nav a:hover { color: var(--text); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 18px; border-radius: 12px; border: 1px solid var(--line); background: rgba(255,255,255,.05); font-weight: 750; }
+    .btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #06101a; border: 0; box-shadow: 0 18px 60px rgba(72,215,255,.20); }
+    .hero { padding: 98px 0 72px; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 44px; align-items: center; }
+    .eyebrow { color: var(--brand); font-weight: 800; letter-spacing: .14em; text-transform: uppercase; font-size: 12px; margin-bottom: 16px; }
+    h1 { font-size: clamp(42px, 7vw, 76px); line-height: 1.02; letter-spacing: -2.2px; margin-bottom: 22px; }
+    .lead { color: var(--muted); font-size: 19px; max-width: 720px; margin-bottom: 28px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+    .trust-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 34px; }
+    .trust-card, .card, .service, .policy-card { background: rgba(255,255,255,.045); border: 1px solid var(--line); border-radius: 22px; }
+    .trust-card { padding: 16px; }
+    .trust-card strong { display: block; color: var(--text); font-size: 15px; }
+    .trust-card span { color: var(--soft); font-size: 13px; }
+    .hero-panel { padding: 26px; background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.035)); border: 1px solid var(--line); border-radius: 28px; box-shadow: 0 22px 80px rgba(0,0,0,.30); }
+    .panel-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; color: var(--muted); font-size: 13px; }
+    .status { color: var(--ok); font-weight: 800; }
+    .workflow { display: grid; gap: 12px; }
+    .step { padding: 16px; border-radius: 16px; background: rgba(7,16,24,.72); border: 1px solid rgba(255,255,255,.08); display: flex; justify-content: space-between; gap: 12px; }
+    .step b { display: block; }
+    .step span { color: var(--soft); font-size: 13px; }
+    section { padding: 78px 0; border-top: 1px solid rgba(255,255,255,.06); }
+    .section-head { max-width: 760px; margin-bottom: 34px; }
+    h2 { font-size: clamp(32px, 5vw, 48px); line-height: 1.12; letter-spacing: -1.2px; margin-bottom: 12px; }
+    .section-head p { color: var(--muted); font-size: 17px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .service, .card, .policy-card { padding: 24px; }
+    .service .icon { font-size: 28px; margin-bottom: 14px; }
+    h3 { font-size: 21px; margin-bottom: 9px; }
+    .service p, .card p, .policy-card p, li { color: var(--muted); }
+    ul { padding-left: 20px; margin-top: 12px; }
+    .company-box { background: linear-gradient(135deg, rgba(72,215,255,.13), rgba(141,124,255,.12)); border: 1px solid rgba(72,215,255,.25); border-radius: 28px; padding: 30px; }
+    .info-list { display: grid; gap: 14px; margin-top: 18px; }
+    .info-row { display: grid; grid-template-columns: 190px 1fr; gap: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.10); }
+    .info-row span { color: var(--soft); }
+    .info-row b { font-weight: 750; }
+    .contact-card { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: stretch; }
+    footer { border-top: 1px solid var(--line); padding: 34px 0; color: var(--soft); }
+    .footer-grid { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    .legal-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    @media (max-width: 860px) {
+      nav { display: none; }
+      .hero-grid, .grid-3, .grid-2, .contact-card { grid-template-columns: 1fr; }
+      .trust-row { grid-template-columns: 1fr; }
+      .info-row { grid-template-columns: 1fr; }
+      .hero { padding-top: 72px; }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="/">Bunny<span>Era</span></a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="#company">Company</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn" href="mailto:support@bunnyerapro.com">Contact</a>
+    </div>
+  </header>
 
-    <header>
-        <div class="logo">
-            <div class="logo-icon"></div>
-            BunnyEra
-        </div>
-        <nav>
-            <a href="#" class="active">Ecosystem Hub</a>
-            <a href="#infrastructure">Infrastructure</a>
-            <a href="#hardware">Terminal Networks</a>
-            <a href="#founders">Founders</a>
-            <a href="#console">Global Console</a>
-        </nav>
-        <button class="btn-connect" onclick="alert('Establishing Secure Handshake Node Protocol...')">Launch Terminal</button>
-    </header>
-
+  <main>
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-fui-badge">
-                <span></span> AUTH_RETAIL_PROTOCOL_v3.0 // ACTIVE
-            </div>
-
-            <div class="hero-subtitle">The Autonomous Commerce Enterprise Platform // 2024-2026</div>
-            <h1 class="hero-title">Automating Global<br>Digital Retail Layer.<br><span>Smart Plans, Better Life.</span></h1>
-            <p class="hero-desc">
-                BunnyEra bridges autonomous retail pipelines, industrial-grade consumer tech, and encrypted payment clearing layers. We engineer decentralized commercial operating protocols designed for touchless product distribution and zero-latency transaction scaling.
-            </p>
-            
-            <a href="#infrastructure" class="btn-primary">Initialize Protocol Overview</a>
-
-            <div class="hero-crypto-stream">
-                <div class="crypto-node">
-                    <div class="crypto-lbl">BLOCK_HASH_L2</div>
-                    <div class="crypto-val">0x8F3A...<span>9EEF</span></div>
-                </div>
-                <div class="crypto-node">
-                    <div class="crypto-lbl">NODE_INTEGRITY</div>
-                    <div class="crypto-val">SIGMA: <span>99.98%</span></div>
-                </div>
-                <div class="crypto-node">
-                    <div class="crypto-lbl">MATRIX_STREAM</div>
-                    <div class="crypto-val">FLOW: <span>2.4k/s</span></div>
-                </div>
-            </div>
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">BunnyEra LLC · Ecommerce Operations · AI Workflow Support</div>
+          <h1>AI-assisted operations for cross-border ecommerce brands.</h1>
+          <p class="lead">BunnyEra LLC helps online sellers and small businesses improve product research, listing quality, marketing content, website operations, and internal workflow automation.</p>
+          <div class="actions">
+            <a class="btn primary" href="#services">View Services</a>
+            <a class="btn" href="#contact">Request Business Support</a>
+          </div>
+          <div class="trust-row">
+            <div class="trust-card"><strong>Registered Business</strong><span>BunnyEra LLC, Wyoming, United States</span></div>
+            <div class="trust-card"><strong>Service Focus</strong><span>Ecommerce, content, websites, workflow consulting</span></div>
+            <div class="trust-card"><strong>Delivery Model</strong><span>Digital services delivered online</span></div>
+          </div>
         </div>
-
-        <div class="hologram-caliper"></div>
-
-        <div class="hero-display">
-            
-            <div class="cyber-bunny-ip" onclick="alert('TACTICAL_BUNNY_CORE: Firewalls Decrypted.')">
-                <div class="bunny-ear ear-left"></div>
-                <div class="bunny-ear ear-right"></div>
-                <div class="bunny-head">
-                    <div class="bunny-eyes eye-left"></div>
-                    <div class="bunny-eyes eye-right"></div>
-                </div>
-                <div class="bunny-ring"></div>
-                <div class="bunny-ring-outer"></div>
-            </div>
-
-            <div class="hero-cyber-card">
-                <img src="assets/hero-screen.png" alt="BunnyEra Global AI Topology Canvas">
-                <div class="panel-tag-hologram">MONITOR_GRID_08</div>
-            </div>
+        <div class="hero-panel" aria-label="BunnyEra service workflow overview">
+          <div class="panel-top"><b>Operations Workflow</b><span class="status">ACTIVE</span></div>
+          <div class="workflow">
+            <div class="step"><div><b>01 · Product & Market Research</b><span>Category, competitor, pricing, and opportunity review.</span></div><span>Research</span></div>
+            <div class="step"><div><b>02 · Listing & Content Creation</b><span>Product titles, descriptions, campaign copy, and social content.</span></div><span>Content</span></div>
+            <div class="step"><div><b>03 · Storefront Support</b><span>Website pages, landing pages, FAQ, policies, and support copy.</span></div><span>Website</span></div>
+            <div class="step"><div><b>04 · Workflow Automation</b><span>Repeatable AI-assisted processes for daily ecommerce operations.</span></div><span>Automation</span></div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="infrastructure">
-        <div class="section-header">
-            <h2 class="section-title">Technical <span>Infrastructure</span></h2>
-            <p class="section-subtitle">System Architecture & Liquidity Engineering</p>
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>Clear, practical digital business services for sellers, online brands, and small teams that need operational support without building a large internal department.</p>
         </div>
-        
-        <div class="tech-grid">
-            <div class="tech-card">
-                <div class="tech-icon">⚙️</div>
-                <h3 class="tech-title">Autonomous Engine</h3>
-                <p class="tech-desc">Autonomous commercial workflow software deploying telemetry, machine allocation logic, and cross-border settlement channels across active global hubs.</p>
-            </div>
-            <div class="tech-card">
-                <div class="tech-icon">🌐</div>
-                <h3 class="tech-title">Smart Physical SCM</h3>
-                <p class="tech-desc">Deep hardware-integrated distribution execution. Managing container flows, customs clearings, and smart-box tracking via embedded regional nodes.</p>
-            </div>
-            <div class="tech-card">
-                <div class="tech-icon">🧬</div>
-                <h3 class="tech-title">Layer-2 Clearing Matrix</h3>
-                <p class="tech-desc">A low-latency consensus framework built exclusively to settle multi-currency revenue partitions and protect retail intellectual property.</p>
-            </div>
+        <div class="grid-3">
+          <div class="service"><div class="icon">🛒</div><h3>Ecommerce Operations Support</h3><p>Product upload support, listing structure, category organization, title optimization, and store content improvement.</p></div>
+          <div class="service"><div class="icon">🔎</div><h3>Product Research & Market Analysis</h3><p>Competitor review, pricing checks, product positioning, niche research, and opportunity summaries for ecommerce decision-making.</p></div>
+          <div class="service"><div class="icon">✍️</div><h3>AI Content & Marketing Workflow</h3><p>Advertising copy, social media captions, short video scripts, campaign ideas, email copy, and content workflow templates.</p></div>
+          <div class="service"><div class="icon">🌐</div><h3>Website & Storefront Support</h3><p>Business website copy, landing pages, product pages, FAQ pages, contact pages, and policy page preparation.</p></div>
+          <div class="service"><div class="icon">💬</div><h3>Customer Support Templates</h3><p>Customer service replies, return and refund response templates, shipping communication, and after-sales support scripts.</p></div>
+          <div class="service"><div class="icon">⚙️</div><h3>Automation & Workflow Consulting</h3><p>AI tool setup, process documentation, operational checklists, and repeatable workflows for ecommerce teams.</p></div>
         </div>
+      </div>
     </section>
 
-    <section id="hardware" class="bg-darker">
-        <div class="section-header">
-            <h2 class="section-title">Hardware & <span>Terminals</span></h2>
-            <p class="section-subtitle">Industrial Machinery Built For Autonomous Workforces</p>
+    <section id="about">
+      <div class="wrap grid-2">
+        <div class="section-head">
+          <h2>About BunnyEra</h2>
+          <p>BunnyEra LLC is a United States registered company focused on AI-assisted ecommerce operations and digital business services.</p>
         </div>
-
-        <div class="prod-grid">
-            <div class="prod-card">
-                <div class="image-viewport">
-                    <div class="hologram-overlay"></div>
-                    <img src="assets/laptop-social.jpg" alt="Cross-Channel Analytics Pipeline">
-                </div>
-                <h3 class="prod-name">Cross-Channel Analytics Pipeline</h3>
-                <p class="prod-desc">Enterprise operational dashboard piping store performance data directly into multi-layered international marketing matrixes.</p>
-                <div class="prod-meta">
-                    <span class="prod-status">LIVE // DISTRIBUTED</span>
-                    <span class="card-tag">MARKETING</span>
-                </div>
-            </div>
-
-            <div class="prod-card">
-                <div class="image-viewport">
-                    <div class="hologram-overlay"></div>
-                    <img src="assets/phone-terminal.jpg" alt="Cyber Crystal Node V1">
-                </div>
-                <h3 class="prod-name">Cyber Crystal Node V1</h3>
-                <p class="prod-desc">Signature physical interactive terminal embedded with glowing neon circuitry and cryptography validation architectures.</p>
-                <div class="prod-meta">
-                    <span class="prod-status">PRODUCTION PHASE II</span>
-                    <span class="card-tag">TERMINAL</span>
-                </div>
-            </div>
+        <div class="card">
+          <h3>What we do</h3>
+          <p>We support cross-border sellers and online brands with research, content, website operations, and workflow automation. Our work is service-based and delivered digitally through online collaboration.</p>
+          <ul>
+            <li>We do not provide banking, money transmission, crypto exchange, or payment processing services.</li>
+            <li>We do not sell restricted financial products or regulated investment products.</li>
+            <li>We focus on legitimate ecommerce operations, digital content, and business workflow support.</li>
+          </ul>
         </div>
+      </div>
     </section>
 
-    <section id="founders">
-        <div class="section-header">
-            <h2 class="section-title">System <span>Founders</span></h2>
-            <p class="section-subtitle">Core Strategists Structuring Distributed Commerce</p>
+    <section id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>How projects work</h2>
+          <p>Each project starts with a clear business requirement and ends with usable digital deliverables.</p>
         </div>
-
-        <div class="founders-grid">
-            <div class="founder-card">
-                <div class="founder-avatar-holder">
-                    <div class="founder-avatar-inner">[ CORE ]</div>
-                </div>
-                <h3 class="founder-name">Chief Architect</h3>
-                <p class="founder-role">SYSTEM FOUNDER</p>
-                <p class="founder-bio">Architecting BunnyEra's cloud orchestration framework and high-throughput transaction protocol matrix.</p>
-            </div>
-
-            <div class="founder-card">
-                <div class="founder-avatar-holder">
-                    <div class="founder-avatar-inner">[ DEPLOY ]</div>
-                </div>
-                <h3 class="founder-name">SCM Director</h3>
-                <p class="founder-role">CO-FOUNDER</p>
-                <p class="founder-bio">Masterminding automated cross-border fulfillment pipelines and secure logistics edge hardware.</p>
-            </div>
+        <div class="grid-3">
+          <div class="policy-card"><h3>1. Requirement Review</h3><p>We review the business objective, product category, target customers, platform requirements, and delivery timeline.</p></div>
+          <div class="policy-card"><h3>2. Digital Service Delivery</h3><p>We prepare written materials, website content, product research, operational templates, or workflow documentation.</p></div>
+          <div class="policy-card"><h3>3. Revision & Support</h3><p>We provide reasonable revisions based on the agreed service scope and help the client apply the materials to their business.</p></div>
         </div>
+      </div>
     </section>
 
-    <section id="console" class="bg-darker">
-        <div class="section-header">
-            <h2 class="section-title">Network <span>Console</span></h2>
-            <p class="section-subtitle">Real-time Node Transparency & Integrity Analysis</p>
+    <section id="company">
+      <div class="wrap company-box">
+        <div class="section-head">
+          <h2>Company information</h2>
+          <p>Business details for customers, partners, and verification teams.</p>
         </div>
-
-        <div class="dashboard-container">
-            <div class="dash-top">
-                <div class="dash-signals">
-                    <div class="dash-sig"></div>
-                    <div class="dash-sig"></div>
-                </div>
-                <div class="dash-meta-title">BUNNYERA_AUTONOMOUS_MATRIX_v3.0_PROD</div>
-            </div>
-            
-            <div class="dash-panel">
-                <div class="dash-nav">
-                    <div class="dash-nav-btn active">
-                        <span>● Layer-2 Execution Protocol</span>
-                        <span>RUNNING</span>
-                    </div>
-                    <div class="dash-nav-btn">
-                        <span>Terminal Telemetry Hub</span>
-                        <span>ONLINE</span>
-                    </div>
-                    <div class="dash-nav-btn">
-                        <span>Cross-Border SCM Track</span>
-                        <span>100% SECURE</span>
-                    </div>
-                </div>
-
-                <div class="dash-stats">
-                    <div class="data-card">
-                        <div class="data-label">AGGREGATED CORE PROTOCOL VOLUME (24H)</div>
-                        <div class="data-value">$14,892,105.42</div>
-                    </div>
-                    <div class="data-card">
-                        <div class="data-label">LAYER-2 PROTOCOL THROUGHPUT SPEED</div>
-                        <div class="data-value">2,400 TPS (0.002s latency)</div>
-                    </div>
-                </div>
-            </div>
+        <div class="info-list">
+          <div class="info-row"><span>Legal name</span><b>BunnyEra LLC</b></div>
+          <div class="info-row"><span>Entity type</span><b>Limited Liability Company (LLC)</b></div>
+          <div class="info-row"><span>Registered location</span><b>Wyoming, United States</b></div>
+          <div class="info-row"><span>Business address</span><b>5830 E 2ND ST, STE 7000 #28099, Casper, WY 82609, United States</b></div>
+          <div class="info-row"><span>Business category</span><b>Ecommerce operations, digital services, content creation, and workflow consulting</b></div>
+          <div class="info-row"><span>Website</span><b>https://bunnyera.com</b></div>
+          <div class="info-row"><span>Email</span><b><a href="mailto:support@bunnyerapro.com">support@bunnyerapro.com</a></b></div>
         </div>
+      </div>
     </section>
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <div class="f-logo">BunnyEra</div>
-                <p class="f-desc">Engineering next-generation autonomous retail pipelines and decentralized execution layers for global commercial optimization.</p>
-            </div>
-
-            <div>
-                <div class="footer-title">Global Headquarters</div>
-                <div class="office-list">
-                    <div class="office-item">
-                        <span class="office-name">New York, US</span>
-                        <a href="tel:+16469910001" class="office-phone">+1 646 991 0001</a>
-                    </div>
-                    <div class="office-item">
-                        <span class="office-name">Hong Kong, CN</span>
-                        <a href="tel:+85246076024" class="office-phone">+852 4607 6024</a>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="footer-title">Social Gateways</div>
-                <div class="social-matrix">
-                    <a href="#" target="_blank" class="social-btn"><span>📺</span> YouTube</a>
-                    <a href="#" target="_blank" class="social-btn"><span>✈️</span> Telegram</a>
-                    <a href="#" target="_blank" class="social-btn"><span>👾</span> Discord</a>
-                    <a href="#" target="_blank" class="social-btn"><span>🐙</span> GitHub</a>
-                </div>
-            </div>
+    <section id="contact">
+      <div class="wrap contact-card">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>For business inquiries, service requests, partnership discussions, or account verification questions, contact BunnyEra LLC by email.</p>
+          <div class="actions"><a class="btn primary" href="mailto:support@bunnyerapro.com">Email BunnyEra</a></div>
         </div>
-
-        <div class="footer-bottom">
-            <div class="f-copyright">© 2024 - 2026 BunnyEra Org. All Rights Reserved.</div>
-            <div class="f-legal">
-                <a href="#">Privacy Framework</a>
-                <a href="#">Node Operations</a>
-                <a href="#">Clearance Protocol</a>
-            </div>
+        <div class="card">
+          <h3>Service inquiries</h3>
+          <p>Please include your company name, website, requested service, target market, and expected timeline. We review each request before confirming the service scope.</p>
+          <ul>
+            <li>Product research and ecommerce operations</li>
+            <li>Website and storefront support</li>
+            <li>Marketing content and social media workflow</li>
+            <li>AI-assisted business process setup</li>
+          </ul>
         </div>
-    </footer>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <b>BunnyEra LLC</b><br />AI-assisted ecommerce operations and digital business services.
+      </div>
+      <div class="legal-links">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/refund.html">Refund Policy</a>
+        <a href="/delivery.html">Delivery Policy</a>
+      </div>
+      <div>© 2026 BunnyEra LLC. All rights reserved.</div>
+    </div>
+  </footer>
 </body>
 </html>
