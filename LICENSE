@@ -1,201 +1,168 @@
-                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+BunnyEra Proprietary License
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+Copyright © 2026 BunnyEra. All Rights Reserved.
 
-   1. Definitions.
+Effective Date: 2026
 
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
+1. Ownership
 
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
+This repository, project, website, application, source code, documentation,
+text, images, illustrations, character designs, user interface designs,
+brand materials, project names, product names, workflows, automation logic,
+marketing content, and all related materials are the proprietary property of
+BunnyEra unless otherwise stated.
 
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
+BunnyEra retains all rights, title, and interest in and to the materials,
+including all copyrights, trademarks, trade names, service marks, design
+rights, database rights, trade secrets, know-how, and other intellectual
+property rights.
 
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
+2. Protected BunnyEra Materials
 
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
+The following materials are protected and may not be used without prior
+written permission from BunnyEra:
 
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
+- BunnyEra
+- BunnyEra AI
+- BunnyEra LoveTalk
+- BunnyEra Social Pipeline
+- BunnyEra Matrix Ops
+- BunnyEra Shop
+- BunnyEra Products
+- BunnyEra official website
+- Bunny Bunny
+- Brown Bear
+- BunnyEra original IP characters
+- BunnyEra logos, icons, names, slogans, and visual identity
+- BunnyEra website layout, copywriting, brand story, and project descriptions
+- BunnyEra product images, promotional images, social media assets, and videos
+- BunnyEra automation workflows, scripts, prompts, and operating systems
+- Any confusingly similar names, characters, logos, visual designs, or brand assets
 
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
+3. No License Granted
 
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
+No license, right, or permission is granted to any person or organization
+to use, copy, reproduce, modify, publish, distribute, sell, sublicense,
+display, perform, reverse engineer, scrape, train AI models on, or create
+derivative works from the materials in this repository or project.
 
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
+Access to this repository, website, application, or project does not give
+you any ownership rights or usage rights.
 
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
+4. Prohibited Uses
 
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
+Without prior written permission from BunnyEra, you may not:
 
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
+- Copy or reuse any source code from this project
+- Copy or reuse any website layout, UI structure, or page design
+- Copy or reuse BunnyEra brand text, descriptions, slogans, or content
+- Copy or reuse BunnyEra character designs, illustrations, images, or videos
+- Use BunnyEra names, logos, characters, or project names in another product
+- Create a competing or similar website, product, brand, application, or IP project
+- Sell, rent, sublicense, publish, distribute, or commercially exploit any part of this project
+- Upload, mirror, archive, or redistribute this project or any part of it
+- Use this project or its content for AI training, dataset creation, scraping, or automated extraction
+- Remove, hide, or modify copyright notices, ownership notices, or brand identifiers
 
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
+5. Internal and Authorized Use
 
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
+Only BunnyEra and persons expressly authorized in writing by BunnyEra may
+use, edit, deploy, operate, publish, or maintain this project.
 
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
+Authorized contributors, contractors, agents, or service providers may only
+use the materials for the specific BunnyEra-related work they were approved
+to perform. Such permission does not transfer ownership and may be revoked
+at any time.
 
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work,
-          excluding those notices that do not pertain to any part of
-          the Derivative Works; and
+6. Third-Party Materials
 
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and
-          do not modify the License. You may add Your own attribution
-          notices within Derivative Works that You distribute, alongside
-          or as an addendum to the NOTICE text from the Work, provided
-          that such additional attribution notices cannot be construed
-          as modifying the License.
+This project may include or reference third-party software, libraries,
+frameworks, fonts, images, APIs, services, or other materials.
 
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
+Third-party materials remain subject to their respective licenses, terms,
+and ownership rights. Nothing in this license grants any rights to
+third-party materials beyond what is permitted by their applicable licenses.
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
+Where required, third-party copyright notices, attribution notices, and
+license files must be retained.
 
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
+7. Open Source Components
 
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
+If this project uses open source components, such use does not make the
+entire BunnyEra project open source.
 
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
+Open source components are licensed only under their own licenses. BunnyEra
+source code, brand assets, character IP, project content, business logic,
+website content, and original materials remain proprietary and protected.
 
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
+8. Trademarks and Brand Rights
 
-   END OF TERMS AND CONDITIONS
+BunnyEra, BunnyEra AI, BunnyEra LoveTalk, BunnyEra Social Pipeline,
+BunnyEra Matrix Ops, BunnyEra Shop, Bunny Bunny, Brown Bear, and related
+names, logos, icons, slogans, characters, and brand assets are protected
+brand materials of BunnyEra.
 
-   APPENDIX: How to apply the Apache License to your work.
+You may not use any BunnyEra brand material in a way that suggests
+affiliation, sponsorship, endorsement, partnership, authorization, or
+ownership without prior written permission.
 
-      To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets "[]"
-      replaced with your own identifying information. (Don't include
-      the brackets!)  The text should be enclosed in the appropriate
-      comment syntax for the file format. We also recommend that a
-      file or class name and description of purpose be included on the
-      same "printed page" as the copyright notice for easier
-      identification within third-party archives.
+9. AI, Dataset, and Model Training Restriction
 
-   Copyright [yyyy] [name of copyright owner]
+You may not use this project, website, source code, documentation, images,
+characters, prompts, workflows, or brand content to train, fine-tune,
+evaluate, benchmark, or improve any artificial intelligence model, machine
+learning system, dataset, scraper, crawler, or automated content generation
+system without prior written permission from BunnyEra.
 
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
+10. Confidential and Non-Public Materials
 
-       http://www.apache.org/licenses/LICENSE-2.0
+Any private files, credentials, API keys, business plans, operating manuals,
+internal workflows, unpublished designs, prompts, customer data, financial
+records, deployment scripts, automation logic, or non-public project
+materials are confidential.
 
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
+Such materials may not be disclosed, copied, transferred, stored elsewhere,
+or used for any purpose outside authorized BunnyEra work.
+
+11. No Warranty
+
+The materials are provided "AS IS" and "AS AVAILABLE" without warranty of
+any kind, whether express, implied, statutory, or otherwise.
+
+BunnyEra makes no warranties, including but not limited to warranties of
+merchantability, fitness for a particular purpose, non-infringement,
+availability, accuracy, security, or error-free operation.
+
+12. Limitation of Liability
+
+To the maximum extent permitted by law, BunnyEra shall not be liable for
+any direct, indirect, incidental, special, consequential, exemplary, or
+punitive damages, including but not limited to loss of profits, loss of
+data, business interruption, security incidents, or reputational harm
+arising from any use of, access to, or reliance on this project or its
+materials.
+
+13. Enforcement
+
+Any unauthorized use, copying, distribution, publication, modification,
+scraping, AI training, commercial exploitation, or misuse of BunnyEra
+materials may result in legal action, takedown requests, account reports,
+domain complaints, platform enforcement, and claims for damages or
+injunctive relief.
+
+14. Permission Requests
+
+For permission, licensing, partnership, or authorized use requests, contact:
+
+BunnyEra
+Website: https://bunnyera.com
+Email: bunnyera.global@gmail.com
+
+15. Reservation of Rights
+
+All rights not expressly granted in writing by BunnyEra are reserved.
+
+No failure or delay by BunnyEra in exercising any right shall operate as a
+waiver of that right.
+
+End of License.
